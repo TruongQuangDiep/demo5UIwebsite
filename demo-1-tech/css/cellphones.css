@@ -566,13 +566,86 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
 .shadow-bottom-200 { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important; }
 .shadow-bottom-400 { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08) !important; }
 
-/* 2-row paginated grid for authentic CellphoneS swiper */
+/* Swiper Demand Categories Track (Laptop Nhu Cầu) */
+.swiper-demand-cate-380 {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.swiper-demand-cate-380 .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 4px 2px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+.swiper-demand-cate-380 .swiper-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+.swiper-demand-cate-380 .swiper-slide {
+    width: auto !important;
+    min-width: 130px !important;
+    flex-shrink: 0 !important;
+    display: flex !important;
+    height: auto !important;
+    margin-right: 0 !important;
+}
+@media (max-width: 767px) {
+    .swiper-demand-cate-380 .swiper-slide {
+        min-width: 76px !important;
+        width: 76px !important;
+    }
+}
+
+/* Swiper Sub Categories (Laptop Brands) Track */
+.swiper-sub-cate-380 {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+.swiper-sub-cate-380 .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    overflow-x: auto !important;
+    gap: 6px !important;
+    padding: 2px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+.swiper-sub-cate-380 .swiper-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+.swiper-sub-cate-380 .swiper-slide {
+    width: auto !important;
+    flex-shrink: 0 !important;
+    display: inline-flex !important;
+    margin-right: 0 !important;
+}
+
+/* 2-row paginated grid for authentic CellphoneS laptop swiper */
+.slide-product-list {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+}
 .slide-product-list .swiper-wrapper {
     display: flex !important;
     flex-direction: column !important;
     flex-wrap: wrap !important;
     height: 940px !important;
+    width: auto !important;
+    max-width: 100% !important;
     overflow-x: auto !important;
+    overflow-y: hidden !important;
     scroll-behavior: smooth !important;
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;

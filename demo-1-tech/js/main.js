@@ -3868,6 +3868,18 @@ function generateSmartBotResponse(query) {
 /* ==========================================================================
    LAPTOP SHOWCASE CAROUSEL NAVIGATION (AUTHENTIC CELLPHONES)
    ========================================================================== */
+window.scrollLaptopDemand = function(direction) {
+    const track = document.querySelector('.swiper-demand-cate-380 .swiper-wrapper');
+    if (!track) return;
+    track.scrollBy({ left: direction * 280, behavior: 'smooth' });
+};
+
+window.scrollLaptopBrands = function(direction) {
+    const track = document.querySelector('.swiper-sub-cate-380 .swiper-wrapper');
+    if (!track) return;
+    track.scrollBy({ left: direction * 220, behavior: 'smooth' });
+};
+
 window.scrollLaptopProducts = function(direction) {
     const track = document.getElementById('laptop-products-track') || document.querySelector('.slide-product-list .swiper-wrapper');
     if (!track) return;
