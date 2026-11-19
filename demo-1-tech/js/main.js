@@ -3868,21 +3868,107 @@ function generateSmartBotResponse(query) {
 /* ==========================================================================
    LAPTOP SHOWCASE CAROUSEL NAVIGATION (AUTHENTIC CELLPHONES)
    ========================================================================== */
-window.scrollLaptopDemand = function(direction) {
-    const track = document.querySelector('.swiper-demand-cate-380 .swiper-wrapper');
-    if (!track) return;
-    track.scrollBy({ left: direction * 280, behavior: 'smooth' });
+
+
+// =============================================================================
+// COMPUTER SHOWCASE TABS & CAROUSELS LOGIC
+// =============================================================================
+const COMP_SHOWCASE_BANNERS = {
+    laptop: {
+        src: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:321:795/q:100/plain/https://media-asset.cellphones.com.vn/page_configs/xEQOKUA6nNHUioxg6W2W5PJOi8V80THOHqs7r74i.png',
+        alt: 'AMD X MICROSOFT X CELLPHONES desk',
+        href: 'sanpham.html?category=laptop'
+    },
+    monitor: {
+        src: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:321:795/q:100/plain/https://media-asset.cellphones.com.vn/page_configs/xEQOKUA6nNHUioxg6W2W5PJOi8V80THOHqs7r74i.png',
+        alt: 'Màn hình máy tính chính hãng giá tốt',
+        href: 'sanpham.html?category=man-hinh'
+    },
+    pc: {
+        src: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:321:795/q:100/plain/https://media-asset.cellphones.com.vn/page_configs/xEQOKUA6nNHUioxg6W2W5PJOi8V80THOHqs7r74i.png',
+        alt: 'Build PC Gaming & Đồ họa đỉnh cao',
+        href: 'sanpham.html?category=pc'
+    },
+    accessories: {
+        src: 'https://cdn2.cellphones.com.vn/insecure/rs:fill:321:795/q:100/plain/https://media-asset.cellphones.com.vn/page_configs/xEQOKUA6nNHUioxg6W2W5PJOi8V80THOHqs7r74i.png',
+        alt: 'Phụ kiện máy tính chuột phím cao cấp',
+        href: 'sanpham.html?category=phu-kien-may-tinh'
+    }
 };
 
-window.scrollLaptopBrands = function(direction) {
-    const track = document.querySelector('.swiper-sub-cate-380 .swiper-wrapper');
+window.selectComputerShowcaseTab = function(tabKey) {
+    const categories = ['laptop', 'monitor', 'pc', 'accessories'];
+    if (!categories.includes(tabKey)) return;
+
+    categories.forEach(cat => {
+        const btn = document.getElementById('comp-tab-' + cat);
+        const panel = document.getElementById('comp-panel-' + cat);
+        if (!btn) return;
+
+        if (cat === tabKey) {
+            btn.className = 'md:text-md min-h-12 flex-1 cursor-pointer border-b-2 from-5% to-60% px-2 text-base font-semibold transition-all duration-200 ease-in-out md:min-h-15 md:px-4 text-[#d70018] border-[#d70018] from-red-50 to-transparent bg-gradient-to-t md:uppercase';
+            if (panel) {
+                panel.classList.remove('hidden');
+                panel.style.display = 'block';
+            }
+        } else {
+            btn.className = 'md:text-md min-h-12 flex-1 cursor-pointer border-b from-5% to-60% px-2 text-base font-semibold transition-all duration-200 ease-in-out md:min-h-15 md:px-4 border-neutral-100 bg-white text-neutral-800 hover:border-neutral-300 hover:bg-neutral-50 md:uppercase';
+            if (panel) {
+                panel.classList.add('hidden');
+                panel.style.display = 'none';
+            }
+        }
+    });
+
+    const bannerImg = document.getElementById('comp-showcase-banner-img');
+    const bannerLink = document.getElementById('comp-showcase-banner-link');
+    const bannerData = COMP_SHOWCASE_BANNERS[tabKey];
+    if (bannerData) {
+        if (bannerImg) {
+            bannerImg.src = bannerData.src;
+            bannerImg.alt = bannerData.alt;
+        }
+        if (bannerLink) {
+            bannerLink.href = bannerData.href;
+        }
+    }
+};
+
+window.scrollCompProducts = function(direction, category) {
+    const activePanel = category 
+        ? document.getElementById('comp-panel-' + category) 
+        : document.querySelector('.comp-tab-panel:not(.hidden)');
+    if (!activePanel) return;
+    const track = activePanel.querySelector('.slide-product-list .swiper-wrapper') || activePanel.querySelector('#laptop-products-track');
+    if (!track) return;
+    const scrollAmount = track.clientWidth > 600 ? 840 : 340;
+    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+};
+
+window.scrollCompDemand = function(direction, category) {
+    const activePanel = category 
+        ? document.getElementById('comp-panel-' + category) 
+        : document.querySelector('.comp-tab-panel:not(.hidden)');
+    if (!activePanel) return;
+    const track = activePanel.querySelector('[class*="swiper-demand-cate-"] .swiper-wrapper') || activePanel.querySelector('#laptop-demand-track');
+    if (!track) return;
+    track.scrollBy({ left: direction * 250, behavior: 'smooth' });
+};
+
+window.scrollCompBrands = function(direction, category) {
+    const activePanel = category 
+        ? document.getElementById('comp-panel-' + category) 
+        : document.querySelector('.comp-tab-panel:not(.hidden)');
+    if (!activePanel) return;
+    const track = activePanel.querySelector('[class*="swiper-sub-cate-"] .swiper-wrapper');
     if (!track) return;
     track.scrollBy({ left: direction * 220, behavior: 'smooth' });
 };
 
+window.scrollLaptopDemand = function(direction) {
+    window.scrollCompDemand(direction, 'laptop');
+};
+
 window.scrollLaptopProducts = function(direction) {
-    const track = document.getElementById('laptop-products-track') || document.querySelector('.slide-product-list .swiper-wrapper');
-    if (!track) return;
-    const scrollAmount = track.clientWidth > 600 ? 840 : 340;
-    track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    window.scrollCompProducts(direction, 'laptop');
 };

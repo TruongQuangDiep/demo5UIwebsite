@@ -567,13 +567,13 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
 .shadow-bottom-400 { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08) !important; }
 
 /* Swiper Demand Categories Track (Laptop Nhu Cầu) */
-.swiper-demand-cate-380 {
+.swiper-demand-cate-380, [class*="swiper-demand-cate-"], [class*="swiper-demand-cate-"] {
     position: relative !important;
     overflow: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
 }
-.swiper-demand-cate-380 .swiper-wrapper {
+.swiper-demand-cate-380, [class*="swiper-demand-cate-"], [class*="swiper-demand-cate-"] .swiper-wrapper {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
@@ -584,10 +584,10 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
-.swiper-demand-cate-380 .swiper-wrapper::-webkit-scrollbar {
+.swiper-demand-cate-380, [class*="swiper-demand-cate-"], [class*="swiper-demand-cate-"] .swiper-wrapper::-webkit-scrollbar {
     display: none !important;
 }
-.swiper-demand-cate-380 .swiper-slide {
+.swiper-demand-cate-380, [class*="swiper-demand-cate-"], [class*="swiper-demand-cate-"] .swiper-slide {
     width: auto !important;
     min-width: 130px !important;
     flex-shrink: 0 !important;
@@ -596,20 +596,20 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
     margin-right: 0 !important;
 }
 @media (max-width: 767px) {
-    .swiper-demand-cate-380 .swiper-slide {
+    .swiper-demand-cate-380, [class*="swiper-demand-cate-"], [class*="swiper-demand-cate-"] .swiper-slide {
         min-width: 76px !important;
         width: 76px !important;
     }
 }
 
 /* Swiper Sub Categories (Laptop Brands) Track */
-.swiper-sub-cate-380 {
+.swiper-sub-cate-380, [class*="swiper-sub-cate-"], [class*="swiper-sub-cate-"] {
     position: relative !important;
     overflow: hidden !important;
     width: 100% !important;
     max-width: 100% !important;
 }
-.swiper-sub-cate-380 .swiper-wrapper {
+.swiper-sub-cate-380, [class*="swiper-sub-cate-"], [class*="swiper-sub-cate-"] .swiper-wrapper {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: nowrap !important;
@@ -620,10 +620,10 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
     scrollbar-width: none !important;
     -ms-overflow-style: none !important;
 }
-.swiper-sub-cate-380 .swiper-wrapper::-webkit-scrollbar {
+.swiper-sub-cate-380, [class*="swiper-sub-cate-"], [class*="swiper-sub-cate-"] .swiper-wrapper::-webkit-scrollbar {
     display: none !important;
 }
-.swiper-sub-cate-380 .swiper-slide {
+.swiper-sub-cate-380, [class*="swiper-sub-cate-"], [class*="swiper-sub-cate-"] .swiper-slide {
     width: auto !important;
     flex-shrink: 0 !important;
     display: inline-flex !important;
@@ -669,4 +669,12 @@ section .bg-white.rounded-xl.hover\:shadow-md:hover {
         width: 165px !important;
         margin-right: 4px !important;
     }
+}
+
+/* Computer Showcase Tab Panels */
+.comp-tab-panel.hidden {
+    display: none !important;
+}
+.comp-tab-panel:not(.hidden) {
+    display: block !important;
 }
