@@ -1,3 +1,9 @@
+
+function refreshLucideIcons() {
+    if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+    }
+}
 /**
  * MAIN INTERACTION & CLIENT-SIDE SPA ROUTER - TECHPULSE STORE (DEMO 1)
  * Chuyển trang mượt mà không load lại Header/Footer + Tự động tái kích hoạt dữ liệu trang.
@@ -8,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     initApp();
     setupSPARouter();
     runPageSpecificScripts();
+    refreshLucideIcons();
 });
 
 let cachedHeaderHtml = null;
@@ -90,6 +97,7 @@ function fixComponentLinks() {
 // Khởi tạo các tương tác dùng chung toàn trang
 function initApp() {
     fixComponentLinks();
+    refreshLucideIcons();
     setupMobileMenu();
     setupHeaderScroll();
     setupHeaderDropdowns();
@@ -266,7 +274,7 @@ const MEGA_MENU_DATA = {
         ],
         col2: [
             {
-                title: "Điện thoại HOT ⚡",
+                title: "Điện thoại HOT",
                 type: "chips",
                 items: [
                     { name: "iPhone 18 Pro Max", href: "sanpham.html?category=phone" },
@@ -309,7 +317,7 @@ const MEGA_MENU_DATA = {
                 ]
             },
             {
-                title: "Máy tính bảng HOT ⚡",
+                title: "Máy tính bảng HOT",
                 type: "chips",
                 items: [
                     { name: "iPad Pro M5", href: "sanpham.html?category=tablet" },
@@ -742,7 +750,7 @@ const MEGA_MENU_DATA = {
         ],
         col2: [
             {
-                title: "Đồng hồ HOT ⚡",
+                title: "Đồng hồ HOT",
                 type: "chips",
                 items: [
                     { name: "Apple Watch Ultra 2", href: "sanpham.html?category=smartwatch", badge: "Hot" },
@@ -842,7 +850,7 @@ const MEGA_MENU_DATA = {
         ],
         col3: [
             {
-                title: "Phụ kiện HOT ⚡",
+                title: "Phụ kiện HOT",
                 type: "chips",
                 items: [
                     { name: "Củ sạc Anker 65W GaN", href: "sanpham.html?category=accessory", badge: "Hot" },
@@ -969,7 +977,7 @@ const MEGA_MENU_DATA = {
         ],
         col2: [
             {
-                title: "Chủ đề đang HOT ⚡",
+                title: "Chủ đề đang HOT",
                 type: "chips",
                 items: [
                     { name: "So sánh iPhone 16 Pro Max vs S24 Ultra", href: "gioithieu.html", span: 2 },

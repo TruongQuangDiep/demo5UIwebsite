@@ -35,6 +35,8 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <!-- Lucide Icons (Modern Minimalist Icon Family) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
 
@@ -45,8 +47,8 @@
     <div class="bg-white border-b border-slate-200 py-3">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <ol class="flex items-center space-x-2 text-xs text-slate-500">
-                <li><a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
-                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li><a href="index.html" class="hover:text-blue-600 transition"><i data-lucide="home" class="w-3.5 h-3.5 inline"></i>Trang chủ</a></li>
+                <li><i data-lucide="chevron-right" class="w-3 h-3 inline text-neutral-400"></i></li>
                 <li class="font-semibold text-slate-900" id="breadcrumb-current">Danh mục sản phẩm</li>
             </ol>
         </div>
@@ -63,7 +65,7 @@
                     
                     <div class="flex items-center justify-between pb-4 border-b border-slate-100">
                         <h3 class="font-bold text-slate-900 flex items-center gap-2">
-                            <i class="fa-solid fa-filter text-red-600 text-sm"></i> Bộ Lọc Tìm Kiếm
+                            <i data-lucide="filter" class="w-3.5 h-3.5 inline"></i> Bộ Lọc Tìm Kiếm
                         </h3>
                         <button id="reset-filters-btn" class="text-xs text-red-600 hover:underline font-medium">Đặt lại</button>
                     </div>
@@ -167,7 +169,7 @@
                         <!-- Search Box in Product page -->
                         <div class="relative flex-1 sm:w-60 flex items-center">
                             <input type="text" id="filter-search-input" placeholder="Tìm theo tên..." class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-3 py-2 text-xs focus:outline-none focus:border-blue-500">
-                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                            <i data-lucide="search" class="w-4 h-4 inline"></i>
                         </div>
 
                         <!-- Sort selector -->
