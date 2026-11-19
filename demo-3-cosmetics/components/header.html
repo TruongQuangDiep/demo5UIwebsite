@@ -1,0 +1,112 @@
+<!-- Top Announcement Bar -->
+<div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-2">
+            <span class="bg-amber-500 text-stone-950 font-extrabold px-2 py-0.5 rounded text-[10px]">GLOW BEAUTY</span>
+            <span>Miễn phí vận chuyển toàn quốc đơn từ 500K - Tặng set quà minisize trị giá 350.000₫</span>
+        </div>
+        <div class="flex items-center gap-4 text-stone-400">
+            <a href="lienhe.html" class="hover:text-amber-400 transition"><i class="fa-solid fa-location-dot mr-1 text-amber-500"></i>Store: 88 Đồng Khởi, Q.1</a>
+            <span>|</span>
+            <a href="tel:19006060" class="hover:text-amber-400 font-semibold"><i class="fa-solid fa-phone mr-1 text-amber-500"></i>Tư vấn da: 1900 6060</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation Header (2 Rows) -->
+<header id="site-header" class="bg-white/95 backdrop-blur-md text-stone-800 border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- ROW 1: Logo + Expanded Search Bar + User/Cart Actions -->
+        <div class="flex items-center justify-between h-20 gap-6">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+                <div class="w-11 h-11 rounded-2xl bg-gradient-to-tr from-amber-600 via-rose-500 to-amber-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-amber-500/25 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-sparkles"></i>
+                </div>
+                <div>
+                    <span class="text-2xl font-serif font-black tracking-wider bg-gradient-to-r from-stone-900 via-stone-800 to-amber-700 bg-clip-text text-transparent">GlowAura</span>
+                    <p class="text-[10px] text-amber-600 tracking-widest uppercase font-semibold">Dermatological Luxury</p>
+                </div>
+            </a>
+
+            <!-- Big Search Bar (Expanded & Prominent) -->
+            <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+                <form class="header-search-form relative w-full flex items-center">
+                    <input type="text" placeholder="Tìm kiếm serum B5, kem peptide, chống nắng quang phổ rộng, tẩy trang..." class="w-full bg-stone-100 text-stone-800 pl-5 pr-12 py-3 rounded-full text-xs sm:text-sm border border-stone-200 focus:outline-none focus:border-amber-600 focus:ring-2 focus:ring-amber-200 transition placeholder-stone-400 shadow-inner">
+                    <button type="submit" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-9 h-9 bg-stone-900 hover:bg-stone-800 text-amber-400 rounded-full flex items-center justify-center transition shadow-md shadow-stone-900/30">
+                        <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Actions -->
+            <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+                <!-- Account Button -->
+                <a href="dangnhap.html" class="text-stone-700 hover:text-amber-600 text-xs font-semibold flex items-center gap-2 py-2.5 px-3.5 rounded-xl bg-stone-100 hover:bg-stone-200 border border-stone-200 transition">
+                    <i class="fa-regular fa-user text-amber-600 text-sm"></i>
+                    <span class="hidden sm:inline">Tài khoản</span>
+                </a>
+
+                <!-- Cart Button with Live Badge -->
+                <a href="giohang.html" class="relative bg-stone-900 hover:bg-stone-800 text-white p-2.5 sm:px-4 sm:py-2.5 rounded-xl flex items-center gap-2 transition group shadow-md shadow-stone-900/20">
+                    <i class="fa-solid fa-bag-shopping text-sm text-amber-400 group-hover:scale-110 transition"></i>
+                    <span class="hidden sm:inline text-xs font-bold">Giỏ hàng</span>
+                    <span class="cart-count-badge hidden absolute -top-1.5 -right-1.5 bg-rose-600 text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow-md">0</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-stone-700 hover:text-amber-600 p-2">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- ROW 2: Navigation Categories Bar (Desktop) -->
+        <div class="hidden lg:flex items-center justify-between border-t border-stone-200/70 py-2.5">
+            <nav class="flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-stone-600 hover:text-amber-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-house text-xs text-amber-500"></i> Trang chủ
+                </a>
+                <a href="sanpham.html" class="text-stone-600 hover:text-amber-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-sparkles text-xs text-amber-500"></i> Sản phẩm
+                </a>
+                <a href="khuyenmai.html" class="text-stone-600 hover:text-amber-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-gift text-xs text-amber-500"></i> Ưu đãi
+                    <span class="bg-rose-500 text-white text-[10px] px-1.5 py-0.2 rounded-full font-bold ml-0.5">HOT</span>
+                </a>
+                <a href="gioithieu.html" class="text-stone-600 hover:text-amber-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-gem text-xs text-amber-500"></i> Thương hiệu
+                </a>
+                <a href="lienhe.html" class="text-stone-600 hover:text-amber-600 transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-headset text-xs text-amber-500"></i> Tư vấn da / Liên hệ
+                </a>
+            </nav>
+
+            <div class="text-xs text-amber-700 font-semibold flex items-center gap-2">
+                <i class="fa-solid fa-shield-halved text-amber-600"></i>
+                <span>100% Chính Hãng Dược Mỹ Phẩm Châu Âu • Đổi trả 14 ngày</span>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden pb-3">
+            <form class="header-search-form relative w-full flex items-center">
+                <input type="text" placeholder="Tìm sản phẩm skincare..." class="w-full bg-stone-100 text-stone-800 pl-4 pr-11 py-2 rounded-xl text-xs border border-stone-200 focus:outline-none focus:border-amber-600">
+                <button type="submit" class="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 bg-stone-900 text-amber-400 rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+        <a href="index.html" class="block py-2 text-stone-700 hover:text-amber-600 border-b border-stone-100"><i class="fa-solid fa-house w-6 text-amber-500"></i>Trang chủ</a>
+        <a href="sanpham.html" class="block py-2 text-stone-700 hover:text-amber-600 border-b border-stone-100"><i class="fa-solid fa-sparkles w-6 text-amber-500"></i>Danh mục sản phẩm</a>
+        <a href="khuyenmai.html" class="block py-2 text-stone-700 hover:text-amber-600 border-b border-stone-100"><i class="fa-solid fa-gift w-6 text-amber-500"></i>Ưu đãi độc quyền</a>
+        <a href="gioithieu.html" class="block py-2 text-stone-700 hover:text-amber-600 border-b border-stone-100"><i class="fa-solid fa-gem w-6 text-amber-500"></i>Về GlowAura Beauty</a>
+        <a href="lienhe.html" class="block py-2 text-stone-700 hover:text-amber-600 border-b border-stone-100"><i class="fa-solid fa-headset w-6 text-amber-500"></i>Tư vấn da & Liên hệ</a>
+        <a href="dangnhap.html" class="block py-2 text-stone-700 hover:text-amber-600"><i class="fa-solid fa-user w-6 text-amber-500"></i>Đăng nhập / Đăng ký</a>
+    </div>
+</header>

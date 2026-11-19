@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NordicLiving - Nội Thất & Trang Trí Scandinavian Tối Giản Bắc Âu</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#211f1d',
+                            950: '#141210',
+                        },
+                        amber: {
+                            750: '#92400e',
+                            850: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <main class="flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="relative overflow-hidden bg-stone-900 text-white py-20 lg:py-28">
+            <div class="absolute inset-0 z-0 opacity-40">
+                <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1920&q=80" alt="Scandinavian Interior" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-r from-stone-950 via-stone-900/80 to-transparent z-0"></div>
+
+            <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-2xl space-y-6">
+                    <div class="inline-flex items-center gap-2 bg-amber-900/60 border border-amber-600/40 text-amber-300 text-xs font-bold uppercase tracking-widest px-3.5 py-1.5 rounded-full backdrop-blur-md">
+                        <i class="fa-solid fa-leaf text-amber-400"></i> Scandinavian Living 2026
+                    </div>
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight">
+                        Tối Giản Tinh Tế, Ấm Áp Chuẩn Hygge
+                    </h1>
+                    <p class="text-stone-300 text-sm sm:text-base leading-relaxed font-light">
+                        Biến ngôi nhà thành chốn bình yên đích thực với nội thất gỗ tự nhiên sồi & óc chó Bắc Âu, phom dáng công thái học tối giản và chất liệu vải nỉ hữu cơ bền vững.
+                    </p>
+                    <div class="pt-4 flex flex-wrap gap-4">
+                        <a href="sanpham.html" class="bg-amber-700 hover:bg-amber-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-full transition shadow-lg shadow-amber-900/40 flex items-center gap-2">
+                            <span>Khám Phá Bộ Sưu Tập</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="lienhe.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-full transition backdrop-blur-md flex items-center gap-2">
+                            <i class="fa-solid fa-compass-drafting text-amber-400"></i>
+                            <span>Tư Vấn Thiết Kế 3D</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4 Core Pillars -->
+        <section class="py-10 bg-white border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="flex items-center gap-4 p-3">
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 flex items-center justify-center text-amber-700 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-tree"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-stone-900 text-sm">100% Gỗ Tự Nhiên FSC</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">Sồi trắng & óc chó Bắc Mỹ tuyển chọn</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-3">
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 flex items-center justify-center text-amber-700 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-stone-900 text-sm">Bảo Hành 5 Năm Tại Nhà</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">Bảo trì trọn đời khung sườn & đệm</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-3">
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 flex items-center justify-center text-amber-700 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-stone-900 text-sm">Miễn Phí Vận Chuyển</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">Lắp ráp trọn gói cho đơn từ 5 triệu</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-3">
+                        <div class="w-12 h-12 rounded-2xl bg-stone-100 flex items-center justify-center text-amber-700 text-xl flex-shrink-0">
+                            <i class="fa-solid fa-cube"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-serif font-bold text-stone-900 text-sm">Mô Phỏng 3D Không Gian</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">Phối cảnh căn hộ miễn phí trước khi mua</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Grid -->
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-2">Không Gian Sống</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900">Danh Mục Nội Thất Nổi Bật</h2>
+                <p class="text-stone-500 text-xs sm:text-sm mt-2">Tuyển tập những món đồ tạo tác nên linh hồn của không gian sống hiện đại</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <a href="sanpham.html?category=sofa" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Sofa & Ghế Bành</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Êm ái & Tối giản</p>
+                </a>
+                <a href="sanpham.html?category=table" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-utensils"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Bàn Ăn & Trà</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Gỗ sồi nguyên tấm</p>
+                </a>
+                <a href="sanpham.html?category=chair" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-chair"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Ghế Thư Giãn</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Lounge chair da thật</p>
+                </a>
+                <a href="sanpham.html?category=bed" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Giường Ngủ</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Bọc đầu giường êm</p>
+                </a>
+                <a href="sanpham.html?category=shelf" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-table-cells-large"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Hệ Tủ Kệ Sách</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Module thông minh</p>
+                </a>
+                <a href="sanpham.html?category=decor" class="group bg-white rounded-2xl p-5 border border-stone-200 text-center hover:border-amber-700 hover:shadow-lg transition">
+                    <div class="w-14 h-14 mx-auto mb-3 rounded-full bg-stone-100 group-hover:bg-amber-50 flex items-center justify-center text-stone-700 group-hover:text-amber-800 text-xl transition">
+                        <i class="fa-solid fa-lightbulb"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-stone-800 text-sm group-hover:text-amber-800">Đèn & Thảm Len</h3>
+                    <p class="text-[11px] text-stone-400 mt-1">Ánh sáng ấm 3000K</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products Grid -->
+        <section class="py-16 bg-white border-y border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                    <div>
+                        <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-1">Kiệt Tác Thiết Kế</span>
+                        <h2 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900">Sản Phẩm Được Yêu Thích Nhất</h2>
+                    </div>
+                    <a href="sanpham.html" class="text-xs font-bold uppercase tracking-wider text-amber-800 hover:text-amber-900 flex items-center gap-1.5 transition">
+                        <span>Xem tất cả 8 sản phẩm</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Hygge Lifestyle Banner -->
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-stone-900 text-white rounded-3xl overflow-hidden shadow-xl grid grid-cols-1 lg:grid-cols-2">
+                <div class="p-8 sm:p-14 flex flex-col justify-center space-y-6">
+                    <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Triết Lý Thiết Kế</span>
+                    <h3 class="text-2xl sm:text-4xl font-serif font-bold text-white leading-snug">
+                        "Hygge" - Hạnh Phúc Từ Những Điều Giản Đơn Trong Gian Nhà
+                    </h3>
+                    <p class="text-stone-300 text-xs sm:text-sm leading-relaxed font-light">
+                        Người Bắc Âu tin rằng ngôi nhà không chỉ là nơi che nắng che mưa, mà là nơi nuôi dưỡng cảm xúc. Mỗi chiếc ghế, mặt bàn của NordicLiving đều được bo tròn góc cạnh, tạo cảm giác an toàn, thư thái và gắn kết mọi thành viên trong gia đình.
+                    </p>
+                    <div class="pt-2 flex items-center gap-6">
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-amber-400">12.000+</span>
+                            <span class="text-[11px] text-stone-400 uppercase tracking-wider">Căn hộ đã bài trí</span>
+                        </div>
+                        <div class="h-10 w-[1px] bg-stone-700"></div>
+                        <div>
+                            <span class="block text-3xl font-serif font-bold text-amber-400">99.4%</span>
+                            <span class="text-[11px] text-stone-400 uppercase tracking-wider">Khách hàng hài lòng</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative min-h-[320px] lg:min-h-full">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1000&q=80" alt="Hygge Lifestyle" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('featured-products-grid');
+            if (grid && typeof PRODUCTS !== 'undefined') {
+                grid.innerHTML = PRODUCTS.slice(0, 4).map(p => renderProductCard(p, false)).join('');
+            }
+        });
+    </script>
+</body>
+</html>

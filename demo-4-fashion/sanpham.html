@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Streetwear Drop - URBANVIBE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #14151c;
+            background-image: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%);
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#14151c] text-white flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-[#181922] border-b border-zinc-700/60 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-zinc-400">
+                <li><a href="index.html" class="hover:text-amber-400 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-zinc-600"></i></li>
+                <li class="font-bold text-white uppercase tracking-wider">Bộ Sưu Tập Streetwear Drop</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <!-- Header Section -->
+        <div class="text-center max-w-xl mx-auto mb-10">
+            <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Catalog 2026</span>
+            <h1 class="text-3xl sm:text-4xl font-display font-black uppercase text-white mt-1">Bộ Sưu Tập Streetwear</h1>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2 font-light">Tuyển chọn các item bản giới hạn, định lượng vải cao cấp chuẩn phong cách đường phố</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="w-full bg-[#1c1d27] p-4 sm:p-6 rounded-3xl border border-zinc-700/80 shadow-lg mb-8 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Category Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Phân loại Drop</label>
+                    <select id="filter-category" class="w-full bg-[#14151c] border border-zinc-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <option value="all">Tất cả sản phẩm</option>
+                        <option value="hoodie">Áo Hoodie & Sweater 450GSM</option>
+                        <option value="t-shirt">Áo thun Boxy Fit</option>
+                        <option value="pants">Quần Cargo & Jeans</option>
+                        <option value="jacket">Áo khoác Bomber & Techwear</option>
+                        <option value="sneaker">Giày Sneaker Chunky</option>
+                        <option value="accessory">Phụ kiện & Nón Bucket</option>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Mức giá</label>
+                    <select id="filter-price" class="w-full bg-[#14151c] border border-zinc-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <option value="all">Tất cả mức giá</option>
+                        <option value="under-500">Dưới 500.000₫</option>
+                        <option value="500-1000">Từ 500.000₫ - 1.000.000₫</option>
+                        <option value="over-1000">Trên 1.000.000₫ (Sneaker / Bomber)</option>
+                    </select>
+                </div>
+
+                <!-- Sort Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Sắp xếp theo</label>
+                    <select id="sort-select" class="w-full bg-[#14151c] border border-zinc-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <option value="popular">Phổ biến & Đánh giá cao</option>
+                        <option value="price-low">Giá tăng dần</option>
+                        <option value="price-high">Giá giảm dần</option>
+                        <option value="rating">Được yêu thích nhất</option>
+                    </select>
+                </div>
+
+                <!-- Instant Search Input -->
+                <div>
+                    <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Tìm kiếm nhanh</label>
+                    <div class="relative flex items-center">
+                        <input type="text" id="search-input-page" placeholder="Nhập tên hoodie, cargo, sneaker..." class="w-full bg-[#14151c] border border-zinc-700 rounded-xl pl-3 pr-8 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-xs text-zinc-400 pointer-events-none"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-zinc-800 text-xs">
+                <span id="products-count" class="font-black text-amber-400 uppercase tracking-wider">Đang tải...</span>
+                <button onclick="resetFilters()" class="text-zinc-400 hover:text-amber-400 font-bold transition flex items-center gap-1.5">
+                    <i class="fa-solid fa-arrow-rotate-left"></i> Đặt lại bộ lọc
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Rendered dynamically -->
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

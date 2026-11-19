@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ==========================================================================
+   CellphoneS Brand Design System & Core Stylesheet
+   Extracted & compiled directly from cellphones.com.vn production CSS bundles
+   ========================================================================== */
+
+:root {
+    --cpsui-font-sans: 'Inter', "Inter Fallback", Arial, sans-serif;
+    --cpsui-color-yellow-400: #fed530;
+    --cpsui-color-blue-500: #2a63fa;
+    --cpsui-color-black: #1d1d20;
+    --cpsui-color-white: #ffffff;
+    --color-red-50: #fbe6e8;
+    --color-red-200: #f3b0b7;
+    --color-red-500: #e45464;
+    --color-red-600: #d70018;
+    --color-red-700: #b80014;
+    --color-cellphones-500: #d70018;
+    --color-woodsmoke-50: #f7f7f8;
+    --color-woodsmoke-100: #f2f2f3;
+    --color-woodsmoke-200: #e4e4e7;
+    --color-woodsmoke-300: #d4d4d8;
+    --color-woodsmoke-800: #1d1d20;
+}
+
+/* 1. Header Gradient & Component Shadows (Tone Vàng Nhạt Tinh Tế, Nổi Bật Logo SDLC) */
+.bg-header-gradient {
+    background: linear-gradient(180deg, #FFFDF0 0%, #FEF9C3 40%, #FEF08A 100%) !important;
+    color: #1D1D20 !important;
+}
+
+.shadow-bottom-navbar {
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.1), 0 2px 6px 2px rgba(60, 64, 67, 0.15) !important;
+}
+
+/* CellphoneS Signature Card & Frame Shadows (Đổ bóng sắc nét các khung) */
+.shadow-box-md,
+.cps-card,
+.product-item,
+.hero-slider-box,
+section .bg-white.rounded-2xl,
+section .bg-white.rounded-3xl,
+section .bg-white.rounded-xl,
+main .bg-white.rounded-2xl,
+main .bg-white.rounded-3xl,
+.category-chip-box {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.1), 0 2px 6px 2px rgba(60, 64, 67, 0.15), 0 4px 12px rgba(0, 0, 0, 0.05) !important;
+    border-color: rgba(226, 232, 240, 0.7) !important;
+}
+
+/* CellphoneS Authentic Soft Natural Dropdown & Sidebar Shadows (Mờ bóng tự nhiên chuẩn CellphoneS) */
+#category-dropdown-menu,
+#hero-category-sidebar {
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.08), 0 1px 4px 0 rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+    transition: box-shadow 0.25s ease-in-out;
+}
+
+#hero-category-sidebar:hover {
+    box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.04) !important;
+}
+
+#header-mega-panel,
+#hero-mega-panel {
+    box-shadow: 0 12px 32px 0 rgba(0, 0, 0, 0.1), 0 2px 8px 0 rgba(0, 0, 0, 0.04) !important;
+    border: 1px solid rgba(0, 0, 0, 0.06) !important;
+}
+
+.shadow-box {
+    box-shadow: 0 4px 20px -6px rgba(0, 0, 0, 0.14), 0 0 12px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.shadow-box-lg,
+.product-item:hover,
+.cps-card:hover,
+section .bg-white.rounded-2xl.hover\:shadow-md:hover,
+section .bg-white.rounded-xl.hover\:shadow-md:hover {
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 2. CellphoneS Authentic Flip Countdown Timer */
+.FlipCountdown_flip-card__d5z1B {
+    perspective: 1000px;
+    width: 36px;
+    height: 40px;
+    display: inline-block;
+}
+
+.FlipCountdown_flip-card-inner__sruyf {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform-origin: bottom;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
+
+.FlipCountdown_flip-card-back__DtOL2,
+.FlipCountdown_flip-card-front__5fljn {
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: #fff;
+    color: #1d1d20;
+    font-size: 18px;
+    font-weight: 800;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    width: 100%;
+    height: 100%;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.FlipCountdown_flip-card-back__DtOL2 {
+    transform: rotateX(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .FlipCountdown_flip-card__d5z1B {
+        width: 30px;
+        height: 34px;
+    }
+
+    .FlipCountdown_flip-card-back__DtOL2,
+    .FlipCountdown_flip-card-front__5fljn {
+        font-size: 15px;
+        line-height: 34px;
+    }
+}
+
+/* 3. CellphoneS Product Item Promotion Box ("PMH" - Phiếu mua hàng) */
+.product-item .promotion {
+    width: auto;
+    display: flex;
+    gap: 6px;
+    border-radius: 6px;
+    background: #f2f2f3;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 6px;
+    padding: 3px 6px 3px 3px;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.35;
+    text-transform: none;
+    overflow: hidden;
+    border: 1px dashed #e4e4e7;
+}
+
+.product-item .promotion .promo-list {
+    min-width: 52px;
+    height: 32px;
+    border-radius: 4px;
+    font-size: 8px;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.product-item .promotion .promo-list > ul {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.product-item .promotion .promo-list > ul li {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+}
+
+.product-item .promotion .promo-list > ul li.pmh-title {
+    padding: 1px 0 0;
+    background: #2b2b30;
+    font-size: 9px;
+    font-weight: 600;
+    color: #ffd530;
+    text-transform: uppercase;
+}
+
+.product-item .promotion .promo-list > ul li.pmh-content {
+    background: #d70018;
+    color: #ffffff;
+    font-size: 8.5px;
+    font-weight: 800;
+}
+
+.product-item .promotion .promo-list:empty {
+    display: none;
+}
+
+.product-item .promotion .coupon-price,
+.product-item .promotion .gift-cont {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #2b2b30;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+@media screen and (max-width: 640px) {
+    .product-item .promotion {
+        font-size: 10px;
+        gap: 4px;
+        padding: 2px 4px 2px 2px;
+    }
+
+    .product-item .promotion .promo-list {
+        min-width: 46px;
+        height: 28px;
+    }
+
+    .product-item .promotion .promo-list > ul li.pmh-title {
+        font-size: 8px;
+    }
+
+    .product-item .promotion .promo-list > ul li.pmh-content {
+        font-size: 7.5px;
+    }
+
+    .product-item .promotion .coupon-price,
+    .product-item .promotion .gift-cont {
+        font-size: 9.5px;
+    }
+}
+
+/* 4. Mask Ticket Coupon Vouchers (Jagged Ticket Effect) */
+.GroupProductGift_maskTicket__LnP90 {
+    position: relative;
+    border-radius: 16px;
+    padding: 8px 12px;
+    background: #fff;
+    border: none;
+}
+
+@media (max-width: 767px) {
+    .GroupProductGift_maskTicket__LnP90 {
+        mask: radial-gradient(circle 8px at left 30px, transparent 98%, black) left top / 100% 100%,
+              radial-gradient(circle 8px at right 30px, transparent 98%, black) right top / 100% 100%,
+              linear-gradient(black, black);
+        -webkit-mask: radial-gradient(circle 8px at left 30px, transparent 98%, black) left top / 100% 100%,
+                      radial-gradient(circle 8px at right 30px, transparent 98%, black) right top / 100% 100%,
+                      linear-gradient(black, black);
+        -webkit-mask-composite: destination-out;
+        mask-composite: exclude;
+        mask-repeat: no-repeat;
+        -webkit-mask-repeat: no-repeat;
+    }
+}
+
+/* 5. Footer Contact Info */
+.Footer_footer-contact-info__7DVFR {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 4px 0;
+}
+
+.Footer_footer-contact-info__7DVFR strong {
+    color: var(--color-red-600);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* 6. Live Chat Overrides & Popup TNC */
+#ai-chat-messages::-webkit-scrollbar {
+    width: 4px;
+}
+#ai-chat-messages::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+#ai-chat-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+#ai-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* 6.1 Hiệu ứng Rung & Tỏa sóng Radar cho 3 nút liên hệ nổi (Hotline, Zalo, AI Bot) */
+@keyframes actionShake {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    2% { transform: rotate(-10deg) scale(1.08); }
+    4% { transform: rotate(10deg) scale(1.08); }
+    6% { transform: rotate(-10deg) scale(1.08); }
+    8% { transform: rotate(10deg) scale(1.08); }
+    10% { transform: rotate(0deg) scale(1); }
+}
+
+@keyframes actionRadarPulse {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+    70% {
+        transform: scale(1.65);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1.8);
+        opacity: 0;
+    }
+}
+
+.animate-action-shake {
+    animation: actionShake 3.6s ease-in-out infinite;
+}
+
+.animate-action-shake-delay-1 {
+    animation: actionShake 3.6s ease-in-out 1.2s infinite;
+}
+
+.animate-action-shake-delay-2 {
+    animation: actionShake 3.6s ease-in-out 2.4s infinite;
+}
+
+.animate-radar-wave-red {
+    animation: actionRadarPulse 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+.animate-radar-wave-blue {
+    animation: actionRadarPulse 2.2s cubic-bezier(0.24, 0, 0.38, 1) 0.5s infinite;
+}
+
+.animate-radar-wave-ai {
+    animation: actionRadarPulse 2s cubic-bezier(0.24, 0, 0.38, 1) 1s infinite;
+}
+
+#cs-live-chat {
+    display: none !important;
+}
+
+#cs-live-chat[style*="height: 100%"],
+#cs-live-chat[style*="height: 450px"] {
+    display: block !important;
+}
+
+.PopupTnc_content__WdtwK {
+    overflow: auto;
+    padding: 16px;
+}
+
+.PopupTnc_htmlContent__K1WQV a {
+    color: #d70018;
+    font-weight: 500;
+    text-decoration: underline;
+}
+
+.BoxContentOldProduct_content-old-product__VMN8u a {
+    color: var(--cpsui-color-blue-500);
+    font-weight: 700;
+}
+
+.BoxContentOldProduct_content-old-product__VMN8u a:hover {
+    text-decoration: underline;
+}
+
+/* 7. CellphoneS Animation Keyframes */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+}
+
+@keyframes arrow-slide {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(4px); }
+}
+
+.animate-heartbeat {
+    animation: heartbeat 0.8s ease-in-out infinite;
+}
+
+.animate-arrow-slide {
+    animation: arrow-slide 1.8s ease-in-out infinite;
+}
+
+/* 8. Mega Menu & Dropdown Hover Flyout Enhancements */
+#hero-mega-panel,
+#header-mega-panel {
+    animation: fadeInFlyout 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInFlyout {
+    from {
+        opacity: 0;
+        transform: translateX(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Invisible hit-test bridge so cursor never drops when traveling between trigger and flyout */
+#hero-mega-panel::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+}
+
+#header-mega-panel::before {
+    content: "";
+    position: absolute;
+    left: -16px;
+    top: 0;
+    width: 20px;
+    height: 100%;
+}
+
+/* Smooth custom scrollbar for mega menu */
+#hero-mega-panel::-webkit-scrollbar,
+#header-mega-panel::-webkit-scrollbar {
+    width: 5px;
+}
+#hero-mega-panel::-webkit-scrollbar-track,
+#header-mega-panel::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+#hero-mega-panel::-webkit-scrollbar-thumb,
+#header-mega-panel::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+#hero-mega-panel::-webkit-scrollbar-thumb:hover,
+#header-mega-panel::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* CellphoneS Mega Menu Box & Chip Hover Effects */
+#hero-mega-panel a,
+#header-mega-panel a {
+    transition: all 0.15s ease-in-out;
+}
+#hero-mega-panel a:hover,
+#header-mega-panel a:hover {
+    border-color: #d70018 !important;
+    color: #d70018 !important;
+    box-shadow: 0 1px 3px rgba(215, 0, 24, 0.12);
+}
+
+/* 9. Header Infinite Marquee Scrolling Text (Dải chữ chạy ngang CellphoneS) */
+.marquee-track {
+    display: flex;
+    width: max-content;
+    animation: headerMarqueeScroll 28s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes headerMarqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-33.333333%);
+    }
+}
+
+/* 10. CellphoneS Category Item Typography & Icons (Chuẩn 12px Inter, #1D1D20 & Icon 28px, Hình chữ nhật phẳng như CellphoneS) */
+.cps-category-item,
+.sidebar-cat-item,
+.header-cat-item {
+    font-family: 'Inter', "Inter Fallback", Arial, sans-serif !important;
+    font-size: 12px !important;
+    color: #1D1D20 !important;
+    font-weight: 600 !important;
+    line-height: 1.5 !important;
+    border-radius: 0 !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.cps-category-item:hover,
+.sidebar-cat-item:hover,
+.header-cat-item:hover {
+    color: #d70018 !important;
+    background-color: #f2f2f3 !important;
+    border-radius: 0 !important;
+}
+
+.cps-category-item:hover svg,
+.sidebar-cat-item:hover svg,
+.header-cat-item:hover svg {
+    color: #d70018 !important;
+}
+
+/* 11. CellphoneS Tab Showcase Custom Radii & Utilities */
+.rounded-t-large {
+    border-top-left-radius: 12px !important;
+    border-top-right-radius: 12px !important;
+}
+.rounded-large {
+    border-radius: 12px !important;
+}
+
+@media (min-width: 768px) {
+    .md\:rounded-t-1x-large {
+        border-top-left-radius: 16px !important;
+        border-top-right-radius: 16px !important;
+    }
+    .md\:rounded-1x-large {
+        border-radius: 16px !important;
+    }
+}
+
+.border-b-0\! {
+    border-bottom-width: 0px !important;
+}
+
+
+/* 12. CellphoneS Dual Category Showcase (Điện Thoại / Máy Tính Bảng) */
+.cat-tab-btn {
+    font-family: 'Inter', "Inter Fallback", Arial, sans-serif !important;
+    outline: none !important;
+}
+.cat-tab-btn.active {
+    color: #d70018 !important;
+    border-bottom: 2px solid #d70018 !important;
+    background: linear-gradient(0deg, rgba(215, 0, 24, 0.08) 5%, rgba(255, 255, 255, 0.02) 60%) !important;
+}
+
+
+/* 13. CellphoneS Laptop Showcase & Accessories Grid (Authentic Layout) */
+.size-18 { width: 4.5rem !important; height: 4.5rem !important; }
+.size-12 { width: 3rem !important; height: 3rem !important; }
+.size-5\.5 { width: 1.375rem !important; height: 1.375rem !important; }
+.size-7\.5 { width: 1.875rem !important; height: 1.875rem !important; }
+.w-18\.5 { width: 4.625rem !important; }
+.w-18\.75 { width: 4.6875rem !important; }
+.w-19\.5 { width: 4.875rem !important; }
+.h-7\.25 { height: 1.8125rem !important; }
+.h-10\.5 { height: 2.625rem !important; }
+.h-5\.5 { height: 1.375rem !important; }
+.-right-1\.25 { right: -0.3125rem !important; }
+.bg-linear-to-t { background-image: linear-gradient(to top, var(--tw-gradient-stops)) !important; }
+.bg-linear-to-r { background-image: linear-gradient(to right, var(--tw-gradient-stops)) !important; }
+.from-primary-500\/11 { --tw-gradient-from: rgba(215, 0, 24, 0.11) !important; --tw-gradient-to: rgba(215, 0, 24, 0) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.from-neutral-500\/11 { --tw-gradient-from: rgba(115, 115, 115, 0.11) !important; --tw-gradient-to: rgba(115, 115, 115, 0) !important; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important; }
+.to-pure-white\/5 { --tw-gradient-to: rgba(255, 255, 255, 0.05) !important; }
+.text-primary-500 { color: #d70018 !important; }
+.border-primary-500 { border-color: #d70018 !important; }
+.text-primary-600 { color: #c40016 !important; }
+.bg-negative-100 { background-color: #fee2e2 !important; }
+.text-negative-900 { color: #7f1d1d !important; }
+.shadow-bottom-50 { box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05) !important; }
+.shadow-bottom-200 { box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05) !important; }
+.shadow-bottom-400 { box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08) !important; }
+
+/* 2-row paginated grid for authentic CellphoneS swiper */
+.slide-product-list .swiper-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-wrap: wrap !important;
+    height: 940px !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
+.slide-product-list .swiper-wrapper::-webkit-scrollbar {
+    display: none !important;
+}
+.slide-product-list .swiper-slide {
+    height: calc(50% - 6px) !important;
+    width: 204.5px !important;
+    margin-right: 6px !important;
+    flex-shrink: 0 !important;
+}
+
+@media (max-width: 639px) {
+    .slide-product-list .swiper-wrapper {
+        height: 760px !important;
+    }
+    .slide-product-list .swiper-slide {
+        height: calc(50% - 4px) !important;
+        width: 165px !important;
+        margin-right: 4px !important;
+    }
+}

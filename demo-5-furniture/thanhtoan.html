@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán & Hẹn Giờ Giao Lắp - NORDICLIVING</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#211f1d',
+                            950: '#141210',
+                        },
+                        amber: {
+                            750: '#92400e',
+                            850: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-stone-100 border-b border-stone-200 py-3.5">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-800 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i></li>
+                <li><a href="giohang.html" class="hover:text-amber-800 transition">Giỏ hàng</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i></li>
+                <li class="font-bold text-stone-900 uppercase tracking-wider">Thanh Toán & Đặt Lịch Giao</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="mb-8">
+            <h1 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">Đặt Lịch Giao Hàng & Lắp Đặt</h1>
+            <p class="text-xs sm:text-sm text-stone-500 mt-1">Vui lòng điền thông tin địa chỉ căn hộ để đội ngũ kỹ sư NordicLiving chuẩn bị bốc xếp và hỗ trợ lắp đặt trọn gói</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left: Checkout Form (7 cols) -->
+            <div class="lg:col-span-7 space-y-8">
+                
+                <!-- Step 1: Customer Information -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                        <div class="w-7 h-7 rounded-full bg-stone-900 text-white flex items-center justify-center font-bold text-xs">1</div>
+                        <h2 class="font-serif font-bold text-stone-900 text-lg">Thông Tin Người Nhận</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Họ và tên *</label>
+                            <input type="text" id="cust-name" required placeholder="Nguyễn Văn A" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Số điện thoại *</label>
+                            <input type="tel" id="cust-phone" required placeholder="0912 345 678" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Địa chỉ Email (Nhận phiếu bảo hành điện tử)</label>
+                        <input type="email" id="cust-email" placeholder="example@gmail.com" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Tỉnh / Thành phố *</label>
+                            <select id="cust-city" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs text-stone-800 focus:outline-none focus:border-amber-700">
+                                <option value="hanoi">Hà Nội (Giao & Lắp trong ngày)</option>
+                                <option value="hcm">TP. Hồ Chí Minh (Giao & Lắp trong ngày)</option>
+                                <option value="danang">Đà Nẵng (Giao trong 2-3 ngày)</option>
+                                <option value="other">Tỉnh / Thành phố khác</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Quận / Huyện *</label>
+                            <input type="text" id="cust-district" required placeholder="Quận Tây Hồ, Ba Đình, Cầu Giấy..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Địa chỉ nhà / Căn hộ chi tiết *</label>
+                        <input type="text" id="cust-address" required placeholder="Số nhà, Tên tòa chung cư, Tầng / Số phòng căn hộ..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Ghi chú giao hàng & Thang máy vận chuyển</label>
+                        <textarea id="cust-notes" rows="2" placeholder="Ví dụ: Chung cư có thang máy hàng, vui lòng giao vào sáng thứ 7 để có người nhà nhận..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"></textarea>
+                    </div>
+                </div>
+
+                <!-- Step 2: Payment Method -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 sm:p-8 shadow-sm space-y-4">
+                    <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                        <div class="w-7 h-7 rounded-full bg-stone-900 text-white flex items-center justify-center font-bold text-xs">2</div>
+                        <h2 class="font-serif font-bold text-stone-900 text-lg">Phương Thức Thanh Toán</h2>
+                    </div>
+
+                    <div class="space-y-3 pt-2">
+                        <!-- Option 1: VietQR -->
+                        <label class="border-2 border-amber-700 bg-amber-50/40 rounded-xl p-4 flex items-start gap-4 cursor-pointer transition block">
+                            <input type="radio" name="payment_method" value="vietqr" checked class="mt-1 text-amber-700 focus:ring-amber-700">
+                            <div class="flex-1">
+                                <div class="flex items-center justify-between">
+                                    <span class="font-bold text-xs uppercase tracking-wider text-stone-900">Chuyển Khoản Ngân Hàng VietQR 24/7 (Khuyên Dùng)</span>
+                                    <span class="bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">Tự Động 30s</span>
+                                </div>
+                                <p class="text-xs text-stone-500 mt-1">Hệ thống tạo mã QR động đúng số tiền, xác nhận thanh toán tức thì mà không cần chụp màn hình ủy nhiệm chi.</p>
+                            </div>
+                        </label>
+
+                        <!-- Option 2: COD -->
+                        <label class="border border-stone-200 hover:border-amber-700 rounded-xl p-4 flex items-start gap-4 cursor-pointer transition block bg-stone-50/40">
+                            <input type="radio" name="payment_method" value="cod" class="mt-1 text-amber-700 focus:ring-amber-700">
+                            <div class="flex-1">
+                                <span class="font-bold text-xs uppercase tracking-wider text-stone-900">Thanh Toán Khi Nghiệm Thu & Bàn Giao (COD)</span>
+                                <p class="text-xs text-stone-500 mt-1">Kiểm tra bề mặt gỗ, đường may nỉ và tính năng sản phẩm trước khi thanh toán tiền mặt hoặc quẹt thẻ cho kỹ thuật viên.</p>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Order Summary (5 cols) -->
+            <div class="lg:col-span-5">
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm sticky top-28 space-y-6">
+                    <h3 class="font-serif font-bold text-stone-900 text-lg border-b border-stone-100 pb-3">Đơn Hàng Của Bạn</h3>
+
+                    <!-- Order items preview -->
+                    <div id="checkout-items-list" class="space-y-3 max-h-72 overflow-y-auto pr-1 divide-y divide-stone-100">
+                        <!-- Populated dynamically -->
+                    </div>
+
+                    <!-- Price breakdown -->
+                    <div class="border-t border-stone-100 pt-4 space-y-2.5 text-xs text-stone-600">
+                        <div class="flex justify-between">
+                            <span>Tạm tính nội thất:</span>
+                            <span id="co-subtotal" class="font-bold text-stone-900">0₫</span>
+                        </div>
+                        <div class="flex justify-between text-emerald-700">
+                            <span>Ưu đãi áp dụng:</span>
+                            <span id="co-discount" class="font-bold">-0₫</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Vận chuyển & Lắp đặt:</span>
+                            <span id="co-shipping" class="font-bold text-stone-900">Miễn phí</span>
+                        </div>
+                        <div class="border-t border-stone-200 pt-3 flex justify-between items-baseline">
+                            <span class="font-serif font-bold text-stone-900 text-base">Tổng cộng:</span>
+                            <span id="co-total" class="font-serif font-bold text-2xl text-amber-800">0₫</span>
+                        </div>
+                    </div>
+
+                    <!-- Confirm Order CTA -->
+                    <button onclick="handlePlaceOrder()" class="w-full bg-stone-900 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition shadow-xl flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-lock text-amber-400"></i>
+                        <span>Xác Nhận Đặt Hàng & Giao Lắp</span>
+                    </button>
+
+                    <div class="text-[11px] text-stone-400 text-center leading-relaxed">
+                        Bằng việc bấm đặt hàng, bạn đồng ý với các Điều khoản dịch vụ và Chính sách bảo hành 5 năm của NordicLiving.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- VietQR Simulation Modal -->
+    <div id="vietqr-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-stone-200 text-center space-y-5 animate-scale-up">
+            <div class="flex items-center justify-between border-b border-stone-100 pb-3">
+                <div class="flex items-center gap-2 text-amber-800 font-bold text-xs uppercase tracking-wider">
+                    <i class="fa-solid fa-qrcode text-lg"></i>
+                    <span>Cổng Thanh Toán VietQR 24/7</span>
+                </div>
+                <button onclick="closeVietQrModal()" class="text-stone-400 hover:text-stone-700 text-sm">✕</button>
+            </div>
+
+            <div>
+                <p class="text-xs text-stone-500 mb-3">Mở ứng dụng Mobile Banking bất kỳ để quét mã thanh toán tức thì</p>
+                <div class="bg-stone-50 border border-stone-200 p-4 rounded-2xl inline-block shadow-inner">
+                    <img id="vietqr-image" src="" alt="VietQR" class="w-52 h-52 object-contain mx-auto rounded-lg">
+                </div>
+            </div>
+
+            <div class="bg-stone-100 rounded-xl p-3.5 text-xs text-left space-y-1 text-stone-700 font-mono">
+                <div>Ngân hàng: <strong>Vietcombank (VCB)</strong></div>
+                <div>Số tài khoản: <strong>998811223344</strong></div>
+                <div>Chủ tài khoản: <strong>CTCP NORDICLIVING VIET NAM</strong></div>
+                <div>Số tiền: <strong id="modal-qr-amount" class="text-amber-800">0₫</strong></div>
+                <div>Nội dung: <strong id="modal-qr-memo" class="text-stone-900">NDL 83921</strong></div>
+            </div>
+
+            <button onclick="simulatePaymentSuccess()" class="w-full bg-emerald-700 hover:bg-emerald-800 text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                <i class="fa-solid fa-check-circle"></i>
+                <span>Mô Phỏng Đã Chuyển Khoản Thành Công</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Order Success Modal -->
+    <div id="order-success-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 text-center space-y-5 shadow-2xl border border-stone-200">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto shadow-inner">
+                <i class="fa-solid fa-check"></i>
+            </div>
+
+            <h2 class="text-2xl font-serif font-bold text-stone-900">Đặt Hàng Thành Công!</h2>
+            <p class="text-xs sm:text-sm text-stone-500 leading-relaxed max-w-md mx-auto">
+                Cảm ơn bạn đã lựa chọn NordicLiving. Mã đơn hàng của bạn là <strong id="order-code-display" class="text-amber-800 font-mono">#NDL-83921</strong>. Nhân viên chăm sóc khách hàng sẽ liên hệ xác nhận khung giờ giao lắp trong vòng 15 phút.
+            </p>
+
+            <div class="bg-stone-50 border border-stone-200 rounded-2xl p-4 text-xs text-stone-600 text-left space-y-1.5">
+                <div class="flex items-center gap-2 text-stone-800 font-semibold">
+                    <i class="fa-solid fa-calendar-check text-amber-700"></i>
+                    <span>Dự kiến giao & lắp đặt: Sáng mai (9:00 - 11:30)</span>
+                </div>
+                <div class="flex items-center gap-2 text-stone-800 font-semibold">
+                    <i class="fa-solid fa-shield-halved text-amber-700"></i>
+                    <span>Kích hoạt bảo hành điện tử chính hãng 5 năm</span>
+                </div>
+            </div>
+
+            <div class="flex gap-3 pt-2">
+                <a href="index.html" class="flex-1 bg-stone-900 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition shadow-md">
+                    Về Trang Chủ
+                </a>
+                <a href="sanpham.html" class="flex-1 bg-stone-100 hover:bg-stone-200 text-stone-800 font-bold text-xs uppercase tracking-wider py-3.5 rounded-xl transition">
+                    Tiếp Tục Mua Sắm
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        let currentOrderCode = 'NDL-' + Math.floor(10000 + Math.random() * 90000);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCheckoutPreview();
+        });
+
+        function renderCheckoutPreview() {
+            const cart = getCart();
+            const container = document.getElementById('checkout-items-list');
+
+            if (!cart || cart.length === 0) {
+                window.location.href = 'giohang.html';
+                return;
+            }
+
+            container.innerHTML = cart.map(item => `
+                <div class="pt-3 pb-1 flex items-center justify-between text-xs">
+                    <div class="flex items-center gap-3">
+                        <img src="${item.image}" alt="${item.name}" class="w-12 h-12 rounded-lg object-cover border border-stone-200 flex-shrink-0">
+                        <div>
+                            <h5 class="font-serif font-bold text-stone-900 line-clamp-1">${item.name}</h5>
+                            <span class="text-[11px] text-stone-500">${item.material} • SL: ${item.quantity}</span>
+                        </div>
+                    </div>
+                    <span class="font-serif font-bold text-stone-900">${formatPrice(item.price * item.quantity)}</span>
+                </div>
+            `).join('');
+
+            const totals = getCartTotals();
+            document.getElementById('co-subtotal').textContent = formatPrice(totals.subtotal);
+            document.getElementById('co-discount').textContent = totals.discount > 0 ? `-${formatPrice(totals.discount)}` : '0₫';
+            document.getElementById('co-shipping').textContent = totals.shipping === 0 ? 'Miễn phí' : formatPrice(totals.shipping);
+            document.getElementById('co-total').textContent = formatPrice(totals.total);
+        }
+
+        function handlePlaceOrder() {
+            const name = document.getElementById('cust-name').value.trim();
+            const phone = document.getElementById('cust-phone').value.trim();
+            const address = document.getElementById('cust-address').value.trim();
+
+            if (!name || !phone || !address) {
+                alert('Vui lòng điền đầy đủ Họ tên, Số điện thoại và Địa chỉ giao hàng.');
+                return;
+            }
+
+            const paymentMethod = document.querySelector('input[name="payment_method"]:checked').value;
+            const totals = getCartTotals();
+
+            if (paymentMethod === 'vietqr') {
+                // Open VietQR modal
+                const qrUrl = `https://api.vietqr.io/image/970436-998811223344-qE37s6j.jpg?accountName=CTCP%20NORDICLIVING%20VIET%20NAM&amount=${totals.total}&addInfo=${encodeURIComponent(currentOrderCode)}`;
+                document.getElementById('vietqr-image').src = qrUrl;
+                document.getElementById('modal-qr-amount').textContent = formatPrice(totals.total);
+                document.getElementById('modal-qr-memo').textContent = currentOrderCode;
+                document.getElementById('vietqr-modal').classList.remove('hidden');
+            } else {
+                finishOrder();
+            }
+        }
+
+        function closeVietQrModal() {
+            document.getElementById('vietqr-modal').classList.add('hidden');
+        }
+
+        function simulatePaymentSuccess() {
+            closeVietQrModal();
+            finishOrder();
+        }
+
+        function finishOrder() {
+            clearCart();
+            document.getElementById('order-code-display').textContent = '#' + currentOrderCode;
+            document.getElementById('order-success-modal').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

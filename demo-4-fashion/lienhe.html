@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Flagship Store & Liên Hệ - URBANVIBE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #14151c;
+            background-image: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%);
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#14151c] text-white flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-[#181922] border-b border-zinc-700/60 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-zinc-400">
+                <li><a href="index.html" class="hover:text-amber-400 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-zinc-600"></i></li>
+                <li class="font-bold text-white uppercase tracking-wider">Hệ Thống Store & Liên Hệ</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Connect With Us</span>
+            <h1 class="text-3xl sm:text-4xl font-display font-black uppercase text-white mt-1">Hệ Thống Store & Hỗ Trợ</h1>
+            <p class="text-xs sm:text-sm text-zinc-400 mt-2 font-light">Ghé thăm thử đồ trực tiếp tại showroom hoặc để lại lời nhắn để được hỗ trợ 24/7</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+            
+            <!-- Left: Flagship Store Cards (6 cols) -->
+            <div class="lg:col-span-6 space-y-6">
+                
+                <!-- Store HN -->
+                <div class="bg-zinc-900 rounded-3xl p-6 sm:p-8 border border-zinc-800 space-y-4 hover:border-amber-400/50 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-amber-400 text-black text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">FLAGSHIP HÀ NỘI</span>
+                        <span class="text-xs text-emerald-400 font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Đang mở cửa</span>
+                    </div>
+                    <h3 class="text-xl font-display font-black uppercase text-white">UrbanVibe Studio Phố Huế</h3>
+                    <div class="space-y-2 text-xs text-zinc-400">
+                        <p class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                            <span>88 Phố Huế, P. Hàng Bài, Q. Hoàn Kiếm, Hà Nội</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-amber-400"></i>
+                            <span>Giờ mở cửa: 09:00 - 22:00 (Cả tuần)</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span>Hotline store: <strong class="text-white">024 3888 9999</strong></span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Store SG -->
+                <div class="bg-zinc-900 rounded-3xl p-6 sm:p-8 border border-zinc-800 space-y-4 hover:border-amber-400/50 transition">
+                    <div class="flex items-center justify-between">
+                        <span class="bg-amber-400 text-black text-[10px] font-black px-2.5 py-0.5 rounded-full uppercase tracking-wider">FLAGSHIP SÀI GÒN</span>
+                        <span class="text-xs text-emerald-400 font-bold flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> Đang mở cửa</span>
+                    </div>
+                    <h3 class="text-xl font-display font-black uppercase text-white">UrbanVibe Studio Lê Văn Sỹ</h3>
+                    <div class="space-y-2 text-xs text-zinc-400">
+                        <p class="flex items-start gap-2.5">
+                            <i class="fa-solid fa-location-dot text-amber-400 mt-1"></i>
+                            <span>102 Lê Văn Sỹ, Phường 11, Quận Phú Nhuận, TP.HCM</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-clock text-amber-400"></i>
+                            <span>Giờ mở cửa: 09:00 - 22:30 (Cả tuần)</span>
+                        </p>
+                        <p class="flex items-center gap-2.5">
+                            <i class="fa-solid fa-phone text-amber-400"></i>
+                            <span>Hotline store: <strong class="text-white">028 3999 8888</strong></span>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Contact & Consultation Form (6 cols) -->
+            <div class="lg:col-span-6 bg-zinc-900 rounded-3xl p-6 sm:p-8 border border-zinc-800 space-y-5">
+                <h2 class="font-display font-black text-lg uppercase text-white">Gửi Lời Nhắn Đến UrbanVibe</h2>
+                <p class="text-xs text-zinc-400">Đội ngũ stylist & chăm sóc khách hàng sẽ phản hồi trong vòng 15 phút.</p>
+
+                <form onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Lời nhắn đã được chuyển tới bộ phận chăm sóc khách hàng UrbanVibe.');" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Họ và tên *</label>
+                            <input type="text" required placeholder="Tên của bạn..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Số điện thoại *</label>
+                            <input type="tel" required placeholder="0912..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Chủ đề hỗ trợ</label>
+                        <select class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            <option>Đổi size miễn phí tại nhà</option>
+                            <option>Tư vấn phối đồ & chọn size theo chiều cao/cân nặng</option>
+                            <option>Hợp tác Influencer / Truyền thông</option>
+                            <option>Phản ánh đơn hàng & dịch vụ</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Nội dung chi tiết</label>
+                        <textarea rows="4" placeholder="Nhập câu hỏi hoặc nội dung bạn cần hỗ trợ..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-3.5 bg-amber-400 hover:bg-amber-300 text-black font-black text-xs uppercase tracking-wider rounded-xl transition shadow-lg shadow-amber-400/20">
+                        Gửi Yêu Cầu Hỗ Trợ
+                    </button>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

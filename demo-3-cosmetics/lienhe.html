@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Vấn Da & Liên Hệ - GlowAura Beauty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-stone-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-700 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-300"></i></li>
+                <li class="font-semibold text-stone-900">Tư vấn da & Liên hệ showroom</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <span class="text-amber-600 font-bold text-xs tracking-widest uppercase">Hỗ Trợ Khách Hàng 24/7</span>
+            <h1 class="text-3xl sm:text-4xl font-serif font-black text-stone-900 mt-1">Tư Vấn Phác Đồ & Liên Hệ</h1>
+            <p class="text-xs sm:text-sm text-stone-500 mt-2">Đội ngũ chuyên viên da liễu luôn sẵn sàng lắng nghe và giải đáp mọi băn khoăn về làn da của bạn</p>
+        </div>
+
+        <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left: Consultation Form (7 cols) -->
+            <div class="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-10 border border-stone-200 shadow-sm space-y-6">
+                <div>
+                    <h2 class="font-serif font-bold text-xl text-stone-900">Gửi Yêu Cầu Tư Vấn Da Miễn Phí</h2>
+                    <p class="text-xs text-stone-500 mt-1">Chuyên gia sẽ liên hệ tư vấn 1-1 và gửi phác đồ chuẩn y khoa cho bạn trong vòng 20 phút.</p>
+                </div>
+
+                <form id="contact-form" class="space-y-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Họ và tên của bạn *</label>
+                            <input type="text" id="contact-name" required placeholder="Nguyễn Thu Trang..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Số điện thoại Zalo *</label>
+                            <input type="tel" required placeholder="0988 123 456..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Tình trạng làn da hiện tại</label>
+                            <select class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                                <option>Da dầu mụn, thâm đỏ sau mụn</option>
+                                <option>Da nhạy cảm, nhiễm corticoid / sau peel</option>
+                                <option>Da khô mất nước, bong tróc</option>
+                                <option>Da xỉn màu, nám tàn nhang</option>
+                                <option>Da lão hóa, nếp nhăn chảy xệ</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Khung giờ bạn tiện nghe máy</label>
+                            <select class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                                <option>Càng sớm càng tốt (Trong 20 phút)</option>
+                                <option>Sáng (08:30 - 11:30)</option>
+                                <option>Chiều (14:00 - 17:00)</option>
+                                <option>Tối (19:00 - 21:00)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">Mô tả chi tiết các sản phẩm đang dùng hoặc câu hỏi cho bác sĩ</label>
+                        <textarea rows="4" placeholder="Ví dụ: Da mình đang dùng tretinoin bị rát đỏ, cần tư vấn serum phục hồi và kem chống nắng phù hợp..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-stone-900 hover:bg-stone-800 text-amber-400 font-bold text-xs uppercase tracking-wider rounded-2xl shadow-lg transition">
+                        <i class="fa-solid fa-paper-plane mr-2"></i> Gửi Yêu Cầu Tư Vấn Da Ngay
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right: Store Info & Guarantee (5 cols) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Flagship Stores -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-5">
+                    <h3 class="font-serif font-bold text-base text-stone-900">Hệ Thống Showroom GlowAura</h3>
+
+                    <div class="space-y-4 text-xs text-stone-600 divide-y divide-stone-100">
+                        <div class="pt-2">
+                            <h4 class="font-bold text-stone-900 flex items-center gap-2">
+                                <i class="fa-solid fa-store text-amber-600"></i> Showroom Flagship Quận 1 (TP.HCM)
+                            </h4>
+                            <p class="text-stone-500 mt-1">88 Đồng Khởi, Phường Bến Nghé, Quận 1, TP. Hồ Chí Minh</p>
+                            <p class="text-stone-400 mt-0.5">Giờ mở cửa: 08:30 - 22:00 (Hàng ngày, có soi da AI miễn phí)</p>
+                        </div>
+
+                        <div class="pt-3">
+                            <h4 class="font-bold text-stone-900 flex items-center gap-2">
+                                <i class="fa-solid fa-store text-amber-600"></i> Showroom Hoàn Kiếm (Hà Nội)
+                            </h4>
+                            <p class="text-stone-500 mt-1">36 Tràng Tiền, Quận Hoàn Kiếm, TP. Hà Nội</p>
+                            <p class="text-stone-400 mt-0.5">Giờ mở cửa: 09:00 - 21:30 (Hàng ngày, có soi da AI miễn phí)</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-stone-100 space-y-2 text-xs">
+                        <p class="flex items-center gap-2 text-stone-700">
+                            <i class="fa-solid fa-phone text-amber-600 w-4"></i>
+                            Hotline tư vấn da: <strong class="text-stone-900">1900 6060</strong> (Miễn cước)
+                        </p>
+                        <p class="flex items-center gap-2 text-stone-700">
+                            <i class="fa-solid fa-envelope text-amber-600 w-4"></i>
+                            Email hỗ trợ: <span class="text-stone-900">support@glowaura.vn</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Guarantee Card -->
+                <div class="bg-gradient-to-br from-amber-50 to-stone-100 rounded-3xl p-6 border border-amber-200 shadow-sm space-y-3">
+                    <div class="flex items-center gap-3 text-amber-800">
+                        <i class="fa-solid fa-certificate text-2xl"></i>
+                        <div>
+                            <h4 class="font-serif font-bold text-sm">Cam Kết Dược Mỹ Phẩm Chính Hãng</h4>
+                            <p class="text-[11px] text-amber-700">Đầy đủ hóa đơn VAT & tem chống hàng giả Bộ Công An</p>
+                        </div>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed font-light">
+                        Mọi sản phẩm bán ra đều được bảo hành kích ứng: Nếu bạn gặp bất kỳ phản ứng dị ứng nào với hoạt chất trong 14 ngày, chúng tôi hỗ trợ thu hồi sản phẩm và hoàn tiền 100%.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

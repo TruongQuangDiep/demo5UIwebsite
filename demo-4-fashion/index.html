@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBANVIBE - Contemporary Streetwear & Subculture Studio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #14151c;
+            background-image: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%);
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#14151c] text-white flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative bg-[#0d0e14] overflow-hidden py-16 md:py-24 border-b border-zinc-800">
+            <div class="absolute inset-0 opacity-15 bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400/10 text-amber-400 border border-amber-400/30 text-xs font-black uppercase tracking-widest">
+                            <i class="fa-solid fa-bolt"></i> LIMITED DROP #04 • CYBER STREETWEAR 2026
+                        </div>
+                        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-display font-black tracking-tighter uppercase leading-none">
+                            Phá Bỏ Giới Hạn <br>
+                            <span class="bg-gradient-to-r from-amber-400 via-orange-400 to-amber-500 bg-clip-text text-transparent">Định Nghĩa Bản Lĩnh</span>
+                        </h1>
+                        <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                            Bộ sưu tập thời trang đường phố đương đại với kỹ thuật dệt nỉ bông 450GSM, wash axit khoáng tính và phom dáng Oversized Boxy đậm chất văn hóa Subculture.
+                        </p>
+                        <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="sanpham.html" class="px-8 py-4 bg-amber-400 hover:bg-amber-300 text-black font-black text-xs uppercase tracking-wider rounded-2xl transition shadow-xl shadow-amber-400/20 flex items-center gap-2">
+                                Khám Phá Drop Ngay <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="khuyenmai.html" class="px-8 py-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs uppercase tracking-wider rounded-2xl border border-zinc-800 transition">
+                                Săn Deal Hot (-26%)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hero Banner Visual Card -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 aspect-[4/5] group">
+                            <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=800&q=80" alt="UrbanVibe Streetwear" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent"></div>
+                            
+                            <div class="absolute bottom-6 inset-x-6 space-y-2">
+                                <span class="bg-amber-400 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider">NEW ARRIVAL</span>
+                                <h3 class="text-xl font-display font-black text-white uppercase">Cyber Street Heavyweight Hoodie</h3>
+                                <p class="text-xs text-zinc-300">100% French Terry Cotton 450GSM • Chuẩn Boxy Fit</p>
+                                <div class="flex items-center justify-between pt-2">
+                                    <span class="text-lg font-black text-amber-400">650.000₫</span>
+                                    <a href="chitietsanpham/ao-hoodie-oversize-heavyweight-cyber-street.html" class="text-xs font-bold text-white hover:text-amber-400 underline">Xem chi tiết</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-5 -left-5 bg-zinc-900/90 border border-zinc-700 p-4 rounded-2xl backdrop-blur-md hidden sm:flex items-center gap-3 shadow-2xl">
+                            <div class="w-10 h-10 rounded-xl bg-amber-400 text-black flex items-center justify-center font-black text-lg">
+                                <i class="fa-solid fa-fire"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-black text-white uppercase">5.000+ Khách Hàng</p>
+                                <p class="text-[10px] text-zinc-400">Đánh giá 5 sao toàn quốc</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sale Street Drop Section -->
+        <section class="py-14 bg-[#14151c] border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg animate-bounce">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <div class="flex items-center gap-2">
+                                <h2 class="text-xl sm:text-2xl font-display font-black uppercase text-white">Flash Drop Giá Sốc</h2>
+                                <span class="bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider">HÔM NAY</span>
+                            </div>
+                            <p class="text-xs text-zinc-400">Số lượng có hạn, ưu đãi tự động kết thúc khi hết thời gian</p>
+                        </div>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="flex items-center gap-2 bg-[#1c1d27] px-4 py-2.5 rounded-2xl border border-zinc-700/80">
+                        <span class="text-xs font-bold text-zinc-400 uppercase tracking-wider mr-1">Kết thúc sau:</span>
+                        <div id="flash-sale-countdown" class="flex items-center gap-1.5">
+                            <!-- Populated dynamically -->
+                            <span class="px-2 py-1 rounded-md bg-amber-400 text-black font-black text-xs">05</span>
+                            <span class="text-amber-400 font-bold">:</span>
+                            <span class="px-2 py-1 rounded-md bg-amber-400 text-black font-black text-xs">42</span>
+                            <span class="text-amber-400 font-bold">:</span>
+                            <span class="px-2 py-1 rounded-md bg-amber-400 text-black font-black text-xs">19</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flash Sale Products Grid -->
+                <div id="flash-sale-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="py-16 bg-[#0d0e14] border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Danh Mục Nổi Bật</span>
+                    <h2 class="text-3xl font-display font-black uppercase text-white mt-1">Định Hình Phong Cách Riêng</h2>
+                    <p class="text-xs sm:text-sm text-zinc-400 mt-2 font-light">Chọn phân loại sản phẩm để khám phá chi tiết các item tâm điểm</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                    
+                    <a href="sanpham.html?category=hoodie" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-vest"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Hoodie & Sweater</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Heavyweight 450GSM</span>
+                    </a>
+
+                    <a href="sanpham.html?category=t-shirt" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Áo thun Boxy</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Acid Wash 260GSM</span>
+                    </a>
+
+                    <a href="sanpham.html?category=pants" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-tent"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Cargo & Jeans</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Ripstop 6 túi hộp</span>
+                    </a>
+
+                    <a href="sanpham.html?category=jacket" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-user-ninja"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Bomber Techwear</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Kháng nước 2 mặt</span>
+                    </a>
+
+                    <a href="sanpham.html?category=sneaker" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-shoe-prints"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Sneaker Chunky</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Đế đệm tăng 5.5cm</span>
+                    </a>
+
+                    <a href="sanpham.html?category=accessory" class="group bg-zinc-900 p-5 rounded-2xl border border-zinc-800 hover:border-amber-400 transition-all text-center flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-2xl bg-zinc-800 text-amber-400 flex items-center justify-center text-2xl group-hover:scale-110 group-hover:bg-amber-400 group-hover:text-black transition">
+                            <i class="fa-solid fa-hat-cowboy"></i>
+                        </div>
+                        <h4 class="font-bold text-xs text-white uppercase mt-3 group-hover:text-amber-400 transition">Túi & Nón Bucket</h4>
+                        <span class="text-[10px] text-zinc-500 mt-0.5">Khóa từ Fidlock</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Drops Section -->
+        <section class="py-16 bg-[#14151c] border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between mb-10">
+                    <div>
+                        <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Signature Collection</span>
+                        <h2 class="text-2xl sm:text-3xl font-display font-black uppercase text-white mt-1">Sản Phẩm Tâm Điểm</h2>
+                    </div>
+                    <a href="sanpham.html" class="text-xs font-bold text-zinc-400 hover:text-amber-400 transition flex items-center gap-1 uppercase tracking-wider">
+                        Xem tất cả <i class="fa-solid fa-chevron-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Street Culture Guarantees -->
+        <section class="py-16 bg-[#0d0e14] border-b border-zinc-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    
+                    <div class="bg-[#1c1d27] p-6 rounded-2xl border border-zinc-700/80 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-400 text-black flex items-center justify-center text-xl font-black flex-shrink-0">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white uppercase">Heavyweight 100%</h4>
+                            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">Định lượng vải nỉ 450GSM và thun 260GSM đứng phom chuẩn phương Tây.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1c1d27] p-6 rounded-2xl border border-zinc-700/80 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-400 text-black flex items-center justify-center text-xl font-black flex-shrink-0">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white uppercase">Đổi Size 7 Ngày</h4>
+                            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">Đổi size tận nơi miễn phí, shipper mang size mới đến tận nhà bạn.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1c1d27] p-6 rounded-2xl border border-zinc-700/80 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-400 text-black flex items-center justify-center text-xl font-black flex-shrink-0">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white uppercase">Giao Hỏa Tốc 2H</h4>
+                            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">Nội thành Hà Nội & TP.HCM giao ngay trong 120 phút đóng hộp sang trọng.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#1c1d27] p-6 rounded-2xl border border-zinc-700/80 flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-400 text-black flex items-center justify-center text-xl font-black flex-shrink-0">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-sm text-white uppercase">Bảo Hành 6 Tháng</h4>
+                            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">Bảo hành trọn vẹn đường chỉ may và toàn bộ khóa kéo kim loại YKK.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Streetwear Lookbook Gallery -->
+        <section class="py-16 bg-[#14151c]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Community & Lookbook</span>
+                    <h2 class="text-3xl font-display font-black uppercase text-white mt-1">#UrbanVibeStreetStyle</h2>
+                    <p class="text-xs sm:text-sm text-zinc-400 mt-2 font-light">Tag @urbanvibe.vn trên Instagram để xuất hiện trên trang chủ cùng cộng đồng</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80" alt="Lookbook 1" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=600&q=80" alt="Lookbook 2" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=600&q=80" alt="Lookbook 3" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="rounded-2xl overflow-hidden aspect-square relative group">
+                        <img src="https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80" alt="Lookbook 4" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                            <i class="fa-brands fa-instagram text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

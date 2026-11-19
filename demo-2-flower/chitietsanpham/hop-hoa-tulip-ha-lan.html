@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hộp Hoa Tulip Hà Lan Pastel - Blossom & Bloom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-rose-50/30 text-slate-800 flex flex-col min-h-screen font-sans selection:bg-rose-500 selection:text-white">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-rose-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="../index.html" class="hover:text-rose-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-rose-300"></i></li>
+                <li><a href="../sanpham.html" class="hover:text-rose-600 transition">Bộ sưu tập hoa</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-rose-300"></i></li>
+                <li class="font-bold text-slate-800">Hộp Hoa Tulip Hà Lan Pastel</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left: Gallery (6 cols) -->
+            <div class="lg:col-span-6 space-y-4">
+                <div class="rounded-3xl overflow-hidden bg-rose-50/50 border border-rose-100 shadow-sm relative group h-[440px] flex items-center justify-center">
+                    <img id="main-product-img" src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=800&q=80" alt="Hộp hoa tulip" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md">
+                        -21%
+                    </span>
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-rose-700 font-bold text-xs px-3 py-1 rounded-full shadow-sm">
+                        Nhập Khẩu Hà Lan
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-3 gap-3">
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-rose-600 h-24 shadow-sm transition">
+                        <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=800&q=80" alt="Ảnh 1" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-transparent h-24 shadow-sm hover:border-rose-400 transition">
+                        <img src="https://images.unsplash.com/photo-1589244159943-460088ed5c92?auto=format&fit=crop&w=800&q=80" alt="Ảnh 2" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-transparent h-24 shadow-sm hover:border-rose-400 transition">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Ảnh 3" class="w-full h-full object-cover">
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right: Details (6 cols) -->
+            <div class="lg:col-span-6 space-y-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-bold text-rose-600 uppercase tracking-widest">Hộp Hoa Nghệ Thuật</span>
+                        <span class="text-slate-300">•</span>
+                        <div class="flex items-center text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-700 font-bold ml-1 text-xs">4.9</span>
+                            <span class="text-slate-400 ml-1 text-[11px]">(114 đánh giá)</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-2xl sm:text-3xl font-serif font-black text-slate-900 leading-snug">
+                        Hộp Hoa Tulip Hà Lan Pastel Thơ Mộng
+                    </h1>
+                    
+                    <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
+                        Hộp tròn nắp kính phối 10 bông hoa Tulip nhập khẩu Hà Lan màu hồng phấn tao nhã. Đại diện cho tình yêu vĩnh cửu và sự ngọt ngào thanh khiết.
+                    </p>
+                </div>
+
+                <!-- Price Box -->
+                <div class="bg-rose-50/50 rounded-2xl p-4 border border-rose-100 flex items-baseline gap-3">
+                    <span class="text-3xl font-serif font-black text-rose-600">950.000₫</span>
+                    <span class="text-sm text-slate-400 line-through">1.200.000₫</span>
+                    <span class="text-xs bg-rose-600 text-white font-bold px-2 py-0.5 rounded-full">Tiết kiệm 250.000₫</span>
+                </div>
+
+                <!-- Size options -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                        Số lượng bông Tulip: <span id="selected-size-text" class="text-rose-600 font-bold">Hộp 10 bông</span>
+                    </label>
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="selectSize('Hộp 10 bông', this)" class="size-btn py-2.5 px-3 rounded-xl border-2 border-rose-600 bg-rose-50 text-rose-700 text-xs font-bold transition">
+                            Hộp 10 bông (Tiêu chuẩn)
+                        </button>
+                        <button onclick="selectSize('Hộp 20 bông Đặc Biệt', this)" class="size-btn py-2.5 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Hộp 20 bông Đặc Biệt (+650K)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Màu hộp -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                        Màu nơ & hộp quà: <span id="selected-wrapping-text" class="text-rose-600 font-bold">Hồng Pastel</span>
+                    </label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="selectWrapping('Hồng Pastel', this)" class="wrapping-btn py-2 px-3 rounded-xl border-2 border-rose-600 bg-rose-50 text-rose-700 text-xs font-bold transition">
+                            Hồng Pastel
+                        </button>
+                        <button onclick="selectWrapping('Trắng Sữa', this)" class="wrapping-btn py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Trắng Sữa
+                        </button>
+                        <button onclick="selectWrapping('Tím Mộng Mơ', this)" class="wrapping-btn py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Tím Mộng Mơ
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quantity & Buttons -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Số lượng:</span>
+                        <div class="flex items-center border border-rose-200 rounded-xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="changeQty(-1)" class="w-9 h-9 flex items-center justify-center text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition font-bold text-sm">-</button>
+                            <input type="text" id="detail-qty" value="1" readonly class="w-10 text-center font-bold text-xs text-slate-800">
+                            <button onclick="changeQty(1)" class="w-9 h-9 flex items-center justify-center text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition font-bold text-sm">+</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <button onclick="handleAddToCartClick()" class="w-full py-4 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-700 font-bold text-xs uppercase tracking-wider rounded-2xl transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-basket-shopping text-sm"></i> Thêm Vào Giỏ Hoa
+                        </button>
+                        <button onclick="handleBuyNowClick()" class="w-full py-4 bg-gradient-to-r from-rose-600 to-pink-500 hover:from-rose-700 hover:to-pink-600 text-white font-bold text-xs uppercase tracking-wider rounded-2xl shadow-xl shadow-rose-500/25 transition">
+                            Đặt Giao Hỏa Tốc
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-serif font-black text-slate-900 mb-8">Có Thể Bạn Cũng Thích</h2>
+            <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

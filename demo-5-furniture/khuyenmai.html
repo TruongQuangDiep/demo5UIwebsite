@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chương Trình Ưu Đãi & Voucher Nội Thất - NORDICLIVING</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#211f1d',
+                            950: '#141210',
+                        },
+                        amber: {
+                            750: '#92400e',
+                            850: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-stone-100 border-b border-stone-200 py-3.5">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-800 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i></li>
+                <li class="font-bold text-stone-900 uppercase tracking-wider">Ưu Đãi & Voucher Độc Quyền</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <!-- Header Title & Countdown Banner -->
+        <div class="bg-stone-900 text-white rounded-3xl p-8 sm:p-12 mb-12 shadow-xl border border-stone-800 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div class="max-w-xl text-center lg:text-left space-y-3">
+                <span class="inline-block bg-amber-600 text-white text-[11px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Khai Xuân Không Gian Mới</span>
+                <h1 class="text-3xl sm:text-4xl font-serif font-bold text-white">Lễ Hội Kiến Tạo Không Gian Sống</h1>
+                <p class="text-stone-300 text-xs sm:text-sm leading-relaxed font-light">
+                    Giảm giá lên đến 30% cho các sản phẩm sofa bọc nỉ Bouclé, bàn ăn thông minh và tặng kèm gói phối cảnh 3D chuyên sâu trị giá 15.000.000₫.
+                </p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="bg-stone-800/80 border border-stone-700/60 rounded-2xl p-6 text-center backdrop-blur-md min-w-[280px]">
+                <span class="text-xs text-stone-400 uppercase tracking-wider block mb-3 font-semibold">Ưu đãi kết thúc sau:</span>
+                <div class="flex items-center justify-center gap-3">
+                    <div class="bg-stone-950 rounded-xl px-3 py-2 w-16">
+                        <span id="countdown-days" class="text-2xl font-serif font-bold text-amber-400">03</span>
+                        <span class="text-[10px] text-stone-500 block uppercase">Ngày</span>
+                    </div>
+                    <span class="text-stone-500 font-bold">:</span>
+                    <div class="bg-stone-950 rounded-xl px-3 py-2 w-16">
+                        <span id="countdown-hours" class="text-2xl font-serif font-bold text-amber-400">18</span>
+                        <span class="text-[10px] text-stone-500 block uppercase">Giờ</span>
+                    </div>
+                    <span class="text-stone-500 font-bold">:</span>
+                    <div class="bg-stone-950 rounded-xl px-3 py-2 w-16">
+                        <span id="countdown-minutes" class="text-2xl font-serif font-bold text-amber-400">45</span>
+                        <span class="text-[10px] text-stone-500 block uppercase">Phút</span>
+                    </div>
+                    <span class="text-stone-500 font-bold">:</span>
+                    <div class="bg-stone-950 rounded-xl px-3 py-2 w-16">
+                        <span id="countdown-seconds" class="text-2xl font-serif font-bold text-amber-400">20</span>
+                        <span class="text-[10px] text-stone-500 block uppercase">Giây</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 1-Click Copy Vouchers Section -->
+        <div class="mb-14">
+            <div class="text-center max-w-xl mx-auto mb-8">
+                <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-1">Mã Giảm Giá</span>
+                <h2 class="text-2xl sm:text-3xl font-serif font-bold text-stone-900">Voucher Đặc Quyền</h2>
+                <p class="text-stone-500 text-xs sm:text-sm mt-1">Sao chép mã bằng 1 chạm và sử dụng ngay tại bước thanh toán</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Voucher 1 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm hover:border-amber-700 hover:shadow-md transition relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Voucher 500K</span>
+                            <span class="text-xs text-stone-400 font-semibold">Đơn từ 5.000.000₫</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Giảm 500.000₫ Cho Khách Hàng Mới</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Áp dụng cho mọi đơn hàng sofa, bàn trà, giường ngủ và bàn ăn nguyên tấm.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 block uppercase">Mã voucher:</span>
+                            <span class="font-mono font-bold text-stone-900 text-sm">NORDIC500</span>
+                        </div>
+                        <button onclick="copyVoucher('NORDIC500', this)" class="bg-stone-900 hover:bg-amber-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm">
+                            Sao chép
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Voucher 2 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm hover:border-amber-700 hover:shadow-md transition relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-red-100 text-red-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Giảm 10%</span>
+                            <span class="text-xs text-stone-400 font-semibold">Mọi giá trị đơn</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Giảm 10% Toàn Bộ Giỏ Hàng</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Áp dụng cho đơn hàng nội thất & décor khi thanh toán trả thẳng qua VietQR 24/7.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 block uppercase">Mã voucher:</span>
+                            <span class="font-mono font-bold text-stone-900 text-sm">FURNI10</span>
+                        </div>
+                        <button onclick="copyVoucher('FURNI10', this)" class="bg-stone-900 hover:bg-amber-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm">
+                            Sao chép
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Voucher 3 -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm hover:border-amber-700 hover:shadow-md transition relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md">Freeship</span>
+                            <span class="text-xs text-stone-400 font-semibold">Toàn quốc</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-lg mb-1">Miễn Phí Vận Chuyển & Lắp Đặt</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Đội ngũ kỹ thuật viên lành nghề giao hàng, bốc xếp và lắp ráp tận phòng khách của bạn.</p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between">
+                        <div>
+                            <span class="text-[10px] text-stone-400 block uppercase">Mã voucher:</span>
+                            <span class="font-mono font-bold text-stone-900 text-sm">FREESHIP</span>
+                        </div>
+                        <button onclick="copyVoucher('FREESHIP', this)" class="bg-stone-900 hover:bg-amber-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm">
+                            Sao chép
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Hot Deals Furniture Showcase -->
+        <div class="mb-14">
+            <div class="flex items-center justify-between mb-6">
+                <div>
+                    <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block">Ưu Đãi Sâu</span>
+                    <h2 class="text-2xl font-serif font-bold text-stone-900">Sản Phẩm Đang Flash Deal</h2>
+                </div>
+                <a href="sanpham.html" class="text-xs font-bold uppercase text-amber-800 hover:text-amber-900 flex items-center gap-1">
+                    Xem tất cả <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <div id="deals-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Populated dynamically -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('deals-grid');
+            if (grid && typeof PRODUCTS !== 'undefined') {
+                grid.innerHTML = PRODUCTS.slice(0, 4).map(p => renderProductCard(p, false)).join('');
+            }
+
+            // Simple countdown animation
+            let seconds = 20;
+            let minutes = 45;
+            let hours = 18;
+            setInterval(() => {
+                seconds--;
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                    if (minutes < 0) {
+                        minutes = 59;
+                        hours--;
+                    }
+                }
+                document.getElementById('countdown-seconds').textContent = String(seconds).padStart(2, '0');
+                document.getElementById('countdown-minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('countdown-hours').textContent = String(hours).padStart(2, '0');
+            }, 1000);
+        });
+
+        function copyVoucher(code, btn) {
+            navigator.clipboard.writeText(code).then(() => {
+                const originalText = btn.textContent;
+                btn.textContent = 'Đã chép!';
+                btn.className = 'bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm';
+                showToast(`Đã sao chép mã giảm giá: ${code}`);
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.className = 'bg-stone-900 hover:bg-amber-800 text-white text-xs font-bold px-4 py-2 rounded-xl transition shadow-sm';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

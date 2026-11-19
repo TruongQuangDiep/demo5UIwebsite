@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên Hệ & Đặt Lịch Tư Vấn Thiết Kế - NORDICLIVING</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#211f1d',
+                            950: '#141210',
+                        },
+                        amber: {
+                            750: '#92400e',
+                            850: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-stone-100 border-b border-stone-200 py-3.5">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-800 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i></li>
+                <li class="font-bold text-stone-900 uppercase tracking-wider">Tư Vấn Thiết Kế & Showroom</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="mb-10">
+            <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-1">Hệ Thống Trải Nghiệm</span>
+            <h1 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900">Liên Hệ & Đặt Lịch Tư Vấn Không Gian</h1>
+            <p class="text-stone-500 text-xs sm:text-sm mt-1">Đội ngũ kiến trúc sư nội thất sẵn sàng lắng nghe và kiến tạo bản vẽ 3D riêng cho căn hộ của bạn</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left: Showroom Info (5 cols) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Hà Nội Showroom -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm space-y-3">
+                    <div class="flex items-center gap-3 text-amber-800">
+                        <i class="fa-solid fa-store text-xl"></i>
+                        <h3 class="font-serif font-bold text-stone-900 text-base">Flagship Showroom Hà Nội</h3>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        <strong>Địa chỉ:</strong> 68 Xuân Diệu, P. Quảng An, Q. Tây Hồ, Hà Nội
+                    </p>
+                    <p class="text-xs text-stone-600">
+                        <strong>Hotline:</strong> 024 3828 6886 | 1800 6886 (Nhánh 1)
+                    </p>
+                    <p class="text-xs text-stone-600">
+                        <strong>Giờ đón khách:</strong> 8:30 - 21:30 (Thứ 2 - Chủ Nhật, có chỗ đỗ ô tô)
+                    </p>
+                </div>
+
+                <!-- TP.HCM Showroom -->
+                <div class="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm space-y-3">
+                    <div class="flex items-center gap-3 text-amber-800">
+                        <i class="fa-solid fa-store text-xl"></i>
+                        <h3 class="font-serif font-bold text-stone-900 text-base">Concept Store TP. Hồ Chí Minh</h3>
+                    </div>
+                    <p class="text-xs text-stone-600 leading-relaxed">
+                        <strong>Địa chỉ:</strong> 120 Thảo Điền, P. Thảo Điền, TP. Thủ Đức, TP.HCM
+                    </p>
+                    <p class="text-xs text-stone-600">
+                        <strong>Hotline:</strong> 028 3899 6886 | 1800 6886 (Nhánh 2)
+                    </p>
+                    <p class="text-xs text-stone-600">
+                        <strong>Giờ đón khách:</strong> 8:30 - 21:30 (Thứ 2 - Chủ Nhật, có chỗ đỗ ô tô)
+                    </p>
+                </div>
+
+                <!-- Google Maps Simulation Frame -->
+                <div class="bg-stone-200 rounded-2xl overflow-hidden h-48 relative border border-stone-300 flex items-center justify-center text-center p-4">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=600&q=80" alt="Map View" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                    <div class="relative z-10 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-md max-w-xs">
+                        <i class="fa-solid fa-map-location-dot text-amber-700 text-2xl mb-1"></i>
+                        <p class="text-xs font-bold text-stone-900">Showroom Tây Hồ & Thảo Điền</p>
+                        <p class="text-[11px] text-stone-500">Mở chỉ đường trên Google Maps</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right: Contact & Consultation Form (7 cols) -->
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-2xl border border-stone-200 p-8 shadow-sm">
+                    <div class="mb-6">
+                        <h3 class="font-serif font-bold text-stone-900 text-xl">Đăng Ký Tư Vấn & Phối Cảnh 3D Miễn Phí</h3>
+                        <p class="text-xs text-stone-500 mt-1">Điền thông tin căn hộ, kiến trúc sư trưởng của NordicLiving sẽ liên hệ tư vấn trong 2 giờ</p>
+                    </div>
+
+                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('Cảm ơn bạn! Kiến trúc sư của NordicLiving đã tiếp nhận thông tin và sẽ gọi điện tư vấn phương án thiết kế cho bạn.'); this.reset();">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Họ và tên *</label>
+                                <input type="text" required placeholder="Nguyễn Văn A" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Số điện thoại *</label>
+                                <input type="tel" required placeholder="0912 345 678" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Loại hình căn hộ / nhà ở</label>
+                                <select class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs text-stone-800 focus:outline-none focus:border-amber-700">
+                                    <option>Chung cư 1-2 phòng ngủ</option>
+                                    <option>Chung cư 3+ phòng ngủ / Penthouse</option>
+                                    <option>Nhà phố / Liền kề</option>
+                                    <option>Biệt thự / Villa nghỉ dưỡng</option>
+                                    <option>Homestay / Quán Cafe</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Ngân sách dự kiến</label>
+                                <select class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs text-stone-800 focus:outline-none focus:border-amber-700">
+                                    <option>Dưới 50 triệu (Mua sắm lẻ từng món)</option>
+                                    <option>50 - 150 triệu (Nội thất phòng khách + bếp)</option>
+                                    <option>150 - 300 triệu (Full nội thất 2 phòng ngủ)</option>
+                                    <option>Trên 300 triệu (Thi công trọn gói cao cấp)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 uppercase tracking-wider mb-1.5">Nhu cầu cụ thể hoặc mong muốn bài trí</label>
+                            <textarea rows="4" placeholder="Mô tả kích thước phòng khách, tone màu yêu thích hoặc tải lên mặt bằng căn hộ..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs text-stone-900 focus:outline-none focus:border-amber-700"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-stone-900 hover:bg-amber-800 text-white font-bold text-xs uppercase tracking-wider py-4 rounded-xl transition shadow-md flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane text-amber-400"></i>
+                            <span>Gửi Yêu Cầu Tư Vấn Thiết Kế</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

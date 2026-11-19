@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng Của Bạn - TechPulse Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/cellphones.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li class="font-semibold text-slate-900">Giỏ hàng của bạn</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="mb-8">
+            <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Giỏ Hàng Mua Sắm</h1>
+            <p class="text-xs sm:text-sm text-slate-500 mt-1">Kiểm tra danh sách thiết bị và tiến hành đặt hàng trực tuyến</p>
+        </div>
+
+        <!-- Empty Cart State -->
+        <div id="empty-cart-view" class="hidden bg-white rounded-3xl p-12 text-center border border-slate-200 shadow-sm">
+            <div class="w-24 h-24 rounded-full bg-blue-50 text-blue-500 text-4xl flex items-center justify-center mx-auto mb-4">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+            </div>
+            <h2 class="text-xl font-bold text-slate-900 mb-2">Giỏ hàng của bạn đang trống!</h2>
+            <p class="text-xs sm:text-sm text-slate-500 max-w-md mx-auto mb-6">
+                Chưa có thiết bị công nghệ nào được chọn. Hãy tham khảo hàng trăm sản phẩm đỉnh cao đang có giá ưu đãi đặc biệt hôm nay.
+            </p>
+            <a href="sanpham.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-blue-600 hover:bg-blue-700 text-white rounded-2xl text-xs sm:text-sm font-bold transition shadow-lg shadow-blue-500/25">
+                <i class="fa-solid fa-bag-shopping"></i> Khám Phá Sản Phẩm Ngay
+            </a>
+        </div>
+
+        <!-- Active Cart View -->
+        <div id="active-cart-view" class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Cart Table Items (8 cols) -->
+            <div class="lg:col-span-8 space-y-4">
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="p-6 border-b border-slate-100 flex items-center justify-between">
+                        <h2 class="font-bold text-slate-900 text-sm sm:text-base flex items-center gap-2">
+                            <span>Danh sách sản phẩm</span>
+                            <span id="cart-items-count-badge" class="bg-blue-100 text-blue-700 text-xs px-2.5 py-0.5 rounded-full font-bold">0</span>
+                        </h2>
+                        <button onclick="handleClearCart()" class="text-xs text-red-500 hover:text-red-700 font-semibold flex items-center gap-1 transition">
+                            <i class="fa-regular fa-trash-can"></i> Xóa tất cả
+                        </button>
+                    </div>
+
+                    <!-- Item list container -->
+                    <div id="cart-items-list" class="divide-y divide-slate-100">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Back link -->
+                <div class="flex items-center justify-between pt-2">
+                    <a href="sanpham.html" class="inline-flex items-center gap-2 text-xs font-semibold text-blue-600 hover:underline">
+                        <i class="fa-solid fa-arrow-left"></i> Tiếp tục chọn thêm sản phẩm
+                    </a>
+                </div>
+            </div>
+
+            <!-- Order Summary Sidebar (4 cols) -->
+            <div class="lg:col-span-4 space-y-6">
+                
+                <!-- Summary Card -->
+                <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm space-y-5 sticky top-28">
+                    <h3 class="font-extrabold text-base text-slate-900 pb-3 border-b border-slate-100">
+                        Tóm Tắt Đơn Hàng
+                    </h3>
+
+                    <!-- Coupon Box -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase mb-2">Mã Khuyến Mãi / Voucher</label>
+                        <div class="flex gap-2">
+                            <input type="text" id="coupon-input" placeholder="Nhập: TECHPULSE10" class="flex-1 bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs uppercase font-semibold focus:outline-none focus:border-blue-500">
+                            <button onclick="handleApplyCoupon()" class="px-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold rounded-xl transition">
+                                Áp dụng
+                            </button>
+                        </div>
+                        <div id="coupon-alert" class="hidden mt-2 text-[11px] p-2 rounded-lg"></div>
+                    </div>
+
+                    <!-- Cost Breakdown -->
+                    <div class="space-y-3 pt-3 border-t border-slate-100 text-xs">
+                        <div class="flex justify-between text-slate-600">
+                            <span>Tạm tính:</span>
+                            <span id="summary-subtotal" class="font-semibold text-slate-900">0₫</span>
+                        </div>
+                        <div id="summary-discount-row" class="hidden flex justify-between text-emerald-600">
+                            <span>Giảm giá voucher:</span>
+                            <span id="summary-discount" class="font-semibold">-0₫</span>
+                        </div>
+                        <div class="flex justify-between text-slate-600">
+                            <span>Phí vận chuyển:</span>
+                            <span id="summary-shipping" class="font-semibold text-slate-900">Miễn phí</span>
+                        </div>
+                        <div class="pt-3 border-t border-slate-200 flex justify-between items-baseline">
+                            <span class="font-bold text-sm text-slate-900">Tổng thanh toán:</span>
+                            <span id="summary-total" class="text-xl font-extrabold text-blue-600">0₫</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 text-right">(Đã bao gồm thuế giá trị gia tăng VAT 10%)</p>
+                    </div>
+
+                    <!-- Checkout Button -->
+                    <div class="pt-2">
+                        <a href="thanhtoan.html" class="w-full py-4 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm rounded-2xl shadow-lg shadow-blue-500/25 transition flex items-center justify-center gap-2">
+                            <span>Tiến Hành Đặt Hàng</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Guarantee Badges -->
+                    <div class="pt-4 border-t border-slate-100 space-y-2 text-[11px] text-slate-500">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-blue-600"></i> Bảo mật thanh toán SSL 256-bit</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-blue-600"></i> Miễn phí giao hàng hỏa tốc trong 2h</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-rotate-left text-blue-600"></i> Đổi trả hàng trong 30 ngày dễ dàng</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

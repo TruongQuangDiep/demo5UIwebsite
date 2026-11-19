@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacBook Pro 14 M3 Pro - TechPulse Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/cellphones.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="../index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li><a href="../sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li><a href="../sanpham.html?category=laptop" class="hover:text-blue-600 transition">Laptop</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li class="font-semibold text-slate-900">MacBook Pro 14 M3 Pro</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Product Detail Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Left: Gallery -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="relative bg-slate-100 rounded-2xl p-6 overflow-hidden border border-slate-200">
+                        <span class="absolute top-4 left-4 bg-blue-600 text-white font-bold text-xs px-3 py-1 rounded-lg z-10 shadow-sm">
+                            Apple M3 Pro
+                        </span>
+                        <img id="main-product-img" src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" alt="MacBook Pro M3" class="w-full h-96 object-cover rounded-xl transition duration-300">
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <button onclick="changeMainImage('https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop', this)" class="thumbnail-btn border-2 border-blue-600 rounded-xl overflow-hidden p-1 bg-slate-50 transition">
+                            <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=800&auto=format&fit=crop" class="w-full h-20 object-cover rounded-lg">
+                        </button>
+                        <button onclick="changeMainImage('https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop', this)" class="thumbnail-btn border-2 border-transparent hover:border-slate-300 rounded-xl overflow-hidden p-1 bg-slate-50 transition">
+                            <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?q=80&w=800&auto=format&fit=crop" class="w-full h-20 object-cover rounded-lg">
+                        </button>
+                    </div>
+
+                    <div class="pt-4 grid grid-cols-2 gap-3 text-xs text-slate-600 border-t border-slate-100">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-blue-600 text-base"></i> Apple Việt Nam (VN/A)</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-battery-full text-blue-600 text-base"></i> Pin 22 giờ liên tục</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-microchip text-blue-600 text-base"></i> Chip M3 Pro 11-Core CPU</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-blue-600 text-base"></i> Giao siêu tốc 2 giờ</div>
+                    </div>
+                </div>
+
+                <!-- Right: Information -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-indigo-100 text-indigo-800 font-bold text-xs px-2.5 py-0.5 rounded-full">Pro Workstation</span>
+                            <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Sẵn hàng tại Showroom
+                            </span>
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+                            Apple MacBook Pro 14 M3 Pro 18GB / 512GB
+                        </h1>
+                        <div class="flex items-center gap-4 text-xs mt-3 text-slate-500">
+                            <div class="flex items-center gap-1 text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="font-bold text-slate-800">5.0</span>
+                                <span class="text-slate-400">(45 đánh giá)</span>
+                            </div>
+                            <span>|</span>
+                            <span>Đã bán: <strong class="text-slate-800">180+</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Price Box -->
+                    <div class="bg-gradient-to-r from-blue-50/70 to-indigo-50/50 p-5 rounded-2xl border border-blue-100 flex flex-wrap items-baseline gap-4">
+                        <span class="text-3xl sm:text-4xl font-black text-blue-600">48.990.000₫</span>
+                        <span class="text-sm sm:text-base text-slate-400 line-through">53.990.000₫</span>
+                        <span class="bg-red-500 text-white font-bold text-xs px-2.5 py-1 rounded-lg">Tiết kiệm 5.000.000₫</span>
+                    </div>
+
+                    <!-- Storage / SSD Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
+                            Dung lượng SSD: <span id="selected-storage-text" class="text-blue-600 normal-case">512GB SSD</span>
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="selectStorage('512GB SSD', this)" class="storage-btn px-4 py-2.5 rounded-xl border-2 border-blue-600 bg-blue-50/50 text-blue-700 font-bold text-xs transition">
+                                512GB SSD
+                            </button>
+                            <button onclick="selectStorage('1TB SSD', this)" class="storage-btn px-4 py-2.5 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition">
+                                1TB SSD (+5.000.000₫)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Color Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
+                            Màu sắc: <span id="selected-color-text" class="text-blue-600 normal-case">Đen Không Gian (Space Black)</span>
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="selectColor('Đen Không Gian (Space Black)', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-blue-600 bg-blue-50/50 text-blue-700 font-bold text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#2b2b2b] border border-slate-400"></span> Đen Không Gian
+                            </button>
+                            <button onclick="selectColor('Bạc (Silver)', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#e3e4e5] border border-slate-400"></span> Bạc Silver
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Promotions Box -->
+                    <div class="bg-amber-50/60 border border-amber-200 rounded-2xl p-4 space-y-2 text-xs">
+                        <div class="font-bold text-amber-900 flex items-center gap-2">
+                            <i class="fa-solid fa-gift text-amber-600 text-sm"></i> Quà Tặng Kèm Theo Khi Mua MacBook:
+                        </div>
+                        <ul class="space-y-1.5 text-amber-800">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Tặng Túi chống sốc cao cấp Tomtoc trị giá 850.000₫.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Tặng Hub chuyển đổi đa năng Type-C to HDMI/USB 3.0.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Cài đặt phần mềm đồ họa & tiện ích miễn phí trọn đời máy.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quantity & Action Buttons -->
+                    <div class="pt-4 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-xs font-bold text-slate-700 uppercase">Số lượng:</span>
+                            <div class="flex items-center border border-slate-300 rounded-xl bg-white overflow-hidden">
+                                <button onclick="changeQty(-1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 transition font-bold text-base">-</button>
+                                <input type="number" id="detail-qty" value="1" min="1" max="10" class="w-12 h-10 text-center font-bold text-sm border-x border-slate-200 focus:outline-none" readonly>
+                                <button onclick="changeQty(1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 transition font-bold text-base">+</button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <button onclick="handleAddToCartClick()" class="py-4 px-6 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg">
+                                <i class="fa-solid fa-cart-plus text-blue-400"></i> Thêm Vào Giỏ Hàng
+                            </button>
+                            <button onclick="handleBuyNowClick()" class="py-4 px-6 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25">
+                                <i class="fa-solid fa-bolt"></i> Mua Ngay Bây Giờ
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tabs -->
+            <div class="mt-16 pt-10 border-t border-slate-200">
+                <div class="flex border-b border-slate-200 gap-8 text-sm font-bold">
+                    <button id="tab-btn-desc" onclick="switchTab('desc')" class="pb-3 border-b-2 border-blue-600 text-blue-600">
+                        Đặc Điểm Nổi Bật
+                    </button>
+                    <button id="tab-btn-specs" onclick="switchTab('specs')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900">
+                        Thông Số Kỹ Thuật
+                    </button>
+                </div>
+
+                <div id="tab-content-desc" class="py-6 text-sm text-slate-600 leading-relaxed space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900">Apple M3 Pro: Sức Mạnh Đột Phá Cho Giới Chuyên Nghiệp</h3>
+                    <p>
+                        Được chế tạo trên tiến trình 3 nanomet tiên tiến, chip M3 Pro mang đến kiến trúc GPU hoàn toàn mới với Dynamic Caching và khả năng dò tia tăng tốc phần cứng (Hardware-accelerated ray tracing), đưa hiệu năng dựng phim 8K, render 3D và lập trình biên dịch lên tầm cao chưa từng thấy.
+                    </p>
+                    <h3 class="text-lg font-bold text-slate-900">Màn Hình Liquid Retina XDR Đỉnh Nhất Từng Có</h3>
+                    <p>
+                        Dải tần nhạy sáng cực cao Extreme Dynamic Range mang lại những điểm sáng rực rỡ, màu đen sâu thẳm và màu sắc sống động chuẩn Hollywood. Công nghệ ProMotion 120Hz mang lại sự mượt mà đến kinh ngạc trong từng thao tác cuộn lướt.
+                    </p>
+                </div>
+
+                <div id="tab-content-specs" class="hidden py-6">
+                    <div class="max-w-2xl overflow-hidden rounded-2xl border border-slate-200">
+                        <table class="w-full text-xs text-left">
+                            <tbody class="divide-y divide-slate-200">
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700 w-1/3">Màn hình</td><td class="p-3 text-slate-600">14.2 inch Liquid Retina XDR (3024 x 1964), 120Hz ProMotion</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Vi xử lý</td><td class="p-3 text-slate-600">Apple M3 Pro (11 CPU, 14 GPU)</td></tr>
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700">RAM / Ổ cứng</td><td class="p-3 text-slate-600">18GB Unified Memory / 512GB SSD siêu tốc</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Cổng kết nối</td><td class="p-3 text-slate-600">3 x Thunderbolt 4, HDMI, Jack 3.5mm, Khe thẻ SDXC, MagSafe 3</td></tr>
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700">Pin</td><td class="p-3 text-slate-600">70 Wh Li-Po, thời lượng pin lên đến 22 giờ</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Trọng lượng</td><td class="p-3 text-slate-600">1.61 kg</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Related Products -->
+            <div class="mt-12">
+                <h2 class="text-xl font-extrabold text-slate-900 mb-6">Sản Phẩm Tương Tự</h2>
+                <div id="related-products-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

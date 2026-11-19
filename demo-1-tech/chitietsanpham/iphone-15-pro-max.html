@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15 Pro Max 256GB - TechPulse Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/cellphones.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="../index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li><a href="../sanpham.html" class="hover:text-blue-600 transition">Sản phẩm</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li><a href="../sanpham.html?category=phone" class="hover:text-blue-600 transition">Điện thoại</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li class="font-semibold text-slate-900">iPhone 15 Pro Max</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Product Detail Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 sm:p-10 mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Left: Image Gallery (5 cols) -->
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="relative bg-slate-100 rounded-2xl p-6 overflow-hidden border border-slate-200">
+                        <span class="absolute top-4 left-4 bg-red-600 text-white font-bold text-xs px-3 py-1 rounded-lg z-10 shadow-sm">
+                            Giảm 14%
+                        </span>
+                        <img id="main-product-img" src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop" alt="iPhone 15 Pro Max" class="w-full h-96 object-cover rounded-xl transition duration-300">
+                    </div>
+
+                    <!-- Thumbnails -->
+                    <div class="grid grid-cols-3 gap-3">
+                        <button onclick="changeMainImage('https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop', this)" class="thumbnail-btn border-2 border-blue-600 rounded-xl overflow-hidden p-1 bg-slate-50 transition">
+                            <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=800&auto=format&fit=crop" class="w-full h-20 object-cover rounded-lg">
+                        </button>
+                        <button onclick="changeMainImage('https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80&w=800&auto=format&fit=crop', this)" class="thumbnail-btn border-2 border-transparent hover:border-slate-300 rounded-xl overflow-hidden p-1 bg-slate-50 transition">
+                            <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab?q=80&w=800&auto=format&fit=crop" class="w-full h-20 object-cover rounded-lg">
+                        </button>
+                        <button onclick="changeMainImage('https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=800&auto=format&fit=crop', this)" class="thumbnail-btn border-2 border-transparent hover:border-slate-300 rounded-xl overflow-hidden p-1 bg-slate-50 transition">
+                            <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?q=80&w=800&auto=format&fit=crop" class="w-full h-20 object-cover rounded-lg">
+                        </button>
+                    </div>
+
+                    <!-- Security / Assurance badges -->
+                    <div class="pt-4 grid grid-cols-2 gap-3 text-xs text-slate-600 border-t border-slate-100">
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-shield-check text-blue-600 text-base"></i> 100% Chính Hãng Apple VN/A</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-truck-fast text-blue-600 text-base"></i> Giao Hỏa Tốc Trong 2 Giờ</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-rotate-left text-blue-600 text-base"></i> Đổi Trả Miễn Phí 30 Ngày</div>
+                        <div class="flex items-center gap-2"><i class="fa-solid fa-file-invoice text-blue-600 text-base"></i> Đầy Đủ Hóa Đơn VAT</div>
+                    </div>
+                </div>
+
+                <!-- Right: Product Information & Purchase options (7 cols) -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <div>
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="bg-blue-100 text-blue-700 font-bold text-xs px-2.5 py-0.5 rounded-full">Apple Authorized</span>
+                            <span class="text-xs text-emerald-600 font-semibold flex items-center gap-1">
+                                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Còn hàng
+                            </span>
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-snug">
+                            iPhone 15 Pro Max 256GB - Titan Tự Nhiên
+                        </h1>
+                        <div class="flex items-center gap-4 text-xs mt-3 text-slate-500">
+                            <div class="flex items-center gap-1 text-amber-400">
+                                <i class="fa-solid fa-star"></i>
+                                <span class="font-bold text-slate-800">4.9</span>
+                                <span class="text-slate-400">(156 đánh giá)</span>
+                            </div>
+                            <span>|</span>
+                            <span>Đã bán: <strong class="text-slate-800">840+</strong></span>
+                            <span>|</span>
+                            <span>Mã SP: <strong class="text-slate-800">IP15PM-256</strong></span>
+                        </div>
+                    </div>
+
+                    <!-- Price Box -->
+                    <div class="bg-gradient-to-r from-blue-50/70 to-indigo-50/50 p-5 rounded-2xl border border-blue-100 flex flex-wrap items-baseline gap-4">
+                        <span class="text-3xl sm:text-4xl font-black text-blue-600">29.990.000₫</span>
+                        <span class="text-sm sm:text-base text-slate-400 line-through">34.990.000₫</span>
+                        <span class="bg-red-500 text-white font-bold text-xs px-2.5 py-1 rounded-lg">Tiết kiệm 5.000.000₫</span>
+                    </div>
+
+                    <!-- Storage Capacity Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
+                            Dung lượng: <span id="selected-storage-text" class="text-blue-600 normal-case">256GB</span>
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="selectStorage('256GB', this)" class="storage-btn px-4 py-2.5 rounded-xl border-2 border-blue-600 bg-blue-50/50 text-blue-700 font-bold text-xs transition">
+                                256GB
+                            </button>
+                            <button onclick="selectStorage('512GB', this)" class="storage-btn px-4 py-2.5 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition">
+                                512GB
+                            </button>
+                            <button onclick="selectStorage('1TB', this)" class="storage-btn px-4 py-2.5 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition">
+                                1TB
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Color Selector -->
+                    <div>
+                        <label class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2.5">
+                            Màu sắc: <span id="selected-color-text" class="text-blue-600 normal-case">Titan Tự Nhiên</span>
+                        </label>
+                        <div class="flex flex-wrap gap-3">
+                            <button onclick="selectColor('Titan Tự Nhiên', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-blue-600 bg-blue-50/50 text-blue-700 font-bold text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#9f9c96] border border-slate-400"></span> Titan Tự Nhiên
+                            </button>
+                            <button onclick="selectColor('Titan Xanh', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#2c3b4d] border border-slate-400"></span> Titan Xanh
+                            </button>
+                            <button onclick="selectColor('Titan Đen', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#39383b] border border-slate-400"></span> Titan Đen
+                            </button>
+                            <button onclick="selectColor('Titan Trắng', this)" class="color-btn px-4 py-2 rounded-xl border-2 border-slate-200 hover:border-slate-300 text-slate-700 font-medium text-xs transition flex items-center gap-2">
+                                <span class="w-3.5 h-3.5 rounded-full bg-[#f3f2ed] border border-slate-400"></span> Titan Trắng
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Promotions Box -->
+                    <div class="bg-amber-50/60 border border-amber-200 rounded-2xl p-4 space-y-2 text-xs">
+                        <div class="font-bold text-amber-900 flex items-center gap-2">
+                            <i class="fa-solid fa-gift text-amber-600 text-sm"></i> Khuyến Mại & Quà Tặng Độc Quyền:
+                        </div>
+                        <ul class="space-y-1.5 text-amber-800">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Tặng Củ sạc nhanh Apple 20W Type-C trị giá 590.000₫.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Giảm 50% khi mua gói bảo hành mở rộng AppleCare+.</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-xs"></i> Trợ giá thu cũ đổi mới lên đến 2.000.000₫.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quantity & Action Buttons -->
+                    <div class="pt-4 space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-xs font-bold text-slate-700 uppercase">Số lượng:</span>
+                            <div class="flex items-center border border-slate-300 rounded-xl bg-white overflow-hidden">
+                                <button onclick="changeQty(-1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 transition font-bold text-base">-</button>
+                                <input type="number" id="detail-qty" value="1" min="1" max="10" class="w-12 h-10 text-center font-bold text-sm border-x border-slate-200 focus:outline-none" readonly>
+                                <button onclick="changeQty(1)" class="w-10 h-10 flex items-center justify-center text-slate-600 hover:bg-slate-100 transition font-bold text-base">+</button>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                            <button onclick="handleAddToCartClick()" class="py-4 px-6 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg">
+                                <i class="fa-solid fa-cart-plus text-blue-400"></i> Thêm Vào Giỏ Hàng
+                            </button>
+                            <button onclick="handleBuyNowClick()" class="py-4 px-6 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm transition flex items-center justify-center gap-2 shadow-lg shadow-blue-500/25">
+                                <i class="fa-solid fa-bolt"></i> Mua Ngay Bây Giờ
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Tabs: Description & Specs -->
+            <div class="mt-16 pt-10 border-t border-slate-200">
+                <div class="flex border-b border-slate-200 gap-8 text-sm font-bold">
+                    <button id="tab-btn-desc" onclick="switchTab('desc')" class="pb-3 border-b-2 border-blue-600 text-blue-600">
+                        Đặc Điểm Nổi Bật
+                    </button>
+                    <button id="tab-btn-specs" onclick="switchTab('specs')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-slate-900">
+                        Thông Số Kỹ Thuật
+                    </button>
+                </div>
+
+                <div id="tab-content-desc" class="py-6 text-sm text-slate-600 leading-relaxed space-y-4">
+                    <h3 class="text-lg font-bold text-slate-900">Thiết Kế Titan Chuẩn Hàng Không Vũ Trụ</h3>
+                    <p>
+                        iPhone 15 Pro Max là chiếc iPhone đầu tiên sở hữu thiết kế từ chất liệu Titan chuẩn hàng không vũ trụ – cùng loại hợp kim được sử dụng cho các tàu vũ trụ thực hiện sứ mệnh tới Sao Hỏa. Điều này giúp máy nhẹ hơn đáng kể nhưng lại có độ bền phi thường và tản nhiệt tối ưu hơn.
+                    </p>
+                    <h3 class="text-lg font-bold text-slate-900">Chip A17 Pro - Kỷ Nguyên Game Đỉnh Cao</h3>
+                    <p>
+                        Với GPU 6 lõi đẳng cấp chuyên nghiệp hoàn toàn mới, Apple A17 Pro mang lại hiệu suất đồ họa tốt nhất từng có trên iPhone, hỗ trợ Ray Tracing tốc độ phần cứng chạy mượt mà những tựa game console bom tấn như Resident Evil Village, Assassin's Creed Mirage.
+                    </p>
+                    <h3 class="text-lg font-bold text-slate-900">Camera Zoom Quang Học 5x Vượt Trội</h3>
+                    <p>
+                        Ống kính Telephoto với thiết kế lăng kính tetraprism tiên tiến mang lại khả năng zoom quang học 5x ở tiêu cự 120mm, cho bạn những bức ảnh cận cảnh sắc nét từ khoảng cách xa mà không bị suy giảm chất lượng.
+                    </p>
+                </div>
+
+                <div id="tab-content-specs" class="hidden py-6">
+                    <div class="max-w-2xl overflow-hidden rounded-2xl border border-slate-200">
+                        <table class="w-full text-xs text-left">
+                            <tbody class="divide-y divide-slate-200">
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700 w-1/3">Màn hình</td><td class="p-3 text-slate-600">6.7 inch, Super Retina XDR OLED, 120Hz ProMotion</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Vi xử lý</td><td class="p-3 text-slate-600">Apple A17 Pro (3nm)</td></tr>
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700">RAM / Bộ nhớ</td><td class="p-3 text-slate-600">8GB / 256GB</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Camera sau</td><td class="p-3 text-slate-600">Chính 48MP + 12MP UltraWide + 12MP Tele 5x</td></tr>
+                                <tr class="bg-slate-50"><td class="p-3 font-bold text-slate-700">Pin & Sạc</td><td class="p-3 text-slate-600">4.422 mAh, Sạc nhanh 20W, MagSafe 15W</td></tr>
+                                <tr><td class="p-3 font-bold text-slate-700">Chất liệu</td><td class="p-3 text-slate-600">Khung Titan, Mặt lưng kính nhám Ceremic Shield</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Related Products -->
+        <div class="space-y-6">
+            <h2 class="text-xl font-bold text-slate-900">Sản Phẩm Tương Tự Bạn Có Thể Thích</h2>
+            <div id="related-products-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

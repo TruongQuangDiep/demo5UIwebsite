@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowAura Beauty - Dược Mỹ Phẩm & Chăm Sóc Da Cao Cấp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow">
+
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-r from-stone-900 via-stone-850 to-amber-950 text-white overflow-hidden py-16 md:py-24">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#d97706_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs font-semibold backdrop-blur-sm">
+                            <i class="fa-solid fa-sparkles text-amber-400"></i> Dược Mỹ Phẩm Chuẩn Khoa Học Châu Âu
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight">
+                            Khơi Dậy Vẻ Đẹp <br>
+                            <span class="bg-gradient-to-r from-amber-200 via-rose-200 to-amber-400 bg-clip-text text-transparent italic">
+                                Căng Bóng Thuần Khiết
+                            </span>
+                        </h1>
+                        <p class="text-stone-300 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 leading-relaxed font-light">
+                            Liệu trình phục hồi và tái tạo da chuyên sâu với phức hợp 10% Vitamin B5, 6-Peptides và Hyaluronic Acid đa tầng. An toàn tuyệt đối cho làn da nhạy cảm nhất.
+                        </p>
+                        
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                            <a href="sanpham.html" class="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-bold text-xs uppercase tracking-widest rounded-2xl shadow-xl shadow-amber-900/30 transition transform hover:-translate-y-0.5">
+                                Khám Phá Sản Phẩm <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                            <a href="khuyenmai.html" class="w-full sm:w-auto px-8 py-4 bg-stone-800/80 hover:bg-stone-750 text-white font-bold text-xs uppercase tracking-widest rounded-2xl border border-stone-700 transition">
+                                Săn Deal Độc Quyền <span class="text-amber-400 font-extrabold ml-1">-24%</span>
+                            </a>
+                        </div>
+
+                        <!-- Mini stats -->
+                        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-stone-800 text-center lg:text-left">
+                            <div>
+                                <span class="text-2xl font-serif font-black text-amber-400">100%</span>
+                                <p class="text-[11px] text-stone-400 mt-0.5">Thuần chay lành tính</p>
+                            </div>
+                            <div>
+                                <span class="text-2xl font-serif font-black text-amber-400">7 Ngày</span>
+                                <p class="text-[11px] text-stone-400 mt-0.5">Phục hồi màng ẩm</p>
+                            </div>
+                            <div>
+                                <span class="text-2xl font-serif font-black text-amber-400">50.000+</span>
+                                <p class="text-[11px] text-stone-400 mt-0.5">Khách hàng tin chọn</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Image Hero -->
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-sm sm:max-w-md">
+                            <div class="absolute -inset-4 bg-gradient-to-tr from-amber-600/30 via-rose-500/20 to-amber-400/30 rounded-3xl blur-2xl"></div>
+                            <div class="relative rounded-3xl overflow-hidden border border-stone-700/60 shadow-2xl bg-stone-900 p-2">
+                                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=800&q=80" alt="GlowAura B5 Advanced Serum" class="w-full h-[420px] object-cover rounded-2xl">
+                                
+                                <div class="absolute bottom-5 left-5 right-5 bg-stone-950/85 backdrop-blur-md p-4 rounded-2xl border border-stone-750 flex items-center justify-between shadow-lg">
+                                    <div>
+                                        <span class="text-[10px] text-amber-400 font-bold uppercase tracking-wider">Tinh chất bán chạy nhất</span>
+                                        <h4 class="font-serif font-bold text-white text-sm">GlowAura B5 Advanced</h4>
+                                        <p class="text-xs text-amber-500 font-extrabold mt-0.5">680.000₫ <span class="text-stone-400 line-through text-[11px] font-normal">890.000₫</span></p>
+                                    </div>
+                                    <a href="chitietsanpham/serum-phuc-hoi-b5-glowaura.html" class="px-4 py-2 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs rounded-xl transition">
+                                        Xem ngay
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Flash Sale Section -->
+        <section class="py-14 bg-stone-100 border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-8">
+                    <div class="flex items-center gap-3 text-center sm:text-left">
+                        <div class="w-10 h-10 rounded-2xl bg-rose-600 text-white flex items-center justify-center text-lg shadow-md shadow-rose-600/30">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl sm:text-2xl font-serif font-black text-stone-900">Flash Sale Tái Sinh Làn Da</h2>
+                            <p class="text-xs text-stone-500">Giảm giá lên đến 24% - Số lượng giới hạn theo khung giờ</p>
+                        </div>
+                    </div>
+
+                    <!-- Countdown -->
+                    <div class="flex items-center gap-2 text-stone-900 bg-white px-4 py-2 rounded-2xl border border-stone-200 shadow-sm text-xs font-bold">
+                        <span class="text-stone-500">Kết thúc sau:</span>
+                        <span id="countdown-hours" class="bg-stone-900 text-amber-400 px-2 py-1 rounded-lg font-mono">08</span>
+                        <span>:</span>
+                        <span id="countdown-minutes" class="bg-stone-900 text-amber-400 px-2 py-1 rounded-lg font-mono">45</span>
+                        <span>:</span>
+                        <span id="countdown-seconds" class="bg-stone-900 text-amber-400 px-2 py-1 rounded-lg font-mono">12</span>
+                    </div>
+                </div>
+
+                <div id="flash-sale-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cards will be populated dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skincare Categories Section -->
+        <section class="py-16 bg-white border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-amber-600 font-bold text-xs tracking-widest uppercase">Liệu Trình Chuyên Biệt</span>
+                    <h2 class="text-3xl font-serif font-black text-stone-900 mt-1">Danh Mục Dược Mỹ Phẩm</h2>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-2">Được nghiên cứu và kiểm định lâm sàng theo từng bước chu trình skincare tiêu chuẩn</p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+                    
+                    <a href="sanpham.html?category=skincare" class="group bg-stone-50 hover:bg-amber-50/60 p-6 rounded-3xl border border-stone-200/80 hover:border-amber-400 transition-all text-center flex flex-col items-center justify-between space-y-3">
+                        <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition">Serum & Tinh Chất</h3>
+                            <p class="text-[11px] text-stone-400 mt-0.5">Phục hồi & Dưỡng trắng</p>
+                        </div>
+                        <span class="text-[11px] text-amber-700 font-semibold group-hover:underline">Xem 3 sản phẩm &rarr;</span>
+                    </a>
+
+                    <a href="sanpham.html?category=cream" class="group bg-stone-50 hover:bg-amber-50/60 p-6 rounded-3xl border border-stone-200/80 hover:border-amber-400 transition-all text-center flex flex-col items-center justify-between space-y-3">
+                        <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-jar"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition">Kem Dưỡng Phục Hồi</h3>
+                            <p class="text-[11px] text-stone-400 mt-0.5">Khóa ẩm 72H & Trẻ hóa</p>
+                        </div>
+                        <span class="text-[11px] text-amber-700 font-semibold group-hover:underline">Xem 2 sản phẩm &rarr;</span>
+                    </a>
+
+                    <a href="sanpham.html?category=sunscreen" class="group bg-stone-50 hover:bg-amber-50/60 p-6 rounded-3xl border border-stone-200/80 hover:border-amber-400 transition-all text-center flex flex-col items-center justify-between space-y-3">
+                        <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-sun"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition">Kem Chống Nắng</h3>
+                            <p class="text-[11px] text-stone-400 mt-0.5">Quang phổ rộng SPF50+</p>
+                        </div>
+                        <span class="text-[11px] text-amber-700 font-semibold group-hover:underline">Xem 1 sản phẩm &rarr;</span>
+                    </a>
+
+                    <a href="sanpham.html?category=cleanser" class="group bg-stone-50 hover:bg-amber-50/60 p-6 rounded-3xl border border-stone-200/80 hover:border-amber-400 transition-all text-center flex flex-col items-center justify-between space-y-3">
+                        <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-pump-soap"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition">Làm Sạch & Tẩy Trang</h3>
+                            <p class="text-[11px] text-stone-400 mt-0.5">pH 5.5 Dịu nhẹ không căng</p>
+                        </div>
+                        <span class="text-[11px] text-amber-700 font-semibold group-hover:underline">Xem 2 sản phẩm &rarr;</span>
+                    </a>
+
+                    <a href="sanpham.html?category=combo-set" class="group bg-stone-50 hover:bg-amber-50/60 p-6 rounded-3xl border border-stone-200/80 hover:border-amber-400 transition-all text-center flex flex-col items-center justify-between space-y-3 col-span-2 md:col-span-1">
+                        <div class="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center text-amber-600 text-2xl group-hover:scale-110 transition duration-300">
+                            <i class="fa-solid fa-gift"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-serif font-bold text-stone-900 text-sm group-hover:text-amber-800 transition">Bộ Skincare Cao Cấp</h3>
+                            <p class="text-[11px] text-stone-400 mt-0.5">Hộp quà tặng trọn bộ 4 món</p>
+                        </div>
+                        <span class="text-[11px] text-amber-700 font-semibold group-hover:underline">Xem 1 sản phẩm &rarr;</span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section class="py-16 bg-stone-50 border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="flex flex-col sm:flex-row items-center justify-between gap-4 mb-10">
+                    <div>
+                        <span class="text-amber-600 font-bold text-xs tracking-widest uppercase">Lựa Chọn Hàng Đầu</span>
+                        <h2 class="text-2xl sm:text-3xl font-serif font-black text-stone-900 mt-0.5">Sản Phẩm Được Yêu Thích Nhất</h2>
+                    </div>
+                    <a href="sanpham.html" class="text-xs font-bold text-amber-700 hover:text-amber-900 flex items-center gap-1 group">
+                        Xem tất cả sản phẩm <i class="fa-solid fa-arrow-right text-[10px] group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+
+                <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Cards will be populated dynamically -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Scientific Proof / Dermatologist Guarantees -->
+        <section class="py-16 bg-white border-b border-stone-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-amber-600 font-bold text-xs tracking-widest uppercase">Tiêu Chuẩn Vàng</span>
+                    <h2 class="text-3xl font-serif font-black text-stone-900 mt-1">Cam Kết Khoa Học Từ GlowAura</h2>
+                    <p class="text-xs sm:text-sm text-stone-500 mt-2">Tất cả sản phẩm đều tuân thủ nghiêm ngặt tiêu chuẩn Dược Mỹ Phẩm Châu Âu</p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    
+                    <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200 text-center space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl mx-auto">
+                            <i class="fa-solid fa-microscope"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-sm">Kiểm Nghiệm Lâm Sàng</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">100% công thức được thử nghiệm trên 500 tình nguyện viên có làn da nhạy cảm trước khi ra mắt.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200 text-center space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl mx-auto">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-sm">100% Thuần Chay Lành Tính</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Không cồn khô, không paraben, không hương liệu nhân tạo, không thử nghiệm trên động vật.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200 text-center space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl mx-auto">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-sm">Bảo Hiểm Kích Ứng Da</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Cam kết hoàn tiền 100% trong 14 ngày nếu sản phẩm gây bất kỳ kích ứng nào trên da của bạn.</p>
+                    </div>
+
+                    <div class="p-6 rounded-3xl bg-stone-50 border border-stone-200 text-center space-y-3">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl mx-auto">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900 text-sm">Bác Sĩ Da Liễu Tư Vấn</h3>
+                        <p class="text-xs text-stone-500 leading-relaxed">Đội ngũ chuyên gia da liễu sẵn sàng hỗ trợ phân tích tình trạng da và thiết kế phác đồ riêng biệt.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Skin Quiz / Consultation CTA Banner -->
+        <section class="py-16 bg-gradient-to-r from-stone-950 via-stone-900 to-amber-950 text-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="rounded-3xl bg-stone-900/60 border border-stone-750 p-8 sm:p-12 relative overflow-hidden backdrop-blur-sm">
+                    <div class="max-w-2xl space-y-4">
+                        <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Dịch Vụ Độc Quyền</span>
+                        <h2 class="text-2xl sm:text-4xl font-serif font-black leading-snug">
+                            Bạn Chưa Biết Làn Da Cần Gì? <br>
+                            <span class="text-amber-300 italic">Nhận Phác Đồ 1-1 Miễn Phí Ngay</span>
+                        </h2>
+                        <p class="text-stone-300 text-xs sm:text-sm leading-relaxed font-light">
+                            Gửi hình ảnh hoặc mô tả tình trạng da hiện tại của bạn. Đội ngũ bác sĩ và dược sĩ chuyên khoa tại GlowAura sẽ gửi phác đồ chăm sóc cá nhân hóa chỉ trong vòng 20 phút.
+                        </p>
+                        <div class="pt-2">
+                            <a href="lienhe.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-amber-500 hover:bg-amber-400 text-stone-950 font-bold text-xs uppercase tracking-wider rounded-xl shadow-lg transition">
+                                <i class="fa-solid fa-comments"></i> Đăng Ký Tư Vấn Da Miễn Phí
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="py-12 bg-white">
+            <div class="max-w-4xl mx-auto px-4 text-center space-y-4">
+                <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">GlowAura VIP Club</span>
+                <h3 class="text-2xl font-serif font-bold text-stone-900">Đăng Ký Nhận Cẩm Nang Skincare & Voucher 100K</h3>
+                <p class="text-xs text-stone-500 max-w-md mx-auto">Nhận ngay mã giảm giá 100.000₫ cho đơn hàng đầu tiên và thông báo các đợt Flash Sale sớm nhất.</p>
+                <form class="newsletter-form flex flex-col sm:flex-row gap-2 max-w-md mx-auto pt-2">
+                    <input type="email" required placeholder="Nhập địa chỉ email của bạn..." class="flex-1 bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                    <button type="submit" class="px-6 py-2.5 bg-stone-900 hover:bg-stone-800 text-amber-400 rounded-xl text-xs font-bold transition shadow-sm">
+                        Đăng ký ngay
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

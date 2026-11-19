@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Sách Sản Phẩm - TechPulse Store</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/cellphones.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-slate-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="index.html" class="hover:text-blue-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-slate-400"></i></li>
+                <li class="font-semibold text-slate-900" id="breadcrumb-current">Danh mục sản phẩm</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+        
+        <div class="w-full flex flex-col lg:flex-row gap-8 items-start">
+            
+            <!-- Sidebar Filters -->
+            <aside class="w-full lg:w-64 flex-shrink-0">
+                <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm space-y-6 sticky top-28">
+                    
+                    <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                        <h3 class="font-bold text-slate-900 flex items-center gap-2">
+                            <i class="fa-solid fa-filter text-red-600 text-sm"></i> Bộ Lọc Tìm Kiếm
+                        </h3>
+                        <button id="reset-filters-btn" class="text-xs text-red-600 hover:underline font-medium">Đặt lại</button>
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div>
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Danh mục</h4>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="all" checked class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Tất cả sản phẩm</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="phone" class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Điện thoại</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="laptop" class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Laptop</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="tablet" class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Máy tính bảng</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="accessory" class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Tai nghe & Phụ kiện</span>
+                                </span>
+                            </label>
+                            <label class="flex items-center justify-between cursor-pointer group">
+                                <span class="flex items-center gap-2">
+                                    <input type="radio" name="filter-category" value="smartwatch" class="text-red-600 focus:ring-red-500 rounded">
+                                    <span class="group-hover:text-red-600 transition">Đồng hồ thông minh</span>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="pt-4 border-t border-slate-100">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Mức giá</h4>
+                        <div class="space-y-2 text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="filter-price" value="all" checked class="text-red-600">
+                                <span>Tất cả mức giá</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="filter-price" value="under-10m" class="text-red-600">
+                                <span>Dưới 10 triệu</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="filter-price" value="10m-20m" class="text-red-600">
+                                <span>10 - 20 triệu</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="filter-price" value="20m-30m" class="text-red-600">
+                                <span>20 - 30 triệu</span>
+                            </label>
+                            <label class="flex items-center gap-2 cursor-pointer">
+                                <input type="radio" name="filter-price" value="above-30m" class="text-red-600">
+                                <span>Trên 30 triệu</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Brand Filter -->
+                    <div class="pt-4 border-t border-slate-100">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Thương hiệu</h4>
+                        <div class="flex flex-wrap gap-2" id="brand-filters">
+                            <button data-brand="all" class="brand-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-red-600 text-white transition">Tất cả</button>
+                            <button data-brand="Apple" class="brand-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Apple</button>
+                            <button data-brand="Samsung" class="brand-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Samsung</button>
+                            <button data-brand="Sony" class="brand-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Sony</button>
+                            <button data-brand="Dell" class="brand-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-slate-100 text-slate-700 hover:bg-slate-200 transition">Dell</button>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+
+            <!-- Product Grid & Controls -->
+            <div class="flex-1 w-full min-w-0">
+                
+                <!-- Top Filter Bar -->
+                <div class="w-full bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm mb-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div>
+                        <h1 class="text-xl font-extrabold text-slate-900" id="category-title">Tất Cả Sản Phẩm</h1>
+                        <p class="text-xs text-slate-500 mt-0.5" id="results-count">Hiển thị 8 sản phẩm</p>
+                    </div>
+
+                    <div class="flex items-center gap-3 w-full sm:w-auto">
+                        <!-- Search Box in Product page -->
+                        <div class="relative flex-1 sm:w-60 flex items-center">
+                            <input type="text" id="filter-search-input" placeholder="Tìm theo tên..." class="w-full bg-slate-50 border border-slate-200 rounded-xl pl-9 pr-3 py-2 text-xs focus:outline-none focus:border-blue-500">
+                            <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs pointer-events-none"></i>
+                        </div>
+
+                        <!-- Sort selector -->
+                        <select id="sort-select" class="bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs font-medium text-slate-700 focus:outline-none focus:border-blue-500">
+                            <option value="default">Sắp xếp: Mặc định</option>
+                            <option value="price-asc">Giá: Thấp đến cao</option>
+                            <option value="price-desc">Giá: Cao đến thấp</option>
+                            <option value="rating-desc">Đánh giá cao nhất</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Product Cards Grid -->
+                <div id="products-grid" class="w-full grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6">
+                    <!-- Cards will be rendered dynamically by JavaScript -->
+                </div>
+
+                <!-- Empty State (Hidden by default) -->
+                <div id="empty-state" class="w-full hidden bg-white rounded-2xl p-12 text-center border border-slate-200 shadow-sm">
+                    <div class="w-20 h-20 rounded-full bg-red-50 text-red-500 text-3xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fa-solid fa-box-open"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900 mb-1">Không tìm thấy sản phẩm phù hợp</h3>
+                    <p class="text-xs text-slate-500 max-w-sm mx-auto mb-6">Vui lòng thử điều chỉnh lại bộ lọc giá, danh mục hoặc từ khóa tìm kiếm của bạn.</p>
+                    <button id="clear-all-filters-btn" class="px-6 py-2.5 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition shadow-sm">
+                        Xóa tất cả bộ lọc
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Chuyện Thương Hiệu - URBANVIBE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #14151c;
+            background-image: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%);
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#14151c] text-white flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-[#181922] border-b border-zinc-700/60 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-zinc-400">
+                <li><a href="index.html" class="hover:text-amber-400 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-zinc-600"></i></li>
+                <li class="font-bold text-white uppercase tracking-wider">Về UrbanVibe</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <!-- Story Hero Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
+            <div class="lg:col-span-7 space-y-6">
+                <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Our DNA & Subculture</span>
+                <h1 class="text-3xl sm:text-5xl font-display font-black uppercase text-white leading-tight">
+                    Khởi Nguồn Từ Đường Phố, <br>
+                    <span class="text-amber-400">Định Nghĩa Bản Lĩnh Giới Trẻ</span>
+                </h1>
+                <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
+                    Thành lập vào năm 2021 giữa lòng nhịp sống cuồng nhiệt của giới trẻ Sài Gòn & Hà Nội, <strong>URBANVIBE</strong> không đơn thuần là một nhãn hiệu quần áo, mà là tiếng nói phản ánh tinh thần tự do, dám khác biệt và phá vỡ các khuôn mẫu rập khuôn.
+                </p>
+                <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
+                    Chúng tôi lấy cảm hứng từ nền văn hóa trượt ván (Skateboarding), âm nhạc Hip-Hop underground, nghệ thuật Graffiti và những khối bê tông kiến trúc đương đại. Mỗi sản phẩm được phát hành theo từng mùa "Drop" có giới hạn số lượng, đảm bảo bạn luôn sở hữu trang phục mang tính độc bản cao nhất.
+                </p>
+                <div class="pt-2">
+                    <a href="sanpham.html" class="inline-flex items-center gap-2 px-8 py-3.5 bg-amber-400 hover:bg-amber-300 text-black font-black text-xs uppercase tracking-wider rounded-2xl transition shadow-xl shadow-amber-400/20">
+                        Khám Phá Các Bản Drop Mới <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 relative">
+                <div class="rounded-3xl overflow-hidden border border-zinc-800 shadow-2xl bg-zinc-900 aspect-[4/5]">
+                    <img src="https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=800&q=80" alt="UrbanVibe Studio" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -left-4 bg-zinc-900 border border-zinc-700 p-4 rounded-2xl hidden sm:block shadow-2xl">
+                    <p class="text-amber-400 font-display font-black text-2xl">2021 - 2026</p>
+                    <p class="text-[10px] text-zinc-400 uppercase font-bold tracking-wider">5 Năm Đồng Hành Street Style</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 Pillars Section -->
+        <div class="mb-16">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-amber-400 font-black text-xs uppercase tracking-widest">Core Values</span>
+                <h2 class="text-2xl sm:text-3xl font-display font-black uppercase text-white mt-1">4 Trụ Cột Chất Lượng Cốt Lõi</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl font-black">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white uppercase">Vải Heavyweight Cao Cấp</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                        100% Cotton nỉ bông 450GSM và thun 260GSM chải kỹ, giữ phom Boxy chuẩn sau nhiều lần giặt.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl font-black">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white uppercase">Kỹ Thuật Xử Lý Thủ Công</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                        Wash axit khoáng tính loang màu độc bản, in lụa tràm Plastisol và mài rách laser chuẩn xác.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl font-black">
+                        <i class="fa-solid fa-recycle"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white uppercase">Sản Xuất Đạo Đức</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                        Xưởng sản xuất khép kín tại Việt Nam tuân thủ tiêu chuẩn lao động công bằng và bảo vệ môi trường.
+                    </p>
+                </div>
+
+                <div class="bg-zinc-900 p-6 rounded-3xl border border-zinc-800 space-y-3">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-400/10 text-amber-400 flex items-center justify-center text-xl font-black">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="font-bold text-sm text-white uppercase">Dịch Vụ Khách Hàng Tận Tâm</h3>
+                    <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                        Đổi size tận nhà miễn phí 7 ngày, bảo hành trọn đời chỉ may và khóa kéo YKK chính hãng.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

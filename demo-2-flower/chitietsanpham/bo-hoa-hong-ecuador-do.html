@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bó Hoa Hồng Ecuador Đỏ Ruby - Blossom & Bloom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-rose-50/30 text-slate-800 flex flex-col min-h-screen font-sans selection:bg-rose-500 selection:text-white">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-rose-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="../index.html" class="hover:text-rose-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-rose-300"></i></li>
+                <li><a href="../sanpham.html" class="hover:text-rose-600 transition">Bộ sưu tập hoa</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-rose-300"></i></li>
+                <li class="font-bold text-slate-800">Bó Hoa Hồng Ecuador Đỏ Ruby</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+            
+            <!-- Left: Gallery (6 cols) -->
+            <div class="lg:col-span-6 space-y-4">
+                <div class="rounded-3xl overflow-hidden bg-rose-50/50 border border-rose-100 shadow-sm relative group h-[440px] flex items-center justify-center">
+                    <img id="main-product-img" src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" alt="Bó hoa hồng Ecuador" class="w-full h-full object-cover">
+                    <span class="absolute top-4 left-4 bg-rose-600 text-white font-bold text-xs px-3 py-1 rounded-full shadow-md">
+                        -23%
+                    </span>
+                    <span class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm text-rose-700 font-bold text-xs px-3 py-1 rounded-full shadow-sm">
+                        Bán Chạy Nhất
+                    </span>
+                </div>
+
+                <!-- Thumbnails -->
+                <div class="grid grid-cols-3 gap-3">
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-rose-600 h-24 shadow-sm transition">
+                        <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" alt="Ảnh 1" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-transparent h-24 shadow-sm hover:border-rose-400 transition">
+                        <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&w=800&q=80" alt="Ảnh 2" class="w-full h-full object-cover">
+                    </button>
+                    <button onclick="changeMainImage('https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80', this)" class="thumbnail-btn rounded-2xl overflow-hidden border-2 border-transparent h-24 shadow-sm hover:border-rose-400 transition">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Ảnh 3" class="w-full h-full object-cover">
+                    </button>
+                </div>
+
+                <!-- Service guarantees -->
+                <div class="bg-white rounded-3xl p-5 border border-rose-100 shadow-sm grid grid-cols-3 gap-2 text-center text-xs">
+                    <div class="p-2 space-y-1">
+                        <i class="fa-solid fa-truck-fast text-rose-500 text-lg"></i>
+                        <p class="font-bold text-slate-800 text-[11px]">Giao Hỏa Tốc 2H</p>
+                        <p class="text-[10px] text-slate-400">Nội thành TP.HCM & HN</p>
+                    </div>
+                    <div class="p-2 space-y-1 border-x border-rose-100">
+                        <i class="fa-solid fa-camera text-rose-500 text-lg"></i>
+                        <p class="font-bold text-slate-800 text-[11px]">Gửi Ảnh Thành Phẩm</p>
+                        <p class="text-[10px] text-slate-400">Xác nhận trước khi gửi</p>
+                    </div>
+                    <div class="p-2 space-y-1">
+                        <i class="fa-solid fa-gift text-rose-500 text-lg"></i>
+                        <p class="font-bold text-slate-800 text-[11px]">Tặng Kèm Thiệp & Bột</p>
+                        <p class="text-[10px] text-slate-400">Bột dưỡng hoa giữ tươi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Details (6 cols) -->
+            <div class="lg:col-span-6 space-y-6">
+                <div>
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-xs font-bold text-rose-600 uppercase tracking-widest">Hoa Tươi Nghệ Thuật</span>
+                        <span class="text-slate-300">•</span>
+                        <div class="flex items-center text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                            <span class="text-slate-700 font-bold ml-1 text-xs">5.0</span>
+                            <span class="text-slate-400 ml-1 text-[11px]">(168 đánh giá)</span>
+                        </div>
+                    </div>
+                    
+                    <h1 class="text-2xl sm:text-3xl font-serif font-black text-slate-900 leading-snug">
+                        Bó Hoa Hồng Ecuador Đỏ Ruby (Tình Yêu Nồng Nàn)
+                    </h1>
+                    
+                    <p class="text-xs sm:text-sm text-slate-500 mt-2 leading-relaxed">
+                        Bó hoa gồm 19 cành hồng Ecuador đỏ nhung cao cấp nhập khẩu, phối hoa baby trắng Hà Lan và lá bạc dịu dàng. Cánh dày mịn màng, độ bền tươi từ 7-10 ngày.
+                    </p>
+                </div>
+
+                <!-- Price Box -->
+                <div class="bg-rose-50/50 rounded-2xl p-4 border border-rose-100 flex items-baseline gap-3">
+                    <span class="text-3xl font-serif font-black text-rose-600">850.000₫</span>
+                    <span class="text-sm text-slate-400 line-through">1.100.000₫</span>
+                    <span class="text-xs bg-rose-600 text-white font-bold px-2 py-0.5 rounded-full">Tiết kiệm 250.000₫</span>
+                </div>
+
+                <!-- Size options -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                        Chọn kích thước bó hoa: <span id="selected-size-text" class="text-rose-600 font-bold">Bó lớn (19 bông)</span>
+                    </label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <button onclick="selectSize('Bó vừa (15 bông)', this)" class="size-btn py-2.5 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Bó vừa (15 bông)
+                        </button>
+                        <button onclick="selectSize('Bó lớn (19 bông)', this)" class="size-btn py-2.5 px-3 rounded-xl border-2 border-rose-600 bg-rose-50 text-rose-700 text-xs font-bold transition">
+                            Bó lớn (19 bông)
+                        </button>
+                        <button onclick="selectSize('Bó VIP (33 bông)', this)" class="size-btn py-2.5 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Bó VIP (33 bông)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wrapping paper options -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-800 uppercase tracking-wider mb-2">
+                        Màu giấy gói phong cách Hàn Quốc: <span id="selected-wrapping-text" class="text-rose-600 font-bold">Hồng Pastel</span>
+                    </label>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                        <button onclick="selectWrapping('Hồng Pastel', this)" class="wrapping-btn py-2 px-3 rounded-xl border-2 border-rose-600 bg-rose-50 text-rose-700 text-xs font-bold transition">
+                            Hồng Pastel
+                        </button>
+                        <button onclick="selectWrapping('Đen Quyền Lực', this)" class="wrapping-btn py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Đen Quyền Lực
+                        </button>
+                        <button onclick="selectWrapping('Trắng Tinh Khôi', this)" class="wrapping-btn py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Trắng Tinh Khôi
+                        </button>
+                        <button onclick="selectWrapping('Kem Vintage', this)" class="wrapping-btn py-2 px-3 rounded-xl border border-slate-200 text-slate-700 text-xs font-medium hover:border-rose-400 transition">
+                            Kem Vintage
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quantity & Buttons -->
+                <div class="space-y-3 pt-2">
+                    <div class="flex items-center gap-4">
+                        <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Số lượng:</span>
+                        <div class="flex items-center border border-rose-200 rounded-xl bg-white overflow-hidden shadow-sm">
+                            <button onclick="changeQty(-1)" class="w-9 h-9 flex items-center justify-center text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition font-bold text-sm">-</button>
+                            <input type="text" id="detail-qty" value="1" readonly class="w-10 text-center font-bold text-xs text-slate-800">
+                            <button onclick="changeQty(1)" class="w-9 h-9 flex items-center justify-center text-slate-600 hover:bg-rose-50 hover:text-rose-600 transition font-bold text-sm">+</button>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                        <button onclick="handleAddToCartClick()" class="w-full py-4 bg-rose-50 hover:bg-rose-100 border border-rose-200 text-rose-700 font-bold text-xs uppercase tracking-wider rounded-2xl transition shadow-sm flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-basket-shopping text-sm"></i> Thêm Vào Giỏ Hoa
+                        </button>
+                        <button onclick="handleBuyNowClick()" class="w-full py-4 bg-gradient-to-r from-rose-600 to-pink-500 hover:from-rose-700 hover:to-pink-600 text-white font-bold text-xs uppercase tracking-wider rounded-2xl shadow-xl shadow-rose-500/25 transition">
+                            Mua Ngay Hỏa Tốc
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Tabs: Mô Tả & Hướng Dẫn Chăm Sóc -->
+        <div class="mt-16 bg-white rounded-3xl p-6 sm:p-10 border border-rose-100 shadow-sm">
+            <div class="flex border-b border-rose-100 gap-8 mb-6">
+                <button id="tab-btn-desc" onclick="switchTab('desc')" class="pb-3 border-b-2 border-rose-600 text-rose-600 font-serif font-bold text-sm">
+                    Ý Nghĩa & Mô Tả Chi Tiết
+                </button>
+                <button id="tab-btn-care" onclick="switchTab('care')" class="pb-3 border-b-2 border-transparent text-slate-500 hover:text-rose-600 font-serif font-bold text-sm transition">
+                    Bí Quyết Chăm Sóc Hoa Tươi Lâu
+                </button>
+            </div>
+
+            <div id="tab-content-desc" class="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <p>
+                    Hoa hồng Ecuador đỏ luôn được tôn vinh là nữ hoàng của thế giới hoa nhờ kích thước đóa hoa vượt trội, màu sắc đỏ nhung thắm đượm và mùi hương tự nhiên quyến rũ. Bó hoa gồm 19 cành tượng trưng cho thông điệp tình yêu: <strong>"Hãy kiên nhẫn và chờ đợi, tình yêu này là duy nhất và mãi mãi"</strong>.
+                </p>
+                <p>
+                    Từng cành hoa được tuyển chọn công phu từ độ bung nở lý tưởng, loại bỏ gai nhọn và cuống lá dập, sau đó được phối cùng cành lá bạc nhập khẩu Dollar tạo độ mềm mại bồng bềnh.
+                </p>
+            </div>
+
+            <div id="tab-content-care" class="hidden space-y-3 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                <div class="flex items-start gap-3 p-3 bg-rose-50/50 rounded-xl">
+                    <i class="fa-solid fa-droplet text-rose-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Cắt gốc hoa xéo 45 độ:</h4>
+                        <p class="text-slate-500 mt-0.5">Dùng kéo sắc cắt vát gốc cành hoa 1-2cm mỗi ngày giúp tăng diện tích hút nước.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-rose-50/50 rounded-xl">
+                    <i class="fa-solid fa-flask text-rose-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Sử dụng bột dưỡng hoa tặng kèm:</h4>
+                        <p class="text-slate-500 mt-0.5">Pha 1/2 gói dưỡng hoa vào nước cắm bình để ức chế vi khuẩn và kéo dài độ tươi lên 7-10 ngày.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-3 p-3 bg-rose-50/50 rounded-xl">
+                    <i class="fa-solid fa-sun text-rose-500 mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-slate-800">Vị trí trưng bày:</h4>
+                        <p class="text-slate-500 mt-0.5">Tránh đặt hoa dưới ánh nắng gắt trực tiếp hoặc luồng gió phả thẳng từ máy lạnh.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Related Products -->
+        <div class="mt-16">
+            <h2 class="text-2xl font-serif font-black text-slate-900 mb-8">Có Thể Bạn Cũng Thích</h2>
+            <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Rendered dynamically -->
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="../js/data.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

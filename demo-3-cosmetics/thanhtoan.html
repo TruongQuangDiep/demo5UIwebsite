@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đơn Hàng - GlowAura Beauty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-stone-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-700 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-300"></i></li>
+                <li><a href="giohang.html" class="hover:text-amber-700 transition">Giỏ hàng</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-300"></i></li>
+                <li class="font-semibold text-stone-900">Thanh toán đơn hàng</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <h1 class="text-2xl sm:text-3xl font-serif font-black text-stone-900 mb-8">Thanh Toán & Đặt Hàng</h1>
+
+        <form id="checkout-form" class="w-full flex flex-col lg:flex-row gap-8 items-start">
+            
+            <!-- Left: Information Form & Payment Methods -->
+            <div class="flex-1 w-full space-y-8">
+                
+                <!-- Section 1: Customer Details -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-5">
+                    <h2 class="font-serif font-bold text-base text-stone-900 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-500 text-stone-950 text-xs flex items-center justify-center font-bold">1</span>
+                        Thông Tin Người Nhận
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Họ và tên *</label>
+                            <input type="text" id="cust-name" required placeholder="Nguyễn Thị Mai..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">Số điện thoại *</label>
+                            <input type="tel" id="cust-phone" required placeholder="0912 345 678..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">Địa chỉ giao hàng chi tiết *</label>
+                        <input type="text" id="cust-address" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-stone-700 mb-1">Ghi chú đơn hàng & Tình trạng da (tùy chọn)</label>
+                        <textarea id="cust-note" rows="2" placeholder="Ví dụ: Giao giờ hành chính, da đang treatment cần che chắn kín..." class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs focus:outline-none focus:border-amber-600"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section 2: Payment Method Selection -->
+                <div class="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-5">
+                    <h2 class="font-serif font-bold text-base text-stone-900 flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-500 text-stone-950 text-xs flex items-center justify-center font-bold">2</span>
+                        Phương Thức Thanh Toán
+                    </h2>
+
+                    <div class="space-y-3">
+                        
+                        <!-- Option 1: VietQR -->
+                        <label class="payment-radio-option flex items-center justify-between p-4 rounded-2xl border-2 border-stone-200 hover:border-amber-400 cursor-pointer transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment_method" value="VIETQR" checked class="text-amber-600 focus:ring-amber-500">
+                                <div>
+                                    <p class="font-serif font-bold text-xs text-stone-900 flex items-center gap-2">
+                                        Chuyển khoản QR Siêu Tốc (VietQR 24/7)
+                                        <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded-full">Khuyên dùng</span>
+                                    </p>
+                                    <p class="text-[11px] text-stone-500 mt-0.5">Quét mã QR qua app ngân hàng bất kỳ, tự động xác nhận đơn hàng</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-qrcode text-2xl text-amber-600"></i>
+                        </label>
+
+                        <!-- Option 2: COD -->
+                        <label class="payment-radio-option flex items-center justify-between p-4 rounded-2xl border-2 border-stone-200 hover:border-amber-400 cursor-pointer transition">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment_method" value="COD" class="text-amber-600 focus:ring-amber-500">
+                                <div>
+                                    <p class="font-serif font-bold text-xs text-stone-900">Thanh toán khi nhận hàng (COD)</p>
+                                    <p class="text-[11px] text-stone-500 mt-0.5">Kiểm tra mỹ phẩm nguyên seal trước khi thanh toán tiền mặt cho shipper</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-hand-holding-dollar text-2xl text-stone-400"></i>
+                        </label>
+
+                    </div>
+
+                    <!-- VietQR Preview Box (Shown by default) -->
+                    <div id="vietqr-preview-box" class="bg-amber-50/60 rounded-2xl p-5 border border-amber-200 space-y-4">
+                        <div class="flex flex-col sm:flex-row items-center gap-6">
+                            <!-- QR Mock Image -->
+                            <div class="w-40 h-40 bg-white p-2 rounded-2xl border border-amber-300 shadow-sm flex flex-col items-center justify-center text-center flex-shrink-0">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=GLOWAURA_COSMETICS_PAYMENT" alt="VietQR Payment" class="w-32 h-32 object-contain">
+                                <span class="text-[9px] font-bold text-stone-500 mt-1">Quét bằng App Ngân Hàng</span>
+                            </div>
+
+                            <!-- Bank Information Details -->
+                            <div class="space-y-2 text-xs flex-1">
+                                <span class="bg-amber-500 text-stone-950 font-extrabold text-[10px] px-2 py-0.5 rounded">TÀI KHOẢN CHÍNH THỨC</span>
+                                <h4 class="font-serif font-bold text-stone-900 text-sm">NGÂN HÀNG QUÂN ĐỘI (MB BANK)</h4>
+                                <div class="space-y-1 text-stone-600 font-mono">
+                                    <p>Số tài khoản: <strong class="text-stone-900 font-bold text-sm">8888 6666 9999</strong></p>
+                                    <p>Chủ tài khoản: <strong class="text-stone-900 font-bold">CTY TNHH GLOWAURA VIETNAM</strong></p>
+                                    <p>Nội dung: <strong class="text-amber-700 font-bold">GLOWAURA [SĐT CỦA BẠN]</strong></p>
+                                </div>
+                                <p class="text-[11px] text-stone-500 italic pt-1">* Hệ thống tự động kích hoạt phác đồ và đóng gói sau khi nhận chuyển khoản.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right: Order Items & Pay Button -->
+            <div class="w-full lg:w-96 flex-shrink-0 space-y-6">
+                
+                <div class="bg-white rounded-3xl p-6 border border-stone-200 shadow-sm space-y-5">
+                    <h3 class="font-serif font-bold text-sm text-stone-900">Chi Tiết Đơn Hàng</h3>
+
+                    <div id="checkout-items-list" class="space-y-3 max-h-64 overflow-y-auto pr-1 divide-y divide-stone-100">
+                        <!-- Populated dynamically -->
+                    </div>
+
+                    <div class="space-y-2 text-xs pt-3 border-t border-stone-100">
+                        <div class="flex justify-between text-stone-600">
+                            <span>Tạm tính:</span>
+                            <span id="co-subtotal" class="font-bold text-stone-900">0₫</span>
+                        </div>
+                        <div id="co-discount-row" class="hidden flex justify-between text-rose-600 font-bold">
+                            <span>Giảm giá:</span>
+                            <span id="co-discount">-0₫</span>
+                        </div>
+                        <div class="flex justify-between text-stone-600">
+                            <span>Phí vận chuyển:</span>
+                            <span id="co-shipping" class="font-medium text-emerald-600">Miễn phí</span>
+                        </div>
+                        <div class="pt-3 border-t border-stone-200 flex justify-between items-baseline">
+                            <span class="font-serif font-bold text-stone-900 text-sm">Tổng cần thanh toán:</span>
+                            <span id="co-total" class="text-xl font-serif font-black text-amber-700">0₫</span>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 text-center bg-gradient-to-r from-amber-600 to-amber-700 hover:from-amber-500 hover:to-amber-600 text-stone-950 font-bold text-xs uppercase tracking-wider rounded-2xl shadow-xl shadow-amber-900/20 transition">
+                        <i class="fa-solid fa-lock mr-2"></i> Xác Nhận Đặt Hàng Ngay
+                    </button>
+
+                    <p class="text-[10px] text-stone-400 text-center leading-relaxed">
+                        Bằng việc bấm xác nhận, bạn đồng ý với các điều khoản mua sắm và chính sách bảo hành làn da 14 ngày của GlowAura Beauty.
+                    </p>
+                </div>
+
+            </div>
+
+        </form>
+
+    </main>
+
+    <!-- Order Success Modal -->
+    <div id="order-success-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4 bg-stone-950/70 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-6 sm:p-8 max-w-md w-full shadow-2xl text-center space-y-4 animate-in fade-in zoom-in duration-300">
+            <div class="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-3xl mx-auto shadow-inner">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            
+            <h3 class="font-serif font-bold text-2xl text-stone-900">Đặt Hàng Thành Công!</h3>
+            <p class="text-xs text-stone-500">Mã đơn hàng: <strong id="success-order-code" class="text-amber-700 font-mono text-sm">#GA-12345</strong></p>
+
+            <div class="bg-stone-50 rounded-2xl p-4 text-left text-xs space-y-1.5 text-stone-600 border border-stone-200">
+                <p>Khách hàng: <strong id="success-cust-name" class="text-stone-900"></strong></p>
+                <p>Điện thoại: <strong id="success-cust-phone" class="text-stone-900"></strong></p>
+                <p>Giao tới: <span id="success-cust-addr" class="text-stone-900"></span></p>
+                <p class="pt-1 border-t border-stone-200">Tổng thanh toán: <strong id="success-total-amount" class="text-amber-700 font-bold text-sm"></strong></p>
+            </div>
+
+            <p class="text-[11px] text-stone-400">Chuyên viên tư vấn da sẽ liên hệ xác nhận đơn và hướng dẫn chu trình sử dụng trong vòng 15 phút.</p>
+
+            <a href="index.html" class="inline-block w-full py-3 bg-stone-900 hover:bg-stone-800 text-amber-400 font-bold text-xs uppercase tracking-wider rounded-xl transition shadow-md">
+                Quay Lại Trang Chủ
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

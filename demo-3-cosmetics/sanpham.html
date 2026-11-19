@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Dược Mỹ Phẩm - GlowAura Beauty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-stone-200 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-700 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-300"></i></li>
+                <li class="font-semibold text-stone-900">Danh mục sản phẩm dược mỹ phẩm</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <!-- Header Section -->
+        <div class="text-center max-w-xl mx-auto mb-10">
+            <span class="text-amber-600 font-bold text-xs tracking-widest uppercase">Phác Đồ Khoa Học</span>
+            <h1 class="text-3xl sm:text-4xl font-serif font-black text-stone-900 mt-1">Dược Mỹ Phẩm Cao Cấp</h1>
+            <p class="text-xs sm:text-sm text-stone-500 mt-2">100% công thức chuẩn y khoa, an toàn cho làn da nhạy cảm và da sau điều trị</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="w-full bg-white p-4 sm:p-6 rounded-3xl border border-stone-200 shadow-sm mb-8 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Category Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Dòng sản phẩm</label>
+                    <select id="filter-category" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-600">
+                        <option value="all">Tất cả sản phẩm</option>
+                        <option value="skincare">Serum & Tinh chất</option>
+                        <option value="cream">Kem dưỡng phục hồi</option>
+                        <option value="cleanser">Làm sạch & Tẩy trang</option>
+                        <option value="sunscreen">Kem chống nắng</option>
+                        <option value="combo-set">Bộ chăm sóc da</option>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Mức giá</label>
+                    <select id="filter-price" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-600">
+                        <option value="all">Tất cả mức giá</option>
+                        <option value="under-500">Dưới 500.000₫</option>
+                        <option value="500-1000">Từ 500.000₫ - 1.000.000₫</option>
+                        <option value="over-1000">Trên 1.000.000₫ (Cao cấp)</option>
+                    </select>
+                </div>
+
+                <!-- Sort Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Sắp xếp theo</label>
+                    <select id="sort-select" class="w-full bg-stone-50 border border-stone-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-amber-600">
+                        <option value="popular">Phổ biến & Đánh giá cao</option>
+                        <option value="price-low">Giá tăng dần</option>
+                        <option value="price-high">Giá giảm dần</option>
+                        <option value="rating">Được yêu thích nhất</option>
+                    </select>
+                </div>
+
+                <!-- Search Input on page -->
+                <div>
+                    <label class="block text-xs font-bold text-stone-700 mb-1">Tìm kiếm nhanh</label>
+                    <div class="relative flex items-center">
+                        <input type="text" id="search-input-page" placeholder="Nhập tên serum, B5, peptide..." class="w-full bg-stone-50 border border-stone-200 rounded-xl pl-3 pr-8 py-2 text-xs focus:outline-none focus:border-amber-600">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-xs text-stone-400 pointer-events-none"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-stone-100 text-xs">
+                <span id="products-count" class="font-bold text-amber-800">Đang tải...</span>
+                <button onclick="resetFilters()" class="text-amber-700 hover:text-amber-900 font-bold hover:underline">
+                    <i class="fa-solid fa-arrow-rotate-left mr-1"></i>Đặt lại bộ lọc
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Rendered dynamically -->
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

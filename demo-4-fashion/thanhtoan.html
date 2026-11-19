@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán Đơn Hàng - URBANVIBE</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#fbbf24',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif;
+            background-color: #14151c;
+            background-image: radial-gradient(ellipse 70% 35% at 50% 0%, rgba(245, 158, 11, 0.05), transparent 70%);
+        }
+        .font-display { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#14151c] text-white flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-[#181922] border-b border-zinc-700/60 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-zinc-400">
+                <li><a href="index.html" class="hover:text-amber-400 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-zinc-600"></i></li>
+                <li><a href="giohang.html" class="hover:text-amber-400 transition">Giỏ hàng</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-zinc-600"></i></li>
+                <li class="font-bold text-white uppercase tracking-wider">Thanh Toán</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <h1 class="text-2xl sm:text-3xl font-display font-black uppercase text-white mb-8 flex items-center gap-3">
+            <i class="fa-solid fa-credit-card text-amber-400"></i> Xác Nhận Đơn Hàng & Thanh Toán
+        </h1>
+
+        <form id="checkout-form" class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+            
+            <!-- Left: Forms (7 cols) -->
+            <div class="lg:col-span-7 space-y-6">
+                
+                <!-- Section 1: Customer Info -->
+                <div class="bg-[#1c1d27] rounded-3xl p-6 sm:p-8 border border-zinc-700/80 shadow-lg space-y-4">
+                    <h2 class="font-display font-bold text-base uppercase text-white flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-400 text-black text-xs flex items-center justify-center font-black">1</span>
+                        Thông Tin Giao Hàng
+                    </h2>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Họ và tên người nhận *</label>
+                            <input type="text" id="cust-name" required placeholder="Nguyễn Văn A..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Số điện thoại *</label>
+                            <input type="tel" id="cust-phone" required placeholder="0912 345 678..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Địa chỉ nhận hàng chi tiết *</label>
+                        <input type="text" id="cust-address" required placeholder="Số nhà, tên đường, phường/xã, quận/huyện, tỉnh/thành..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-zinc-300 mb-1 uppercase tracking-wider">Ghi chú giao hàng & Yêu cầu size (tùy chọn)</label>
+                        <textarea id="cust-note" rows="2" placeholder="Ví dụ: Giao sau 18h, cho kiểm tra hàng trước khi nhận..." class="w-full bg-zinc-950 border border-zinc-700 rounded-xl px-3.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400 placeholder-zinc-500"></textarea>
+                    </div>
+                </div>
+
+                <!-- Section 2: Payment Method Selection -->
+                <div class="bg-zinc-900 rounded-3xl p-6 sm:p-8 border border-zinc-800 shadow-sm space-y-5">
+                    <h2 class="font-display font-bold text-base uppercase text-white flex items-center gap-2">
+                        <span class="w-6 h-6 rounded-full bg-amber-400 text-black text-xs flex items-center justify-center font-black">2</span>
+                        Phương Thức Thanh Toán
+                    </h2>
+
+                    <div class="space-y-3">
+                        
+                        <!-- Option 1: VietQR -->
+                        <label class="payment-radio-option flex items-center justify-between p-4 rounded-2xl border-2 border-zinc-800 hover:border-amber-400 cursor-pointer transition bg-zinc-950">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment_method" value="VIETQR" checked class="text-amber-400 focus:ring-amber-400">
+                                <div>
+                                    <p class="font-bold text-xs text-white flex items-center gap-2 uppercase tracking-wider">
+                                        Chuyển khoản QR Tức Thì (VietQR 24/7)
+                                        <span class="bg-amber-400 text-black text-[9px] font-black px-2 py-0.5 rounded-full">Khuyên dùng</span>
+                                    </p>
+                                    <p class="text-[11px] text-zinc-400 mt-0.5">Quét mã QR qua app ngân hàng, hệ thống tự động xác nhận đơn trong 10 giây</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-qrcode text-2xl text-amber-400"></i>
+                        </label>
+
+                        <!-- Option 2: COD -->
+                        <label class="payment-radio-option flex items-center justify-between p-4 rounded-2xl border-2 border-zinc-800 hover:border-amber-400 cursor-pointer transition bg-zinc-950">
+                            <div class="flex items-center gap-3">
+                                <input type="radio" name="payment_method" value="COD" class="text-amber-400 focus:ring-amber-400">
+                                <div>
+                                    <p class="font-bold text-xs text-white uppercase tracking-wider">Thanh toán khi nhận hàng (COD)</p>
+                                    <p class="text-[11px] text-zinc-400 mt-0.5">Kiểm tra trang phục đúng mẫu và size trước khi thanh toán tiền mặt</p>
+                                </div>
+                            </div>
+                            <i class="fa-solid fa-hand-holding-dollar text-2xl text-zinc-500"></i>
+                        </label>
+
+                    </div>
+
+                    <!-- VietQR Preview Box (Shown by default) -->
+                    <div id="vietqr-preview-box" class="bg-zinc-950 rounded-2xl p-5 border border-zinc-800 space-y-4">
+                        <div class="flex flex-col sm:flex-row items-center gap-6">
+                            <!-- QR Mock Image -->
+                            <div class="w-40 h-40 bg-white p-2 rounded-2xl border border-zinc-700 shadow-md flex flex-col items-center justify-center text-center flex-shrink-0">
+                                <i class="fa-solid fa-qrcode text-7xl text-black"></i>
+                                <span class="text-[9px] font-black text-black mt-1">VIETQR 24/7</span>
+                            </div>
+
+                            <div class="space-y-1.5 text-xs text-zinc-300">
+                                <p class="text-amber-400 font-bold flex items-center gap-1.5">
+                                    <i class="fa-solid fa-building-columns"></i> Ngân hàng Quân Đội (MB Bank)
+                                </p>
+                                <p>Số tài khoản: <strong class="text-white font-mono text-sm">8888 9999 66</strong></p>
+                                <p>Chủ tài khoản: <strong class="text-white uppercase">URBANVIBE STUDIO</strong></p>
+                                <p>Số tiền: <strong id="qr-amount-text" class="text-amber-400 font-black text-sm">0₫</strong></p>
+                                <p class="text-[10px] text-zinc-500">Nội dung CK: <span class="font-mono text-zinc-400">UBV [Số điện thoại của bạn]</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Right: Order Summary (5 cols) -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <div class="bg-zinc-900 rounded-3xl p-6 sm:p-8 border border-zinc-800 space-y-6">
+                    <h3 class="font-display font-bold text-base uppercase text-white">Chi Tiết Đơn Hàng</h3>
+
+                    <!-- Items List -->
+                    <div id="checkout-items-list" class="space-y-3 max-h-72 overflow-y-auto pr-1">
+                        <!-- Populated by JS -->
+                    </div>
+
+                    <!-- Totals Breakdown -->
+                    <div class="space-y-3 text-xs border-t border-zinc-800 pt-4">
+                        <div class="flex items-center justify-between text-zinc-400">
+                            <span>Tạm tính:</span>
+                            <span id="checkout-subtotal" class="font-bold text-white">0₫</span>
+                        </div>
+                        <div class="flex items-center justify-between text-zinc-400">
+                            <span>Phí vận chuyển:</span>
+                            <span id="checkout-shipping" class="font-bold text-white">0₫</span>
+                        </div>
+                        <div class="flex items-center justify-between text-zinc-400">
+                            <span>Giảm giá:</span>
+                            <span id="checkout-discount" class="font-bold text-amber-400">0₫</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-baseline justify-between border-t border-zinc-800 pt-4">
+                        <span class="font-bold text-sm text-white uppercase tracking-wider">Tổng thanh toán:</span>
+                        <span id="checkout-total" class="text-2xl font-black text-amber-400">0₫</span>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-amber-400 hover:bg-amber-300 text-black font-black text-xs uppercase tracking-wider rounded-2xl transition shadow-xl shadow-amber-400/20">
+                        Xác Nhận Đặt Hàng <i class="fa-solid fa-check ml-1"></i>
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+
+        <!-- Order Success Modal -->
+        <div id="order-success-modal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+            <div class="bg-zinc-900 rounded-3xl p-8 max-w-md w-full border border-amber-400/40 text-center space-y-4 shadow-2xl">
+                <div class="w-16 h-16 rounded-full bg-amber-400/10 text-amber-400 text-3xl flex items-center justify-center mx-auto border border-amber-400/30">
+                    <i class="fa-solid fa-check"></i>
+                </div>
+                <h3 class="text-2xl font-display font-black text-white uppercase">Đặt Hàng Thành Công!</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">
+                    Cảm ơn bạn <strong id="modal-cust-name" class="text-white"></strong> đã lựa chọn UrbanVibe Studio. Đơn hàng <strong id="modal-order-code" class="text-amber-400 font-mono"></strong> với tổng giá trị <strong id="modal-total-amount" class="text-white"></strong> đang được chuẩn bị đóng hộp và điều phối giao hỏa tốc.
+                </p>
+                <div class="pt-4 flex gap-3">
+                    <a href="sanpham.html" class="flex-1 py-3 bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-bold rounded-xl transition">
+                        Tiếp Tục Mua Sắm
+                    </a>
+                    <a href="index.html" class="flex-1 py-3 bg-amber-400 hover:bg-amber-300 text-black text-xs font-black uppercase tracking-wider rounded-xl transition">
+                        Về Trang Chủ
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

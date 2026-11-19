@@ -1,0 +1,120 @@
+<!-- Top Announcement Bar -->
+<div class="bg-stone-900 text-stone-200 text-xs py-2 px-4 border-b border-stone-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+        <div class="flex items-center space-x-2">
+            <span class="bg-amber-700/80 text-amber-100 text-[10px] uppercase font-bold tracking-wider px-2 py-0.5 rounded">NORDIC SALE</span>
+            <span class="text-stone-300">Tặng gói thiết kế 3D 15.000.000₫ & Miễn phí lắp đặt tại nhà cho đơn từ 5.000.000₫</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-stone-400 text-xs">
+            <span><i class="fa-solid fa-location-dot mr-1 text-amber-600"></i> Flagship Store: 68 Xuân Diệu, Tây Hồ, Hà Nội</span>
+            <span><i class="fa-solid fa-phone mr-1 text-amber-600"></i> Hotline: 1800 6886</span>
+        </div>
+    </div>
+</div>
+
+<!-- Main Navigation Header (2 Rows) -->
+<header id="site-header" class="bg-white/98 backdrop-blur-md border-b border-stone-200 shadow-sm transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- ROW 1: Brand Logo + Extra-Wide Search Bar + Actions -->
+        <div class="flex items-center justify-between h-20 gap-6">
+            
+            <!-- Brand Logo -->
+            <a href="index.html" class="flex items-center gap-3 group flex-shrink-0">
+                <div class="w-11 h-11 rounded-2xl bg-stone-900 flex items-center justify-center text-amber-400 shadow-md group-hover:bg-amber-800 transition duration-300">
+                    <i class="fa-solid fa-couch text-xl"></i>
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-stone-900 group-hover:text-amber-800 transition">Nordic<span class="text-amber-700">Living</span></span>
+                    <span class="block text-[10px] tracking-widest uppercase text-stone-500 font-semibold">Scandinavian Furniture & Decor</span>
+                </div>
+            </a>
+
+            <!-- Big Search Bar (Expanded & Prominent) -->
+            <div class="hidden md:flex flex-1 max-w-2xl mx-4">
+                <form class="header-search-form relative w-full flex items-center" onsubmit="event.preventDefault(); const val = this.querySelector('input').value.trim(); if(val) { const isSub = window.location.pathname.includes('/chitietsanpham/'); window.location.href = (isSub ? '../sanpham.html' : 'sanpham.html') + '?search=' + encodeURIComponent(val); }">
+                    <input type="text" placeholder="Tìm kiếm sofa bọc nỉ, bàn trà gỗ sồi, đèn cây, thảm len..." class="w-full bg-stone-50 hover:bg-stone-100/80 focus:bg-white text-stone-900 pl-5 pr-12 py-3 rounded-full text-xs sm:text-sm border border-stone-200 focus:outline-none focus:border-amber-700 focus:ring-2 focus:ring-amber-700/20 transition placeholder-stone-400 shadow-inner">
+                    <button type="submit" class="absolute right-1.5 top-1/2 -translate-y-1/2 w-9 h-9 bg-stone-900 hover:bg-amber-800 text-white rounded-full flex items-center justify-center transition shadow-sm">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Actions (Account, Cart, Mobile Menu) -->
+            <div class="flex items-center gap-3 sm:gap-4 flex-shrink-0">
+                <!-- Account Button -->
+                <a href="dangnhap.html" class="text-stone-700 hover:text-amber-800 text-xs font-bold uppercase tracking-wider flex items-center gap-2 py-2.5 px-4 rounded-full bg-stone-100 hover:bg-stone-200 border border-stone-200 transition">
+                    <i class="fa-regular fa-user text-amber-700 text-sm"></i>
+                    <span class="hidden sm:inline">Tài khoản</span>
+                </a>
+
+                <!-- Cart Button with Live Badge -->
+                <a href="giohang.html" class="relative flex items-center gap-2 bg-stone-900 hover:bg-amber-800 text-white text-xs font-bold uppercase tracking-wider px-5 py-2.5 rounded-full transition shadow-md group">
+                    <i class="fa-solid fa-bag-shopping text-sm text-amber-400 group-hover:scale-110 transition"></i>
+                    <span class="hidden md:inline">Giỏ hàng</span>
+                    <span id="header-cart-badge" class="cart-count-badge hidden bg-amber-600 text-white text-[11px] font-black w-5 h-5 rounded-full flex items-center justify-center border-2 border-white shadow-sm ml-1">0</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden w-10 h-10 rounded-xl bg-stone-100 hover:bg-stone-200 flex items-center justify-center text-stone-800 transition" onclick="toggleMobileMenu()">
+                    <i class="fa-solid fa-bars text-lg"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ROW 2: Navigation Categories Bar (Desktop) -->
+        <div class="hidden lg:flex items-center justify-between border-t border-stone-100 py-3">
+            <nav class="flex items-center gap-8 text-xs font-bold uppercase tracking-wider text-stone-700">
+                <a href="index.html" class="hover:text-amber-800 transition flex items-center gap-1.5 py-1">
+                    <i class="fa-solid fa-house text-stone-400 text-xs"></i> Trang chủ
+                </a>
+                <a href="sanpham.html" class="hover:text-amber-800 transition flex items-center gap-1.5 py-1">
+                    <i class="fa-solid fa-couch text-stone-400 text-xs"></i> Bộ sưu tập nội thất
+                </a>
+                <a href="khuyenmai.html" class="hover:text-amber-800 transition flex items-center gap-1.5 py-1">
+                    <i class="fa-solid fa-tag text-amber-600 text-xs"></i> Ưu đãi mùa mới
+                    <span class="bg-red-500 text-white text-[9px] px-1.5 py-0.5 rounded-full font-bold ml-0.5">HOT</span>
+                </a>
+                <a href="gioithieu.html" class="hover:text-amber-800 transition flex items-center gap-1.5 py-1">
+                    <i class="fa-solid fa-lightbulb text-stone-400 text-xs"></i> Không gian sống
+                </a>
+                <a href="lienhe.html" class="hover:text-amber-800 transition flex items-center gap-1.5 py-1">
+                    <i class="fa-solid fa-pen-ruler text-stone-400 text-xs"></i> Tư vấn thiết kế
+                </a>
+            </nav>
+            <div class="flex items-center gap-4 text-xs text-stone-500 font-medium">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-truck-fast text-amber-700"></i> Miễn phí vận chuyển từ 5TR</span>
+                <span>•</span>
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-amber-700"></i> Bảo hành chính hãng 5 năm</span>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Mobile Search on Small Screens -->
+    <div class="lg:hidden px-4 pb-3">
+        <form class="header-search-form relative w-full flex items-center" onsubmit="event.preventDefault(); const val = this.querySelector('input').value.trim(); if(val) { const isSub = window.location.pathname.includes('/chitietsanpham/'); window.location.href = (isSub ? '../sanpham.html' : 'sanpham.html') + '?search=' + encodeURIComponent(val); }">
+            <input type="text" placeholder="Tìm sofa, bàn trà, đèn cây..." class="w-full bg-stone-50 text-stone-900 pl-4 pr-11 py-2.5 rounded-full text-xs border border-stone-200 focus:outline-none focus:border-amber-700 placeholder-stone-500">
+            <button type="submit" class="absolute right-1 top-1/2 -translate-y-1/2 w-7 h-7 bg-stone-900 text-white rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass text-[10px]"></i>
+            </button>
+        </form>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden lg:hidden bg-stone-900 text-stone-200 border-t border-stone-800 px-6 py-5 space-y-4">
+        <a href="index.html" class="block font-medium hover:text-amber-400 transition py-1">Trang chủ</a>
+        <a href="sanpham.html" class="block font-medium hover:text-amber-400 transition py-1">Bộ sưu tập nội thất</a>
+        <a href="khuyenmai.html" class="block font-medium hover:text-amber-400 transition py-1 flex items-center justify-between">
+            <span>Ưu đãi & Voucher</span>
+            <span class="bg-red-500 text-white text-[10px] px-2 py-0.5 rounded font-bold">HOT</span>
+        </a>
+        <a href="gioithieu.html" class="block font-medium hover:text-amber-400 transition py-1">Không gian sống & Ý tưởng</a>
+        <a href="lienhe.html" class="block font-medium hover:text-amber-400 transition py-1">Tư vấn thiết kế & Showroom</a>
+        <div class="pt-4 border-t border-stone-800 flex justify-between items-center text-xs">
+            <a href="dangnhap.html" class="text-amber-400 font-bold"><i class="fa-regular fa-user mr-1"></i>Đăng nhập</a>
+            <a href="dangky.html" class="text-stone-300 font-medium">Đăng ký thành viên</a>
+        </div>
+    </div>
+</header>

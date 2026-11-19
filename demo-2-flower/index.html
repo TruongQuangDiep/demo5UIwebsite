@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom & Bloom - Tiệm Hoa Tươi Nghệ Thuật & Quà Tặng Thủ Công</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-rose-50/30 text-slate-800 flex flex-col min-h-screen font-sans selection:bg-rose-500 selection:text-white">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow">
+        
+        <!-- Hero Section -->
+        <section class="relative bg-gradient-to-r from-rose-900 via-pink-900 to-rose-950 text-white overflow-hidden py-16 md:py-24">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#f43f5e_1px,transparent_1px)] [background-size:24px_24px]"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-rose-500/20 border border-rose-500/30 text-rose-300 text-xs font-semibold backdrop-blur-sm">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <span>Hoa Tươi Nhập Khẩu & Thủ Công Cao Cấp</span>
+                        </div>
+                        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-black tracking-tight leading-tight">
+                            Trao Gửi Yêu Thương <br>
+                            <span class="bg-gradient-to-r from-rose-300 via-pink-200 to-amber-200 bg-clip-text text-transparent">Trọn Vẹn Từng Cảm Xúc</span>
+                        </h1>
+                        <p class="text-rose-100 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0 font-light">
+                            Từng nhành hoa tại Blossom & Bloom được nâng niu tỉ mỉ, thiết kế theo phong cách Châu Âu lãng mạn kết hợp nét thanh nhã Hàn Quốc. Giao hoa hỏa tốc 2H tận tay người thương.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-2">
+                            <a href="sanpham.html" class="px-8 py-4 rounded-2xl bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 font-bold text-xs uppercase tracking-wider text-white shadow-xl shadow-rose-500/30 transition transform hover:-translate-y-0.5 text-center">
+                                Khám Phá Bộ Sưu Tập <i class="fa-solid fa-arrow-right ml-2"></i>
+                            </a>
+                            <a href="khuyenmai.html" class="px-8 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 font-bold text-xs uppercase tracking-wider text-white backdrop-blur-sm transition text-center">
+                                Ưu Đãi Ngày Lễ <i class="fa-solid fa-gift ml-2 text-rose-300"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-5 relative">
+                        <div class="relative mx-auto max-w-sm rounded-3xl overflow-hidden shadow-2xl border-4 border-white/20 group">
+                            <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=800&q=80" alt="Bó hoa Ecuador" class="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                                <span class="bg-rose-500 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full w-max mb-1">Mẫu Nổi Bật</span>
+                                <h3 class="font-serif text-lg font-bold">Bó Hoa Hồng Ecuador Đỏ Ruby</h3>
+                                <p class="text-xs text-rose-200 mt-1">19 đóa hoa hồng nhung nhập khẩu sang trọng</p>
+                                <div class="mt-3 flex items-center justify-between">
+                                    <span class="text-lg font-bold text-rose-300">850.000₫</span>
+                                    <a href="chitietsanpham/bo-hoa-hong-ecuador-do.html" class="text-xs bg-white text-rose-700 font-bold px-3 py-1.5 rounded-xl hover:bg-rose-50 transition">
+                                        Xem Chi Tiết
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Highlights -->
+        <section class="py-8 bg-white border-b border-rose-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center lg:text-left">
+                    <div class="flex flex-col lg:flex-row items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wide">Giao Hoa Hỏa Tốc 2H</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Nội thành TP.HCM & Hà Nội đúng hẹn</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-spa"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wide">100% Hoa Tươi Loại 1</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Tuyển chọn từ Đà Lạt & Hà Lan, Ecuador</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wide">Chụp Ảnh Trước Khi Giao</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">Xác nhận mẫu hoa thực tế với khách</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col lg:flex-row items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-rose-50 text-rose-600 text-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fa-solid fa-envelope-open-text"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-xs text-slate-800 uppercase tracking-wide">Tặng Thiệp & Băng Rôn</h4>
+                            <p class="text-[11px] text-slate-500 mt-0.5">In lời chúc & kèm gói dưỡng hoa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section class="py-14 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-xl mx-auto mb-10">
+                <span class="text-rose-600 font-bold text-xs tracking-widest uppercase">Danh Mục Tuyển Chọn</span>
+                <h2 class="text-2xl sm:text-3xl font-serif font-black text-slate-900 mt-1">Dành Cho Mọi Khoảnh Khắc</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+                <a href="sanpham.html?category=bouquet" class="group relative rounded-3xl overflow-hidden bg-rose-100 h-64 shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=600&q=80" alt="Bó hoa tươi" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex flex-col justify-end p-5 text-white">
+                        <span class="text-xs text-rose-300 font-semibold">Tình yêu & Sinh nhật</span>
+                        <h3 class="text-lg font-serif font-bold">Bó Hoa Tươi</h3>
+                    </div>
+                </a>
+
+                <a href="sanpham.html?category=flower-basket" class="group relative rounded-3xl overflow-hidden bg-rose-100 h-64 shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=600&q=80" alt="Giỏ hoa chúc mừng" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex flex-col justify-end p-5 text-white">
+                        <span class="text-xs text-rose-300 font-semibold">Khai trương & Sự kiện</span>
+                        <h3 class="text-lg font-serif font-bold">Giỏ Hoa Chúc Mừng</h3>
+                    </div>
+                </a>
+
+                <a href="sanpham.html?category=flower-box" class="group relative rounded-3xl overflow-hidden bg-rose-100 h-64 shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1520763185298-1b434c919102?auto=format&fit=crop&w=600&q=80" alt="Hộp hoa sang trọng" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex flex-col justify-end p-5 text-white">
+                        <span class="text-xs text-rose-300 font-semibold">Kỷ niệm & Sang trọng</span>
+                        <h3 class="text-lg font-serif font-bold">Hộp Hoa Nghệ Thuật</h3>
+                    </div>
+                </a>
+
+                <a href="sanpham.html?category=gift-set" class="group relative rounded-3xl overflow-hidden bg-rose-100 h-64 shadow-sm hover:shadow-xl transition">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=600&q=80" alt="Set hoa quà tặng" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent flex flex-col justify-end p-5 text-white">
+                        <span class="text-xs text-rose-300 font-semibold">Nến thơm & Phụ kiện</span>
+                        <h3 class="text-lg font-serif font-bold">Set Hoa & Quà Tặng</h3>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Flash Sale Section -->
+        <section class="py-12 bg-gradient-to-br from-rose-50 via-white to-pink-50 border-y border-rose-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="px-2 py-0.5 rounded-full bg-rose-600 text-white text-[11px] font-bold uppercase tracking-wider animate-pulse">Flash Deal</span>
+                            <h2 class="text-2xl sm:text-3xl font-serif font-black text-slate-900">Hoa Tươi Giảm Sốc Trong Ngày</h2>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Ưu đãi số lượng có hạn, áp dụng cho các đơn đặt trước 18:00</p>
+                    </div>
+
+                    <!-- Countdown Timer -->
+                    <div class="flex items-center gap-2 bg-white px-4 py-2.5 rounded-2xl border border-rose-200 shadow-sm">
+                        <span class="text-xs font-bold text-slate-500 mr-1"><i class="fa-regular fa-clock text-rose-500 mr-1"></i>Kết thúc trong:</span>
+                        <span id="countdown-hours" class="bg-rose-600 text-white font-bold px-2 py-1 rounded-lg text-xs">06</span>
+                        <span class="text-rose-600 font-bold">:</span>
+                        <span id="countdown-minutes" class="bg-rose-600 text-white font-bold px-2 py-1 rounded-lg text-xs">15</span>
+                        <span class="text-rose-600 font-bold">:</span>
+                        <span id="countdown-seconds" class="bg-rose-600 text-white font-bold px-2 py-1 rounded-lg text-xs">40</span>
+                    </div>
+                </div>
+
+                <div id="flash-sale-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Rendered dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10">
+                <div>
+                    <span class="text-rose-600 font-bold text-xs tracking-widest uppercase">Bộ Sưu Tập Tiêu Biểu</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-black text-slate-900 mt-1">Những Mẫu Hoa Được Yêu Thích Nhất</h2>
+                </div>
+                <a href="sanpham.html" class="inline-flex items-center gap-2 text-rose-600 hover:text-rose-700 font-bold text-xs uppercase tracking-wider">
+                    Xem tất cả hoa tươi <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div id="featured-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Rendered dynamically -->
+            </div>
+        </section>
+
+        <!-- Workshop Banner -->
+        <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="text-rose-400 font-bold text-xs uppercase tracking-widest">Dịch Vụ Cá Nhân Hóa</span>
+                        <h2 class="text-2xl sm:text-4xl font-serif font-black leading-tight">
+                            Bạn Cần Thiết Kế Bó Hoa Theo Phong Cách Riêng?
+                        </h2>
+                        <p class="text-slate-300 text-xs sm:text-sm max-w-2xl leading-relaxed">
+                            Đội ngũ Florist tại Blossom & Bloom luôn sẵn sàng lắng nghe ý tưởng, ngân sách và câu chuyện của bạn để sáng tạo nên tác phẩm hoa độc bản, duy nhất dành cho người đặc biệt.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 flex justify-start lg:justify-end">
+                        <a href="lienhe.html" class="px-8 py-4 bg-gradient-to-r from-rose-500 to-pink-500 hover:from-rose-600 hover:to-pink-600 text-white font-bold text-xs uppercase tracking-wider rounded-2xl shadow-xl shadow-rose-500/25 transition">
+                            Tư Vấn Thiết Kế Ngay
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Testimonials -->
+        <section class="py-16 bg-rose-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-xl mx-auto mb-12">
+                    <span class="text-rose-600 font-bold text-xs tracking-widest uppercase">Đánh Giá Từ Khách Hàng</span>
+                    <h2 class="text-2xl sm:text-3xl font-serif font-black text-slate-900 mt-1">Gửi Gắm Yêu Thương Thành Lời</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-3xl border border-rose-100 shadow-sm space-y-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed italic">
+                            "Đặt bó hồng Ecuador tặng người yêu dịp kỷ niệm. Hoa nhận được đẹp hơn cả ảnh chụp, bông to thơm nhẹ và giữ tươi được gần 8 ngày. Bạn gái mình vô cùng hạnh phúc!"
+                        </p>
+                        <div class="pt-2 border-t border-rose-50 flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs">NL</div>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-800">Nguyễn Nhật Long</h4>
+                                <span class="text-[10px] text-slate-400">Khách hàng tại Quận 1, TP.HCM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl border border-rose-100 shadow-sm space-y-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed italic">
+                            "Giỏ hoa khai trương thiết kế tone cam vàng rất sang và nổi bật giữa bữa tiệc. Giao hỏa tốc đúng 1 tiếng 45 phút, có chụp ảnh trước khi gửi. Rất chuyên nghiệp!"
+                        </p>
+                        <div class="pt-2 border-t border-rose-50 flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-pink-100 text-pink-600 flex items-center justify-center font-bold text-xs">TH</div>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-800">Trần Thu Hằng</h4>
+                                <span class="text-[10px] text-slate-400">CEO Công ty Truyền Thông Viva</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-3xl border border-rose-100 shadow-sm space-y-3">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-xs text-slate-600 leading-relaxed italic">
+                            "Hộp quà nến thơm và hoa sáp tinh tế đến từng chi tiết nơ lụa. Nến thơm mùi oải hương thư thái dễ chịu. Chắc chắn sẽ tiếp tục ủng hộ tiệm trong nhiều dịp khác."
+                        </p>
+                        <div class="pt-2 border-t border-rose-50 flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xs">PM</div>
+                            <div>
+                                <h4 class="font-bold text-xs text-slate-800">Phạm Phương Mai</h4>
+                                <span class="text-[10px] text-slate-400">Khách hàng tại Cầu Giấy, Hà Nội</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="py-16 bg-gradient-to-r from-rose-600 via-pink-600 to-rose-700 text-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+                <span class="bg-white/20 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Ưu Đãi Độc Quyền</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-black tracking-tight">Đăng Ký Nhận Bản Tin Hoa Tươi</h2>
+                <p class="text-rose-100 text-xs sm:text-sm max-w-xl mx-auto">
+                    Nhận ngay voucher giảm 50.000₫ cho đơn hàng đầu tiên cùng những gợi ý hoa tươi mới nhất mỗi tuần.
+                </p>
+                <form class="newsletter-form flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto pt-2">
+                    <input type="email" placeholder="Nhập email của bạn..." required class="w-full bg-white text-slate-800 placeholder-slate-400 px-5 py-3 rounded-2xl text-xs border-0 focus:outline-none focus:ring-2 focus:ring-amber-300 shadow-md">
+                    <button type="submit" class="w-full sm:w-auto px-6 py-3 bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider rounded-2xl shadow-lg transition whitespace-nowrap">
+                        Nhận Voucher
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

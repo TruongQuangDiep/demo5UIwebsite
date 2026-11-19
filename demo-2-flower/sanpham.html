@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập Hoa Tươi Nghệ Thuật - Blossom & Bloom</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff1f2',
+                            100: '#ffe4e6',
+                            500: '#f43f5e',
+                            600: '#e11d48',
+                            700: '#be123c',
+                            900: '#881337',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,900;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="bg-rose-50/30 text-slate-800 flex flex-col min-h-screen font-sans selection:bg-rose-500 selection:text-white">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-white border-b border-rose-100 py-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-slate-500">
+                <li><a href="index.html" class="hover:text-rose-600 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-rose-300"></i></li>
+                <li class="font-bold text-slate-800">Bộ Sưu Tập Hoa Tươi</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow">
+        
+        <!-- Header Section -->
+        <div class="text-center max-w-xl mx-auto mb-10">
+            <span class="text-rose-600 font-bold text-xs tracking-widest uppercase">Danh Mục Hoa Nghệ Thuật</span>
+            <h1 class="text-3xl sm:text-4xl font-serif font-black text-slate-900 mt-1">Tác Phẩm Hoa Tươi Thủ Công</h1>
+            <p class="text-xs sm:text-sm text-slate-500 mt-2">100% hoa tươi loại A tuyển chọn mỗi sáng, phối màu theo phong cách lãng mạn tinh tế</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="w-full bg-white p-4 sm:p-6 rounded-3xl border border-rose-100 shadow-sm mb-8 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                
+                <!-- Category Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Dịp / Danh mục</label>
+                    <select id="filter-category" class="w-full bg-rose-50/50 border border-rose-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-rose-500">
+                        <option value="all">Tất cả sản phẩm</option>
+                        <option value="bouquet">Bó hoa tươi lãng mạn</option>
+                        <option value="flower-basket">Giỏ hoa chúc mừng</option>
+                        <option value="flower-box">Hộp hoa sang trọng</option>
+                        <option value="gift-set">Set hoa & nến thơm</option>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Mức giá</label>
+                    <select id="filter-price" class="w-full bg-rose-50/50 border border-rose-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-rose-500">
+                        <option value="all">Tất cả mức giá</option>
+                        <option value="under-600">Dưới 600.000₫</option>
+                        <option value="600-1200">Từ 600.000₫ - 1.200.000₫</option>
+                        <option value="over-1200">Trên 1.200.000₫ (VIP)</option>
+                    </select>
+                </div>
+
+                <!-- Sort Filter -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Sắp xếp theo</label>
+                    <select id="sort-select" class="w-full bg-rose-50/50 border border-rose-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-rose-500">
+                        <option value="popular">Phổ biến & Đánh giá cao</option>
+                        <option value="price-low">Giá tăng dần</option>
+                        <option value="price-high">Giá giảm dần</option>
+                        <option value="rating">Được yêu thích nhất</option>
+                    </select>
+                </div>
+
+                <!-- Search Input on page -->
+                <div>
+                    <label class="block text-xs font-bold text-slate-700 mb-1">Tìm kiếm nhanh</label>
+                    <div class="relative flex items-center">
+                        <input type="text" id="search-input-page" placeholder="Nhập tên hoa, tulip, hồng..." class="w-full bg-rose-50/50 border border-rose-200 rounded-xl pl-3 pr-8 py-2 text-xs focus:outline-none focus:border-rose-500">
+                        <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 -translate-y-1/2 text-xs text-rose-400 pointer-events-none"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="flex items-center justify-between pt-2 border-t border-rose-50 text-xs">
+                <span id="products-count" class="font-bold text-rose-700">Đang tải...</span>
+                <button onclick="resetFilters()" class="text-rose-600 hover:text-rose-800 font-bold hover:underline">
+                    <i class="fa-solid fa-arrow-rotate-left mr-1"></i>Đặt lại bộ lọc
+                </button>
+            </div>
+        </div>
+
+        <!-- Products Grid -->
+        <div id="products-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Rendered dynamically -->
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ưu Đãi Đặc Quyền - GlowAura Beauty</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            800: '#92400e',
+                            900: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', Georgia, serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 flex flex-col min-h-screen">
+
+    <!-- Header Component -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Main Content -->
+    <main class="w-full flex-grow">
+        
+        <!-- Promo Hero -->
+        <section class="bg-gradient-to-r from-stone-900 via-amber-950 to-stone-900 text-white py-14 md:py-20 text-center relative overflow-hidden">
+            <div class="max-w-4xl mx-auto px-4 relative z-10 space-y-4">
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 font-bold px-3 py-1 rounded-full text-xs uppercase tracking-wider backdrop-blur-sm inline-flex items-center gap-1.5">
+                    <i class="fa-solid fa-sparkles text-amber-400"></i> Tuần Lễ Chăm Sóc Sắc Đẹp 2026
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-serif font-black tracking-tight">Đại Tiệc Tái Sinh Làn Da</h1>
+                <p class="text-stone-300 text-xs sm:text-base max-w-xl mx-auto font-light">
+                    Thu thập ngay kho voucher độc quyền, săn ưu đãi giảm giá đến 24% cho các dòng tinh chất B5, Peptide và nhận trọn bộ quà tặng du lịch.
+                </p>
+            </div>
+        </section>
+
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+            
+            <!-- Voucher Wallet Section -->
+            <section>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center text-sm font-bold">
+                        <i class="fa-solid fa-ticket"></i>
+                    </div>
+                    <div>
+                        <h2 class="text-xl font-serif font-bold text-stone-900">Kho Mã Giảm Giá Độc Quyền</h2>
+                        <p class="text-xs text-stone-500">Bấm "Sao chép" để áp dụng ngay tại bước thanh toán</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                    
+                    <!-- Voucher 1 -->
+                    <div class="bg-white rounded-2xl p-5 border border-amber-200 shadow-sm relative overflow-hidden flex flex-col justify-between group hover:border-amber-400 transition">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded">Khách Mới</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-lg mt-1">Giảm 100.000₫</h3>
+                                <p class="text-[11px] text-stone-500">Đơn hàng đầu tiên từ 500.000₫</p>
+                            </div>
+                            <i class="fa-solid fa-gift text-2xl text-amber-400/40"></i>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-dashed border-stone-200 flex items-center justify-between">
+                            <span class="font-mono font-bold text-xs text-amber-700 bg-amber-50 px-2 py-1 rounded">GLOW100</span>
+                            <button onclick="copyCoupon('GLOW100', this)" class="text-xs font-bold text-stone-700 hover:text-amber-700 transition">
+                                <i class="fa-regular fa-copy mr-1"></i>Sao chép
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Voucher 2 -->
+                    <div class="bg-white rounded-2xl p-5 border border-amber-200 shadow-sm relative overflow-hidden flex flex-col justify-between group hover:border-amber-400 transition">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-rose-100 text-rose-800 text-[10px] font-bold px-2 py-0.5 rounded">Freeship</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-lg mt-1">Freeship Toàn Quốc</h3>
+                                <p class="text-[11px] text-stone-500">Áp dụng cho mọi đơn từ 300.000₫</p>
+                            </div>
+                            <i class="fa-solid fa-truck-fast text-2xl text-rose-400/40"></i>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-dashed border-stone-200 flex items-center justify-between">
+                            <span class="font-mono font-bold text-xs text-rose-700 bg-rose-50 px-2 py-1 rounded">B5FREESHIP</span>
+                            <button onclick="copyCoupon('B5FREESHIP', this)" class="text-xs font-bold text-stone-700 hover:text-rose-700 transition">
+                                <i class="fa-regular fa-copy mr-1"></i>Sao chép
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Voucher 3 -->
+                    <div class="bg-white rounded-2xl p-5 border border-amber-200 shadow-sm relative overflow-hidden flex flex-col justify-between group hover:border-amber-400 transition">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold px-2 py-0.5 rounded">VIP Member</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-lg mt-1">Giảm 15% Tối Đa 300K</h3>
+                                <p class="text-[11px] text-stone-500">Đơn hàng skincare từ 1.200.000₫</p>
+                            </div>
+                            <i class="fa-solid fa-crown text-2xl text-emerald-400/40"></i>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-dashed border-stone-200 flex items-center justify-between">
+                            <span class="font-mono font-bold text-xs text-emerald-700 bg-emerald-50 px-2 py-1 rounded">BEAUTYVIP</span>
+                            <button onclick="copyCoupon('BEAUTYVIP', this)" class="text-xs font-bold text-stone-700 hover:text-emerald-700 transition">
+                                <i class="fa-regular fa-copy mr-1"></i>Sao chép
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Voucher 4 -->
+                    <div class="bg-white rounded-2xl p-5 border border-amber-200 shadow-sm relative overflow-hidden flex flex-col justify-between group hover:border-amber-400 transition">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <span class="bg-stone-100 text-stone-800 text-[10px] font-bold px-2 py-0.5 rounded">Combo</span>
+                                <h3 class="font-serif font-bold text-stone-900 text-lg mt-1">Giảm 50.000₫</h3>
+                                <p class="text-[11px] text-stone-500">Khi mua kèm Kem dưỡng Peptide</p>
+                            </div>
+                            <i class="fa-solid fa-bag-shopping text-2xl text-stone-400/40"></i>
+                        </div>
+                        <div class="pt-4 mt-4 border-t border-dashed border-stone-200 flex items-center justify-between">
+                            <span class="font-mono font-bold text-xs text-stone-700 bg-stone-100 px-2 py-1 rounded">PEPTIDE50</span>
+                            <button onclick="copyCoupon('PEPTIDE50', this)" class="text-xs font-bold text-stone-700 hover:text-amber-700 transition">
+                                <i class="fa-regular fa-copy mr-1"></i>Sao chép
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Promo Products Grid -->
+            <section>
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center text-sm font-bold">
+                            <i class="fa-solid fa-bolt"></i>
+                        </div>
+                        <div>
+                            <h2 class="text-xl font-serif font-bold text-stone-900">Sản Phẩm Đang Giảm Giá Sốc</h2>
+                            <p class="text-xs text-stone-500">Ưu đãi áp dụng tự động, số lượng có hạn</p>
+                        </div>
+                    </div>
+                    <a href="sanpham.html" class="text-xs font-bold text-amber-700 hover:underline">Xem tất cả &rarr;</a>
+                </div>
+
+                <div id="promo-products-grid" class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Cards populated dynamically -->
+                </div>
+            </section>
+
+            <!-- Member Privileges -->
+            <section class="bg-white rounded-3xl p-8 border border-stone-200">
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-amber-600 font-bold text-xs uppercase tracking-widest">Hạng Thành Viên</span>
+                    <h2 class="text-2xl font-serif font-bold text-stone-900 mt-1">Đặc Quyền GlowAura Beauty Club</h2>
+                    <p class="text-xs text-stone-500 mt-1">Tích điểm đổi quà và tận hưởng ưu đãi riêng biệt theo từng cấp độ</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
+                        <div class="w-12 h-12 rounded-full bg-stone-200 text-stone-700 flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900">Hạng Bạc (Silver)</h3>
+                        <p class="text-xs text-stone-500">Tích lũy từ 1.000.000₫</p>
+                        <p class="text-xs text-amber-800 font-semibold">Tích điểm 3% • Quà sinh nhật 100K</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-amber-50/60 border border-amber-300 space-y-3 shadow-sm">
+                        <div class="w-12 h-12 rounded-full bg-amber-500 text-stone-950 flex items-center justify-center mx-auto text-xl shadow-md">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-amber-900">Hạng Vàng (Gold)</h3>
+                        <p class="text-xs text-amber-700">Tích lũy từ 5.000.000₫</p>
+                        <p class="text-xs text-amber-900 font-bold">Tích điểm 5% • Freeship trọn đời • Quà sinh nhật 300K</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-stone-50 border border-stone-200 space-y-3">
+                        <div class="w-12 h-12 rounded-full bg-stone-900 text-amber-400 flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <h3 class="font-serif font-bold text-stone-900">Hạng Kim Cương (VIP)</h3>
+                        <p class="text-xs text-stone-500">Tích lũy từ 15.000.000₫</p>
+                        <p class="text-xs text-amber-800 font-semibold">Tích điểm 8% • Chuyên gia da liễu riêng • Quà sinh nhật 1.000.000₫</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        function copyCoupon(code, btn) {
+            navigator.clipboard.writeText(code).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i class="fa-solid fa-check text-emerald-600 mr-1"></i>Đã chép!';
+                if (typeof showToast === 'function') {
+                    showToast({
+                        title: "Đã sao chép mã " + code,
+                        message: "Dán mã này vào ô Giảm giá tại trang Giỏ hàng để nhận ưu đãi!",
+                        type: "success"
+                    });
+                }
+                setTimeout(() => { btn.innerHTML = original; }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

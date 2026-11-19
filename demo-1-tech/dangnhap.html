@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập Thành viên - SDLC Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        },
+                        sdlc: {
+                            yellow: '#FDE047',
+                            gold: '#FACC15',
+                            amber: '#F59E0B',
+                            dark: '#1D1D20'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/cellphones.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-[#FCFCFA] text-[#1D1D20] flex flex-col min-h-screen">
+
+    <!-- Header Container (Được nhúng tự động với tone vàng nhạt đồng bộ) -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Main Content: Giao diện 2 cột Tone Vàng Đồng Bộ cùng Logo AL.png (SDLC Platform) -->
+    <main class="w-full flex-grow flex items-center justify-center py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-14 items-center">
+            
+            <!-- CỘT TRÁI: Logo SDLC Platform (AL.png), 7 Đặc quyền viền góc vàng, Minh họa Linh vật vàng -->
+            <div class="w-full flex flex-col items-center justify-center text-center">
+                <!-- Logo SDLC Platform nổi bật (Thay thế các nút đỏ cũ) -->
+                <div class="flex items-center justify-center mb-5">
+                    <a href="index.html" class="inline-flex items-center group">
+                        <img src="images/icons/AL.png" alt="SDLC Platform" class="h-11 sm:h-12 w-auto object-contain group-hover:scale-105 transition-transform duration-200">
+                    </a>
+                </div>
+
+                <!-- Tiêu đề Tone Vàng Đậm / Amber Tinh Tế -->
+                <h2 class="text-xl sm:text-[22px] font-black text-[#1D1D20] leading-snug">
+                    Nhập hội khách hàng thành viên <span class="text-amber-600 font-black">SDLC MEMBER</span>
+                </h2>
+                <p class="text-sm sm:text-base text-slate-600 font-medium mt-1 mb-6">
+                    Để không bỏ lỡ các ưu đãi độc quyền từ hệ sinh thái SDLC Platform
+                </p>
+
+                <!-- Khung đặc quyền với 4 góc viền cong Vàng Amber sang trọng -->
+                <div class="relative w-full max-w-[490px] bg-gradient-to-b from-[#FFFDF0] to-[#FFFFFF] rounded-2xl p-6 sm:p-7 border border-amber-200/90 shadow-lg shadow-amber-100/50 text-left">
+                    <!-- 4 góc viền bo cong Tone Vàng Amber -->
+                    <span class="absolute -top-1 -left-1 w-7 h-7 border-t-[3.5px] border-l-[3.5px] border-amber-500 rounded-tl-xl pointer-events-none"></span>
+                    <span class="absolute -top-1 -right-1 w-7 h-7 border-t-[3.5px] border-r-[3.5px] border-amber-500 rounded-tr-xl pointer-events-none"></span>
+                    <span class="absolute -bottom-1 -left-1 w-7 h-7 border-b-[3.5px] border-l-[3.5px] border-amber-500 rounded-bl-xl pointer-events-none"></span>
+                    <span class="absolute -bottom-1 -right-1 w-7 h-7 border-b-[3.5px] border-r-[3.5px] border-amber-500 rounded-br-xl pointer-events-none"></span>
+
+                    <!-- 7 Đặc quyền Thành viên Tone Vàng & Amber -->
+                    <div class="space-y-3.5 text-xs sm:text-[13.5px] text-slate-800">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed">Chiết khấu đến <strong class="text-amber-700 font-bold">5%</strong> khi mua các sản phẩm tại hệ sinh thái</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed"><strong class="text-amber-700 font-bold">Miễn phí giao hàng</strong> cho thành viên SDLC Member và đơn từ 300.000đ</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed">Tặng voucher sinh nhật đến <strong class="text-amber-700 font-bold">500.000đ</strong> cho khách hàng thành viên</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed">Trợ giá thu cũ lên đời <strong class="text-amber-700 font-bold">đến 1 triệu</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed">Thăng hạng nhận voucher <strong class="text-amber-700 font-bold">đến 300.000đ</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed">Đặc quyền S-Student/S-Teacher <strong class="text-amber-700 font-bold">ưu đãi thêm đến 10%</strong></span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center text-xs shrink-0 mt-0.5 shadow-xs">
+                                <i class="fa-solid fa-gift"></i>
+                            </div>
+                            <span class="leading-relaxed"><strong class="text-amber-700 font-bold">S-Business:</strong> Chiết khấu đến 8% dành riêng cho khách hàng doanh nghiệp</span>
+                        </div>
+                    </div>
+
+                    <!-- Liên kết chính sách ưu đãi -->
+                    <div class="text-center pt-4 mt-2 border-t border-amber-200/60">
+                        <a href="khuyenmai.html" class="inline-flex items-center justify-center gap-1.5 text-xs sm:text-sm text-amber-700 font-bold hover:text-amber-800 hover:underline">
+                            <span>Xem chi tiết chính sách ưu đãi thành viên</span>
+                            <i class="fa-solid fa-chevron-right text-[11px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Đồ họa Linh vật Vàng & Voucher Thưởng Tone Ấm Đồng Bộ -->
+                <div class="w-full max-w-[440px] mt-2 flex justify-center items-end relative h-36 overflow-hidden select-none pointer-events-none">
+                    <svg class="w-full h-full" viewBox="0 0 440 144" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Voucher Vàng 300k -->
+                        <g transform="translate(60, 45) rotate(-18)">
+                            <rect width="68" height="34" rx="5" fill="#FEF08A" stroke="#EAB308" stroke-width="1.2"/>
+                            <circle cx="0" cy="17" r="4.5" fill="#FCFCFA"/>
+                            <circle cx="68" cy="17" r="4.5" fill="#FCFCFA"/>
+                            <text x="14" y="22" font-family="Inter, sans-serif" font-weight="800" font-size="12" fill="#854D0E">300k</text>
+                            <line x1="48" y1="8" x2="48" y2="26" stroke="#EAB308" stroke-dasharray="2 2" stroke-width="1.2"/>
+                        </g>
+
+                        <!-- Voucher Vàng 20% -->
+                        <g transform="translate(85, 88) rotate(-8)">
+                            <rect width="64" height="32" rx="5" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.2"/>
+                            <circle cx="0" cy="16" r="4" fill="#FCFCFA"/>
+                            <circle cx="64" cy="16" r="4" fill="#FCFCFA"/>
+                            <text x="12" y="21" font-family="Inter, sans-serif" font-weight="800" font-size="12" fill="#B45309">20%</text>
+                        </g>
+
+                        <!-- Ánh sao lấp lánh Vàng -->
+                        <path d="M150 35L152 41L158 43L152 45L150 51L148 45L142 43L148 41Z" fill="#F59E0B"/>
+                        <path d="M70 25L71.5 29L76 30.5L71.5 32L70 36.5L68.5 32L64 30.5L68.5 29Z" fill="#FBBF24"/>
+                        <path d="M375 75L377 81L383 83L377 85L375 91L373 85L367 83L373 81Z" fill="#F59E0B"/>
+
+                        <!-- Hộp quà Vàng Cam Đằng Sau -->
+                        <g transform="translate(165, 45)">
+                            <rect x="10" y="28" width="55" height="45" rx="6" fill="#FBBF24"/>
+                            <rect x="34" y="28" width="8" height="45" fill="#FFFDF0"/>
+                            <rect x="6" y="20" width="63" height="12" rx="4" fill="#F59E0B"/>
+                            <rect x="34" y="20" width="8" height="12" fill="#FFFDF0"/>
+                            <path d="M38 20 C28 5, 20 12, 36 20 Z" fill="#FFFDF0"/>
+                            <path d="M38 20 C48 5, 56 12, 40 20 Z" fill="#FFFDF0"/>
+                        </g>
+
+                        <!-- Tag % Xanh Dương của Logo SDLC Platform -->
+                        <g transform="translate(200, 95) rotate(-12)">
+                            <path d="M0 12 L12 0 L32 0 L32 24 L12 24 Z" fill="#0284C7"/>
+                            <circle cx="24" cy="12" r="3" fill="#FFFFFF"/>
+                            <text x="7" y="16" font-family="Inter, sans-serif" font-weight="800" font-size="10" fill="#FFFFFF">%</text>
+                        </g>
+
+                        <!-- Linh vật Peeking Tone Vàng Ấm Áp -->
+                        <g transform="translate(240, 32)">
+                            <!-- Râu ăng-ten Vàng Amber -->
+                            <path d="M32 28 C26 12, 16 8, 12 12" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="12" cy="12" r="4.5" fill="#F59E0B"/>
+
+                            <path d="M68 28 C74 12, 84 8, 88 12" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>
+                            <circle cx="88" cy="12" r="4.5" fill="#F59E0B"/>
+
+                            <!-- Mũ / Đầu Linh vật Vàng & Trắng -->
+                            <ellipse cx="50" cy="72" rx="46" ry="40" fill="#FFFBEB"/>
+                            <ellipse cx="50" cy="72" rx="44" ry="38" fill="#FFFFFF" stroke="#FEF08A" stroke-width="2"/>
+
+                            <!-- Cổ Áo Vàng Amber -->
+                            <path d="M22 105 C35 116, 65 116, 78 105" stroke="#F59E0B" stroke-width="6" stroke-linecap="round"/>
+
+                            <!-- Kính Mắt Tròn Kỹ Thuật Đen -->
+                            <rect x="16" y="52" width="30" height="30" rx="12" fill="#F8FAFC" stroke="#334155" stroke-width="2.5"/>
+                            <rect x="54" y="52" width="30" height="30" rx="12" fill="#F8FAFC" stroke="#334155" stroke-width="2.5"/>
+                            <line x1="46" y1="67" x2="54" y2="67" stroke="#334155" stroke-width="2.5"/>
+
+                            <!-- Mắt Sáng Long Lanh -->
+                            <circle cx="31" cy="67" r="6" fill="#1E293B"/>
+                            <circle cx="33" cy="65" r="2.2" fill="#FFFFFF"/>
+                            <circle cx="69" cy="67" r="6" fill="#1E293B"/>
+                            <circle cx="71" cy="65" r="2.2" fill="#FFFFFF"/>
+
+                            <!-- Nụ cười Hạnh Phúc Tone Ấm -->
+                            <path d="M36 86 C40 98, 60 98, 64 86" stroke="#D97706" stroke-width="2.5" fill="#F59E0B" stroke-linecap="round"/>
+                            <path d="M42 90 C46 95, 54 95, 58 90" fill="#FDE68A"/>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- CỘT PHẢI: Khung Đăng Nhập Tone Vàng Nổi Bật -->
+            <div class="w-full flex justify-center">
+                <div class="w-full max-w-[470px] bg-white rounded-3xl p-6 sm:p-10 border border-amber-200/80 shadow-xl shadow-amber-100/30">
+                    
+                    <!-- Tiêu đề Form -->
+                    <div class="text-center mb-6">
+                        <h1 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                            Đăng nhập thành viên
+                        </h1>
+                        <p class="text-xs text-slate-500 mt-1">
+                            Chào mừng đến với hệ thống <span class="font-bold text-amber-600">SDLC Platform</span>
+                        </p>
+                    </div>
+
+                    <!-- Form Đăng Nhập -->
+                    <form id="login-form" class="space-y-4">
+                        <!-- Số điện thoại -->
+                        <div>
+                            <label for="login-account" class="block text-xs sm:text-sm font-semibold text-slate-800 mb-1.5">Số điện thoại</label>
+                            <div class="relative">
+                                <input type="text" id="login-account" required placeholder="Nhập số điện thoại của bạn" class="w-full bg-[#FAFAF8] border border-slate-200 rounded-xl px-4 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200/50 transition">
+                            </div>
+                        </div>
+
+                        <!-- Mật khẩu -->
+                        <div>
+                            <label for="login-password" class="block text-xs sm:text-sm font-semibold text-slate-800 mb-1.5">Mật khẩu</label>
+                            <div class="relative">
+                                <input type="password" id="login-password" required placeholder="Nhập mật khẩu của bạn" class="w-full bg-[#FAFAF8] border border-slate-200 rounded-xl px-4 pr-11 py-3 text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200/50 transition">
+                                <button type="button" onclick="togglePasswordVisibility('login-password', 'eye-icon')" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1.5 transition" title="Hiện/Ẩn mật khẩu">
+                                    <i id="eye-icon" class="fa-regular fa-eye text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Nút Đăng nhập Tone Vàng Nổi Bật (#FDE047 chuẩn thanh header) -->
+                        <button type="submit" class="w-full py-3.5 bg-gradient-to-r from-[#FDE047] via-[#FACC15] to-[#EAB308] hover:from-[#FACC15] hover:to-[#CA8A04] text-[#1D1D20] font-extrabold text-sm sm:text-base rounded-xl shadow-md shadow-amber-300/40 border border-amber-300 active:scale-[0.99] transition duration-200 mt-2 flex items-center justify-center gap-2">
+                            <span>Đăng nhập</span>
+                            <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </button>
+                    </form>
+
+                    <!-- Quên mật khẩu? -->
+                    <div class="text-center pt-3">
+                        <a href="javascript:void(0)" onclick="openForgotModal()" class="text-sm text-amber-700 font-semibold hover:text-amber-800 hover:underline">
+                            Quên mật khẩu?
+                        </a>
+                    </div>
+
+                    <!-- Đường phân cách -->
+                    <div class="relative my-6">
+                        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-slate-200"></div></div>
+                        <div class="relative flex justify-center text-xs"><span class="bg-white px-3 text-slate-400 font-normal">Hoặc đăng nhập bằng</span></div>
+                    </div>
+
+                    <!-- Nút Đăng nhập MXH (Google & Zalo) -->
+                    <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                        <!-- Google -->
+                        <button type="button" onclick="handleSocialLogin('Google')" class="flex items-center justify-center gap-2.5 py-2.5 sm:py-3 px-4 rounded-xl border border-slate-200 hover:bg-amber-50/50 hover:border-amber-300 transition text-sm font-semibold text-slate-700 shadow-sm active:scale-95">
+                            <svg class="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                                <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                                <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.99 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                                <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                            </svg>
+                            <span>Google</span>
+                        </button>
+                        <!-- Zalo -->
+                        <button type="button" onclick="handleSocialLogin('Zalo')" class="flex items-center justify-center gap-2.5 py-2.5 sm:py-3 px-4 rounded-xl border border-slate-200 hover:bg-amber-50/50 hover:border-amber-300 transition text-sm font-semibold text-slate-700 shadow-sm active:scale-95">
+                            <img src="images/icons/zalo.png" onerror="this.onerror=null; this.src='images/icons/zalo.png'" alt="Zalo" class="w-5 h-5 object-contain flex-shrink-0">
+                            <span>Zalo</span>
+                        </button>
+                    </div>
+
+                    <!-- Đăng ký ngay -->
+                    <p class="text-xs sm:text-sm text-center text-slate-600 mt-6">
+                        Bạn chưa có tài khoản? <a href="dangky.html" class="font-bold text-amber-600 hover:text-amber-700 hover:underline">Đăng ký ngay</a>
+                    </p>
+
+                    <!-- Ghi chú chân trang -->
+                    <p class="text-[11px] text-slate-400 text-center mt-4">
+                        Mua sắm & dịch vụ bảo hành tại hệ sinh thái SDLC Platform
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Modal Khôi Phục Mật Khẩu (Tone Vàng Amber Đồng Bộ) -->
+    <div id="forgot-modal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-sm w-full p-6 text-center space-y-4 shadow-2xl border border-amber-100">
+            <div class="w-12 h-12 rounded-full bg-amber-100 text-amber-600 flex items-center justify-center text-xl mx-auto">
+                <i class="fa-solid fa-key"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-900">Khôi Phục Mật Khẩu</h3>
+            <p class="text-xs text-slate-500">Nhập email hoặc số điện thoại của bạn để nhận liên kết đặt lại mật khẩu mới.</p>
+            <input type="text" id="forgot-email" placeholder="Nhập email hoặc số điện thoại..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-amber-400 focus:ring-2 focus:ring-amber-200/50">
+            <div class="flex gap-2 pt-2">
+                <button onclick="closeForgotModal()" class="flex-1 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 rounded-xl text-xs font-bold transition">Đóng</button>
+                <button onclick="sendForgotEmail()" class="flex-1 py-2.5 bg-gradient-to-r from-[#FDE047] to-[#FACC15] hover:from-[#FACC15] hover:to-[#EAB308] text-[#1D1D20] rounded-xl text-xs font-bold transition shadow-sm border border-amber-300">Gửi liên kết</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

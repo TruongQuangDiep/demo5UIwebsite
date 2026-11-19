@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu Chuyện Thương Hiệu - NORDICLIVING</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        stone: {
+                            850: '#211f1d',
+                            950: '#141210',
+                        },
+                        amber: {
+                            750: '#92400e',
+                            850: '#78350f',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#FAF9F5] text-stone-900 flex flex-col min-h-screen">
+
+    <!-- Header Container -->
+    <div id="site-header-container" class="sticky top-0 z-50 w-full"></div>
+
+    <!-- Breadcrumb -->
+    <div class="bg-stone-100 border-b border-stone-200 py-3.5">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ol class="flex items-center space-x-2 text-xs text-stone-500">
+                <li><a href="index.html" class="hover:text-amber-800 transition"><i class="fa-solid fa-house mr-1"></i>Trang chủ</a></li>
+                <li><i class="fa-solid fa-chevron-right text-[10px] text-stone-400"></i></li>
+                <li class="font-bold text-stone-900 uppercase tracking-wider">Câu Chuyện NordicLiving</li>
+            </ol>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow space-y-16">
+        
+        <!-- Hero Story -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block">Về Chúng Tôi</span>
+                <h1 class="text-3xl sm:text-5xl font-serif font-bold text-stone-900 leading-tight">
+                    Nơi Chốn Bình Yên Bắt Đầu Từ Một Tổ Ấm Hygge
+                </h1>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+                    Được thành lập từ niềm đam mê phong cách kiến trúc Bắc Âu Scandinavian, NordicLiving ra đời với sứ mệnh mang lại không gian sống tối giản, tiện nghi và ấm áp cho các gia đình Việt Nam hiện đại.
+                </p>
+                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed font-light">
+                    Chúng tôi tin rằng cái đẹp thực sự không nằm ở sự phô trương hào nhoáng, mà hiện diện ở những thớ gỗ sồi tự nhiên mộc mạc, đường nét uốn lượn hữu cơ và ánh sáng dịu lành của buổi hoàng hôn.
+                </p>
+                <div class="pt-2 flex items-center gap-8">
+                    <div>
+                        <span class="block font-serif font-bold text-3xl text-amber-800">10+</span>
+                        <span class="text-xs text-stone-500 uppercase tracking-wider">Năm kinh nghiệm</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-3xl text-amber-800">100%</span>
+                        <span class="text-xs text-stone-500 uppercase tracking-wider">Gỗ chuẩn FSC</span>
+                    </div>
+                    <div>
+                        <span class="block font-serif font-bold text-3xl text-amber-800">5 Năm</span>
+                        <span class="text-xs text-stone-500 uppercase tracking-wider">Bảo hành tại nhà</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-200 aspect-[4/3]">
+                <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=80" alt="NordicLiving Workshop" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- 3 Core Philosophy Pillars -->
+        <section class="py-12 bg-white rounded-3xl border border-stone-200 p-8 sm:p-14 shadow-sm">
+            <div class="text-center max-w-xl mx-auto mb-12">
+                <span class="text-amber-700 text-xs font-bold uppercase tracking-widest block mb-2">Giá Trị Cốt Lõi</span>
+                <h2 class="text-2xl sm:text-4xl font-serif font-bold text-stone-900">3 Nguyên Tắc Vàng Của NordicLiving</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-3 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mx-auto sm:mx-0">
+                        <i class="fa-solid fa-shapes"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900">Tối Giản Đầy Công Năng</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed font-light">
+                        "Form follows function" - Mọi chi tiết thiết kế đều phục vụ cho sự tiện nghi tối đa của người dùng: từ chiều cao gầm ghế cho robot hút bụi đến cơ chế ray trượt mở rộng thông minh.
+                    </p>
+                </div>
+
+                <div class="space-y-3 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mx-auto sm:mx-0">
+                        <i class="fa-solid fa-seedling"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900">Bền Vững Với Tự Nhiên</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed font-light">
+                        Chỉ sử dụng gỗ sồi trắng và óc chó khai thác từ những cánh rừng tái sinh được chứng nhận FSC quốc tế. Sơn lau gốc dầu thực vật không mùi, an toàn cho trẻ sơ sinh và thú cưng.
+                    </p>
+                </div>
+
+                <div class="space-y-3 text-center sm:text-left">
+                    <div class="w-12 h-12 rounded-2xl bg-amber-50 text-amber-700 flex items-center justify-center text-xl mx-auto sm:mx-0">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-serif font-bold text-lg text-stone-900">Kỹ Thuật Mộng Gỗ Thủ Công</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed font-light">
+                        Kết hợp mộng âm dương truyền thống chịu lực hàng chục năm mà không lo lung lay, kết hợp công nghệ CNC chính xác tới 0.1mm cho độ hoàn thiện mượt mà từng milimet.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="bg-stone-900 text-white rounded-3xl p-8 sm:p-14 text-center space-y-6 shadow-xl">
+            <h2 class="text-2xl sm:text-4xl font-serif font-bold text-white max-w-xl mx-auto">
+                Bạn Đã Sẵn Sàng Kiến Tạo Không Gian Sống Của Riêng Mình?
+            </h2>
+            <p class="text-xs sm:text-sm text-stone-400 max-w-lg mx-auto font-light">
+                Ghé thăm hệ thống Flagship Showroom tại Hà Nội & TP.HCM để trực tiếp trải nghiệm sự êm ái của sofa Bouclé và mùi hương gỗ sồi tự nhiên.
+            </p>
+            <div class="pt-2 flex justify-center gap-4">
+                <a href="sanpham.html" class="bg-amber-700 hover:bg-amber-600 text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition shadow-md">
+                    Xem Bộ Sưu Tập
+                </a>
+                <a href="lienhe.html" class="bg-stone-800 hover:bg-stone-700 text-white border border-stone-700 font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition">
+                    Liên Hệ Showroom
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Container -->
+    <div id="site-footer-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
